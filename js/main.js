@@ -62,6 +62,6 @@ const scene01 = new ScrollMagic.Scene({
   duration: 500,
   triggerHook: 0.3,
 })
-  .setTween(tween)
+  // .setTween(tween)
   .addIndicators()
   .addTo(controller);

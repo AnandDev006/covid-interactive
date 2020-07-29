@@ -1,132 +1,123 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: #fff;
+	background-color: #FFF;
 }
 
 h1 {
-  font-family: 'Proxima Nova';
-  font-size: 3rem;
-  color: #333;
-  font-weight: bold;
-  padding: 50px;
-  z-index: 999;
-  letter-spacing: -2px;
+	font-family: 'Proxima Nova';
+	font-size: 48px;
+	color: #333;
+	font-weight: bold;
+	padding: 50px;
+	z-index: 999;
+	letter-spacing: -2px;
 }
 
 .white {
-  color: #fff;
+	color: #FFF;
 }
 
 .cream {
-  color: #ffdfcf;
-  opacity: 0.8;
+	color: #ffdfcf;
+	opacity: 0.8;
 }
 
 p {
-  font-family: 'Proxima Nova';
-  font-size: 21px;
-  color: #333;
-  font-weight: normal;
-  z-index: 999;
+	font-family: 'Proxima Nova';
+	font-size: 21px;
+	color: #333;
+	font-weight: normal;
+	z-index: 999;
 }
 
 .hidden {
-  opacity: 0;
+	opacity: 0;
 }
 
 #logo {
-  position: fixed;
-
-  top: 30px;
-  right: 30px;
-
-  width: 128px;
-  height: auto;
-
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
+	position: fixed;
+	
+	top: 30px;
+	right: 30px;
+	
+	width: 128px;
+	height: auto;
+	
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 
 #logo.small {
-  width: 64px;
-  height: auto;
+	width: 64px;
+	height: auto;
 }
 .spacer.s0 {
-  min-height: 1px;
+	min-height: 1px;
 }
 .spacer.s1 {
-  min-height: 100px;
+	min-height: 100px;
 }
 .spacer.s2 {
-  min-height: 200px;
+	min-height: 200px;
 }
 .spacer.s3 {
-  min-height: 300px;
+	min-height: 300px;
 }
 .spacer.s4 {
-  min-height: 400px;
+	min-height: 400px;
 }
 .spacer.s5 {
-  min-height: 500px;
+	min-height: 500px;
 }
 .spacer.s6 {
-  min-height: 600px;
+	min-height: 600px;
 }
 .spacer.s7 {
-  min-height: 700px;
+	min-height: 700px;
 }
 .spacer.s8 {
-  min-height: 800px;
+	min-height: 800px;
 }
 .spacer.s9 {
-  min-height: 900px;
+	min-height: 900px;
 }
 .spacer.s10 {
-  min-height: 1000px;
+	min-height: 1000px;
 }
 .horizontal .spacer.s0 {
-  min-width: 1px;
+	min-width: 1px;
 }
 .horizontal .spacer.s1 {
-  min-width: 100px;
+	min-width: 100px;
 }
 .horizontal .spacer.s2 {
-  min-width: 200px;
+	min-width: 200px;
 }
 .horizontal .spacer.s3 {
-  min-width: 300px;
+	min-width: 300px;
 }
 .horizontal .spacer.s4 {
-  min-width: 400px;
+	min-width: 400px;
 }
 .horizontal .spacer.s5 {
-  min-width: 500px;
+	min-width: 500px;
 }
 .horizontal .spacer.s6 {
-  min-width: 600px;
+	min-width: 600px;
 }
 .horizontal .spacer.s7 {
-  min-width: 700px;
+	min-width: 700px;
 }
 .horizontal .spacer.s8 {
-  min-width: 800px;
+	min-width: 800px;
 }
 .horizontal .spacer.s9 {
-  min-width: 900px;
+	min-width: 900px;
 }
 .horizontal .spacer.s10 {
-  min-width: 1000px;
+	min-width: 1000px;
 }
