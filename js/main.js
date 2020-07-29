@@ -1,3 +1,5 @@
+gsap.registerPlugin(MotionPathPlugin);
+
 /* Logo */
 $(window).scroll(function () {
   if ($(this).scrollTop() > 50) {
@@ -10,6 +12,9 @@ $(window).scroll(function () {
 // Virus Spin
 
 const SPIN_TIME = 20;
+const TRANSLATION_TIME = 2;
+const TRAVEL_DISTANCE = 50;
+const PARTICLE_RANDOM_PATH_TIME = 3;
 
 TweenLite.to('.spin-normal', SPIN_TIME, {
   rotation: 360,
@@ -27,23 +32,32 @@ TweenLite.to('.spin-slower', SPIN_TIME / 0.3, {
   repeat: -1,
 });
 
-const TRANSLATION_TIME = 2;
-const TRAVEL_DISTANCE = 50;
-
-TweenLite.to('.virus-primary', TRANSLATION_TIME, {
+TweenLite.to(document.querySelectorAll('.section-01 .virus-primary'), TRANSLATION_TIME, {
   translateY: -TRAVEL_DISTANCE,
   ease: Linear.easeNone,
   repeat: -1,
   yoyo: true,
 });
-TweenLite.to('.virus-secondary', TRANSLATION_TIME, {
+
+TweenLite.to(document.querySelectorAll('.section-01 .virus-secondary'), TRANSLATION_TIME, {
   translateY: -TRAVEL_DISTANCE * 0.8,
   ease: Linear.easeNone,
   repeat: -1,
   yoyo: true,
 });
-TweenLite.to('.virus-tertiary', translateNormalTime, {
+TweenLite.to(document.querySelectorAll('.section-01 .virus-tertiary'), TRANSLATION_TIME, {
   translateY: -TRAVEL_DISTANCE * 0.6,
+  ease: Linear.easeNone,
+  repeat: -1,
+  yoyo: true,
+});
+
+TweenLite.to(document.querySelectorAll('.section-01 .particles'), PARTICLE_RANDOM_PATH_TIME, {
+  motionPath: {
+    path: 'M3,3 L8,3 L2,5 L8,5 L3,7 L7,7',
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true,
+  },
   ease: Linear.easeNone,
   repeat: -1,
   yoyo: true,
@@ -62,6 +76,6 @@ const scene01 = new ScrollMagic.Scene({
   duration: 500,
   triggerHook: 0.3,
 })
-  // .setTween(tween)
+  .setTween(tween)
   .addIndicators()
   .addTo(controller);
