@@ -1,0 +1,33 @@
+.spin-slower {
+  -webkit-animation: spin 60s linear infinite;
+  -moz-animation: spin 60ss linear infinite;
+  animation: spin 60ss linear infinite;
+}
+
+.spin-slow {
+  -webkit-animation: spin 40s linear infinite;
+  -moz-animation: spin 40ss linear infinite;
+  animation: spin 40ss linear infinite;
+}
+
+.spin-normal {
+  -webkit-animation: spin 20s linear infinite;
+  -moz-animation: spin 20ss linear infinite;
+  animation: spin 20ss linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,157 @@
+.section-01 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+
+  height: 100%;
+  min-height: 800px;
+  min-width: 100%;
+  height: 100vh;
+}
+
+.section-01 .section-content {
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  height: 800px;
+
+  background: url("../images/01/bg.png");
+}
+
+.virus-images {
+  position: inherit;
+  width: 100%;
+  height: 600px;
+  top: 100px;
+  left: 0;
+}
+
+/* PARTICLES */
+
+.section-01-particle-01 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.section-01-particle-02 {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+.section-01-particle-03 {
+  position: absolute;
+  top: 90%;
+  left: 20%;
+}
+
+/* VIRUS */
+
+.section-01-virus-01 {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 120px);
+  width: 240px;
+}
+
+.section-01-virus-02 {
+  position: absolute;
+  top: 0;
+  right: 15%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-03 {
+  position: absolute;
+  bottom: 15%;
+  right: 30%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-04 {
+  position: absolute;
+  top: 30%;
+  left: 0;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-05 {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-06 {
+  position: absolute;
+  top: 5%;
+  right: 0;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-07 {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-08 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-09 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-10 {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+
+  opacity: 0.8;
+}
+
+.section-01-virus-11 {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+
+  opacity: 0.8;
+}
+
+.section-01-text {
+  text-align: left;
+
+  width: 500px;
+
+  position: absolute;
+  bottom: 240px;
+  left: calc(50% - 250px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section-01-text {
+    width: 300px;
+    left: calc(50% - 150px);
+  }
+}
