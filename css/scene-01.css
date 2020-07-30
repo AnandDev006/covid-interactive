@@ -30,27 +30,81 @@
 
 .section-01 h1 {
   position: absolute;
-  top: calc(30px - 0.5em);
+  padding-top: 0;
+  top: calc(80px - 0.5em);
 }
 
 /* PARTICLES */
 
-.section-01-particle-01 {
+.section-01 .particle-1-01 {
   position: absolute;
   top: 20%;
   left: 5%;
 }
-
-.section-01-particle-02 {
+.section-01 .particle-1-02 {
   position: absolute;
   top: 60%;
   left: 10%;
 }
-
-.section-01-particle-03 {
+.section-01 .particle-1-03 {
   position: absolute;
-  top: 35%;
+  top: 90%;
+  left: 25%;
+}
+.section-01 .particle-1-04 {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+.section-01 .particle-1-05 {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+}
+.section-01 .particle-1-06 {
+  position: absolute;
+  top: 55%;
+  left: 65%;
+}
+.section-01 .particle-1-07 {
+  position: absolute;
+  top: 2%;
+  left: 85%;
+}
+.section-01 .particle-1-08 {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}
+.section-01 .particle-1-09 {
+  position: absolute;
+  top: 60%;
+  left: 85%;
+}
+.section-01 .particle-2-01 {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+}
+.section-01 .particle-2-02 {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.section-01 .particle-2-03 {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+.section-01 .particle-2-04 {
+  position: absolute;
+  top: 30%;
   left: 80%;
+}
+.section-01 .particle-2-05 {
+  position: absolute;
+  top: 90%;
+  left: 75%;
 }
 
 /* VIRUS */
@@ -157,11 +211,12 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #logo {
-    width: 76px;
+    width: 65px;
+    top: 10px;
   }
 
   .section-01 h1 {
-    top: calc(40px - 0.5em);
+    top: calc(65px - 0.5em);
     font-size: 3rem;
   }
 
