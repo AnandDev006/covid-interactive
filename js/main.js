@@ -46,8 +46,9 @@ Array.from(document.querySelectorAll('.section-01 .virus-secondary')).forEach((v
     ease: Power1.easeInOut,
     repeat: -1,
     yoyo: true,
-    delay: Math.random() * TRANSLATION_TIME,
   })
+    .progress(Math.random())
+    .play()
 );
 Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v) =>
   TweenLite.to(v, TRANSLATION_TIME, {
@@ -55,8 +56,9 @@ Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v)
     ease: Power1.easeInOut,
     repeat: -1,
     yoyo: true,
-    delay: Math.random() * TRANSLATION_TIME,
   })
+    .progress(Math.random())
+    .play()
 );
 Array.from(document.querySelectorAll('.section-01 .particles')).forEach((p) =>
   TweenLite.to(p, PARTICLE_RANDOM_PATH_TIME, {
@@ -67,8 +69,9 @@ Array.from(document.querySelectorAll('.section-01 .particles')).forEach((p) =>
     },
     ease: Linear.easeNone,
     repeat: -1,
-    delay: Math.random() * PARTICLE_RANDOM_PATH_TIME,
   })
+    .progress(Math.random())
+    .play()
 );
 
 const tween = new TimelineLite();
