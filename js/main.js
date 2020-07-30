@@ -16,23 +16,24 @@ const TRANSLATION_TIME = 2;
 const TRAVEL_DISTANCE = 50;
 const PARTICLE_RANDOM_PATH_TIME = 5;
 
-TweenLite.to('.spin-normal', SPIN_TIME, {
+const spinNormalTween = new TweenLite.to('.spin-normal', SPIN_TIME, {
   rotation: 360,
   ease: Linear.easeNone,
   repeat: -1,
 });
-TweenLite.to('.spin-slow', SPIN_TIME / 0.6, {
-  rotation: 360,
-  ease: Linear.easeNone,
-  repeat: -1,
-});
-TweenLite.to('.spin-slower', SPIN_TIME / 0.3, {
+const spinSlowTween = new TweenLite.to('.spin-slow', SPIN_TIME / 0.6, {
   rotation: 360,
   ease: Linear.easeNone,
   repeat: -1,
 });
 
-Array.from(document.querySelectorAll('.section-01 .virus-primary')).forEach((v) =>
+const spinSlowerTween = new TweenLite.to('.spin-slower', SPIN_TIME / 0.3, {
+  rotation: 360,
+  ease: Linear.easeNone,
+  repeat: -1,
+});
+
+const virusPrimaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
   TweenLite.to(v, TRANSLATION_TIME, {
     translateY: -TRAVEL_DISTANCE,
     ease: Power1.easeInOut,
@@ -40,7 +41,8 @@ Array.from(document.querySelectorAll('.section-01 .virus-primary')).forEach((v) 
     yoyo: true,
   })
 );
-Array.from(document.querySelectorAll('.section-01 .virus-secondary')).forEach((v) =>
+
+const virusSecondaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-secondary')).map((v) =>
   TweenLite.to(v, TRANSLATION_TIME, {
     translateY: -TRAVEL_DISTANCE * 0.8,
     ease: Power1.easeInOut,
@@ -50,7 +52,8 @@ Array.from(document.querySelectorAll('.section-01 .virus-secondary')).forEach((v
     .progress(Math.random())
     .play()
 );
-Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v) =>
+
+const virusTertiaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v) =>
   TweenLite.to(v, TRANSLATION_TIME, {
     translateY: -TRAVEL_DISTANCE * 0.6,
     ease: Power1.easeInOut,
@@ -60,7 +63,8 @@ Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v)
     .progress(Math.random())
     .play()
 );
-Array.from(document.querySelectorAll('.section-01 .particles')).forEach((p) =>
+
+const particlesRandomizeTween = Array.from(document.querySelectorAll('.section-01 .particles')).map((p) =>
   TweenLite.to(p, PARTICLE_RANDOM_PATH_TIME, {
     motionPath: {
       path: 'M-2.5,1.09C-20.55,7.55-23,15.02-23,26c0,38,36,24,44,34s11,27,27,36c23.47,13.2,45.2-6.09,43-27  c-2-19-10.88-36.8,3-45c22-13,26-42,7-54c-23.22-14.66-40.13-2.28-49,18C45,4,18.55-6.64,0,0',
