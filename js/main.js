@@ -9,6 +9,8 @@ $(window).scroll(function () {
   }
 });
 
+// PAGE INITIALIZE START
+
 // Virus Spin
 
 const SPIN_TIME = 20;
@@ -71,26 +73,99 @@ const particlesRandomizeTween = Array.from(document.querySelectorAll('.section-0
       alignOrigin: [0.5, 0.5],
       autoRotate: true,
     },
-    ease: Linear.easeNone,
+    ease: Power1.easeInOut,
     repeat: -1,
   })
     .progress(Math.random())
     .play()
 );
 
-const tween = new TimelineLite();
-tween.add(
-  TweenLite.to('.section-01-virus-01', 1, {
-    scale: 1.67,
-  })
-);
+// PAGE INITIALIZE END
+
+// SETUP
 
 const controller = new ScrollMagic.Controller();
+
+// SCENE 1 START
+
+const tweenScene1 = new TimelineLite();
+
+tweenScene1
+  .to('.section-01 .virus-01', 1, {
+    scale: 0.75,
+    x: '-40%',
+    y: '5%',
+  })
+  .to('.section-01 .virus-01', 1, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+  })
+  .fromTo(
+    '.section-01 .virus-cross-section',
+    1,
+    {
+      scale: 0.75,
+      x: '-40%',
+      y: '5%',
+      autoAlpha: 0,
+    },
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .fromTo(
+    '.section-01 .virus-zoomed',
+    1,
+    {
+      autoAlpha: 0,
+      scale: 0.4,
+      x: '-18%',
+      y: "3%"
+    },
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    }
+  )
+  .to('.section-01 .virus-zoomed', 1, {
+    scale: 1,
+    x: '10%',
+    y: '-10%',
+  })
+  .to(
+    '.section-01 .corona-h-1',
+    1,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .corona-h-2',
+    1,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  );
+
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
-  duration: 500,
-  triggerHook: 0.3,
+  duration: 1000,
+  triggerHook: 0,
 })
-  .setTween(tween)
+  .on('progress', ({ progress }) => {
+    virusPrimaryTranslateTween.forEach((t) => (progress > 0 ? t.time(0).pause() : t.play()));
+    progress > 0.1 ? spinNormalTween.time(0).pause() : spinNormalTween.play();
+  })
+  .on('enter leave', ({ type }) => (type == 'enter' ? null : null))
+  .setPin('.section-01')
+  .setTween(tweenScene1)
   .addIndicators()
   .addTo(controller);
+
+// SCENE 1 END
