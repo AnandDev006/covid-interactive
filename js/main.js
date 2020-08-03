@@ -122,7 +122,7 @@ tweenScene1
       autoAlpha: 0,
       scale: 0.4,
       x: '-18%',
-      y: "3%"
+      y: '3%',
     },
     {
       autoAlpha: 1,
@@ -133,6 +133,7 @@ tweenScene1
     scale: 1,
     x: '10%',
     y: '-10%',
+    delay: 1,
   })
   .to(
     '.section-01 .corona-h-1',
@@ -156,13 +157,11 @@ tweenScene1
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
   duration: 1000,
-  triggerHook: 0,
 })
   .on('progress', ({ progress }) => {
     virusPrimaryTranslateTween.forEach((t) => (progress > 0 ? t.time(0).pause() : t.play()));
     progress > 0.1 ? spinNormalTween.time(0).pause() : spinNormalTween.play();
   })
-  .on('enter leave', ({ type }) => (type == 'enter' ? null : null))
   .setPin('.section-01')
   .setTween(tweenScene1)
   .addIndicators()
