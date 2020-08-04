@@ -110,14 +110,10 @@ tweenScene1
     },
     '<'
   )
-  .to(
-    '.section-01 .virus-zoomed',
-    1,
-    {
-      autoAlpha: 1,
-      ease: Power1.easeIn,
-    }
-  )
+  .to('.section-01 .virus-zoomed', 1, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  })
   .to('.section-01 .virus-zoomed', 1, {
     scale: 1,
     x: '10%',
@@ -148,24 +144,27 @@ const scene01 = new ScrollMagic.Scene({
   duration: 1000,
 })
   .on('progress', ({ progress }) => {
-    if (progress > 0 && virusPrimaryTranslateTween[0].isActive()) {
-      virusPrimaryTranslateTween.forEach((t) => t.pause());
-      Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
-        TweenLite.to(v, TRANSLATION_TIME / 4, {
-          y: 0,
-          ease: Power1.easeInOut,
-        })
-      );
-    } else if (progress === 0) {
-      virusPrimaryTranslateTween.forEach((t) => t.play());
-    }
-    if (progress > 0.1 && spinNormalTween.isActive()) {
-      spinNormalTween
-        .repeat(0)
-        .reverse()
-        .duration(SPIN_TIME / 4);
+    console.log(progress);
+    if (progress > 0.1) {
+      if (spinNormalTween.isActive()) {
+        spinNormalTween
+          .repeat(0)
+          .reverse()
+          .duration(SPIN_TIME / 4);
+      }
+
+      if (virusPrimaryTranslateTween[0].isActive()) {
+        virusPrimaryTranslateTween.forEach((t) => t.pause());
+        Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
+          TweenLite.to(v, TRANSLATION_TIME / 4, {
+            y: 0,
+            ease: Power1.easeInOut,
+          })
+        );
+      }
     } else if (progress < 0.1) {
-      spinNormalTween.repeat(-1).duration(SPIN_TIME).play();
+      !spinNormalTween.isActive() && spinNormalTween.repeat(-1).duration(SPIN_TIME).play();
+      !virusPrimaryTranslateTween[0].isActive() && virusPrimaryTranslateTween.forEach((t) => t.restart());
     }
   })
   .setPin('.section-01')
