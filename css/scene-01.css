@@ -116,6 +116,8 @@
 
 .section-01 .virus-cross-section {
   opacity: 0;
+  transform-origin: center;
+  transform: translate(-40%, 5%) scale(0.75);
   position: absolute;
   top: calc(45% - 200px);
   left: calc(50% - 200px);
@@ -124,6 +126,8 @@
 
 .section-01 .virus-zoomed {
   opacity: 0;
+  transform-origin: center;
+  transform: translate(-18%,3%) scale(0.4);
   position: absolute;
   top: calc(45% - 200px);
   left: calc(50% - 180px);
