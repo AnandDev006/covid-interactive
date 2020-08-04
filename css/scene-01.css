@@ -127,7 +127,7 @@
 .section-01 .virus-zoomed {
   opacity: 0;
   transform-origin: center;
-  transform: translate(-18%,3%) scale(0.4);
+  transform: translate(-18%, 3%) scale(0.4);
   position: absolute;
   top: calc(45% - 200px);
   left: calc(50% - 180px);
@@ -221,9 +221,22 @@
   opacity: 0.8;
 }
 
-.section-01-text {
+.text-1 {
   text-align: left;
   display: inline-block;
+  max-width: 600px;
+  position: absolute;
+  left: calc(50% - 300px);
+  top: calc(80%);
+  transform: translate(0, -50%);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-2 {
+  text-align: left;
+  display: inline-block;
+  opacity: 0;
   max-width: 600px;
   position: absolute;
   left: calc(50% - 300px);

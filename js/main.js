@@ -110,6 +110,30 @@ tweenScene1
     },
     '<'
   )
+  .to(
+    ['.section-01 .corona-h-1', '.section-01 .text-1'],
+    1,
+    {
+      autoAlpha: 0,
+      x: -10,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .fromTo(
+    ['.section-01 .corona-h-2', '.section-01 .text-2'],
+    1,
+    {
+      autoAlpha: 0,
+      x: 10,
+    },
+    {
+      autoAlpha: 1,
+      x: 0,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
   .to('.section-01 .virus-zoomed', 1, {
     autoAlpha: 1,
     ease: Power1.easeIn,
@@ -119,25 +143,7 @@ tweenScene1
     x: '10%',
     y: '-10%',
     delay: 1,
-  })
-  .to(
-    '.section-01 .corona-h-1',
-    1,
-    {
-      autoAlpha: 0,
-      ease: Power1.easeOut,
-    },
-    '<'
-  )
-  .to(
-    '.section-01 .corona-h-2',
-    1,
-    {
-      autoAlpha: 1,
-      ease: Power1.easeIn,
-    },
-    '<'
-  );
+  });
 
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
