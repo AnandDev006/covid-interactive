@@ -127,7 +127,7 @@
 .section-01 .virus-zoomed {
   opacity: 0;
   transform-origin: center;
-  transform: translate(-18%, 3%) scale(0.4);
+  transform: translate(-11.5%, 3%) scale(0.4);
   position: absolute;
   top: calc(45% - 200px);
   left: calc(50% - 180px);

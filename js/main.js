@@ -96,6 +96,7 @@ tweenScene1
     x: '-40%',
     y: '5%',
     delay: 1,
+    ease: Power2.easeInOut,
   })
   .to('.section-01 .virus-01', 1, {
     autoAlpha: 0,
@@ -143,7 +144,26 @@ tweenScene1
     x: '10%',
     y: '-10%',
     delay: 1,
-  });
+    ease: Power2.easeInOut,
+  })
+  .to('.section-01 .virus-zoomed', 1, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to('.section-01 .virus-01', 1, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  })
+  .to(
+    ['.section-01 .virus-cross-section', '.section-01 .text-2'],
+    1,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  );
 
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
