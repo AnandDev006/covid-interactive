@@ -221,7 +221,7 @@
   opacity: 0.8;
 }
 
-.text-1 {
+.section-01 .text-1 {
   text-align: left;
   display: inline-block;
   max-width: 600px;
@@ -233,7 +233,7 @@
   line-height: 2rem;
 }
 
-.text-2 {
+.section-01 .text-2 {
   text-align: left;
   display: inline-block;
   opacity: 0;
@@ -276,7 +276,15 @@
     width: 216px;
   }
 
-  .section-01-text {
+  .section-01 .text-1 {
+    top: calc(80vh);
+    left: calc(50% - 150px);
+    max-width: 300px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .section-01 .text-2 {
     top: calc(80vh);
     left: calc(50% - 150px);
     max-width: 300px;

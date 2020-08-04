@@ -94,7 +94,6 @@ tweenScene1
   .to('.section-01 .virus-01', 1, {
     scale: 0.75,
     x: '-40%',
-    y: '5%',
     delay: 1,
     ease: Power2.easeInOut,
   })
@@ -170,8 +169,7 @@ const scene01 = new ScrollMagic.Scene({
   duration: 1000,
 })
   .on('progress', ({ progress }) => {
-    console.log(progress);
-    if (progress > 0.1) {
+    if (progress > 0.05) {
       if (spinNormalTween.isActive()) {
         spinNormalTween
           .repeat(0)
@@ -183,7 +181,7 @@ const scene01 = new ScrollMagic.Scene({
         virusPrimaryTranslateTween.forEach((t) => t.pause());
         Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
           TweenLite.to(v, TRANSLATION_TIME / 4, {
-            y: 0,
+            y: "5%",
             ease: Power1.easeInOut,
           })
         );
