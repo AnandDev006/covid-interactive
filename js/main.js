@@ -112,17 +112,17 @@ tweenScene1
   )
   .to(
     ['.section-01 .corona-h-1', '.section-01 .text-1'],
-    1,
+    0.3,
     {
       autoAlpha: 0,
       x: -10,
       ease: Power1.easeOut,
     },
-    '<'
+    '<+=0.5'
   )
   .fromTo(
     ['.section-01 .corona-h-2', '.section-01 .text-2'],
-    1,
+    0.3,
     {
       autoAlpha: 0,
       x: 10,
