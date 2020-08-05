@@ -118,7 +118,7 @@ tweenScene1
       x: -10,
       ease: Power1.easeOut,
     },
-    '<+=0.5'
+    '<+0.5'
   )
   .fromTo(
     ['.section-01 .corona-h-2', '.section-01 .text-2'],
@@ -162,6 +162,75 @@ tweenScene1
       ease: Power1.easeOut,
     },
     '<'
+  )
+  .to(
+    ['.section-01 .corona-h-2'],
+    0.3,
+    {
+      autoAlpha: 0,
+      x: -10,
+      ease: Power1.easeOut,
+    },
+    '<+0.5'
+  )
+  .fromTo(
+    ['.section-01 .corona-h-3'],
+    0.3,
+    {
+      autoAlpha: 0,
+      x: 10,
+    },
+    {
+      autoAlpha: 1,
+      x: 0,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to('.section-01 .virus-01', 1, {
+    scale: 0.25,
+    ease: Power1.easeIn,
+    delay: 1,
+  })
+  .fromTo(
+    ['.section-01 .label-virus'],
+    0.3,
+    {
+      autoAlpha: 0,
+      x: 10,
+    },
+    {
+      autoAlpha: 1,
+      x: 0,
+      ease: Power1.easeIn,
+    },
+    '<+0.8'
+  )
+  .fromTo(
+    '.section-01 .host-cell',
+    1,
+    {
+      x: 700,
+    },
+    {
+      x: 0,
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    }
+  )
+  .fromTo(
+    ['.section-01 .label-host-cell'],
+    0.3,
+    {
+      autoAlpha: 0,
+      x: 10,
+    },
+    {
+      autoAlpha: 1,
+      x: 0,
+      ease: Power1.easeIn,
+    },
+    '<+0.8'
   );
 
 const scene01 = new ScrollMagic.Scene({
@@ -181,7 +250,7 @@ const scene01 = new ScrollMagic.Scene({
         virusPrimaryTranslateTween.forEach((t) => t.pause());
         Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
           TweenLite.to(v, TRANSLATION_TIME / 4, {
-            y: "5%",
+            y: '5%',
             ease: Power1.easeInOut,
           })
         );

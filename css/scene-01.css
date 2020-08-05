@@ -15,6 +15,19 @@
   width: 100%;
   height: 800px;
   background: url('../images/01/01/bg.jpg');
+  overflow: hidden;
+}
+
+.section-01 .label-virus {
+  position: absolute;
+  left: 37.5%;
+  top: 39%;
+}
+
+.section-01 .label-host-cell {
+  position: absolute;
+  left: 75%;
+  top: 25%;
 }
 
 .virus-images {
@@ -25,18 +38,10 @@
   left: 0;
 }
 
-.section-01 .corona-h-1 {
+.section-01 .title {
   position: absolute;
   padding-top: 0;
   top: calc(80px - 0.5em);
-}
-
-.section-01 .corona-h-2 {
-  position: absolute;
-  padding-top: 0;
-  top: calc(80px - 0.5em);
-  opacity: 0;
-  transform: translateX(-50px);
 }
 
 /* PARTICLES */
@@ -221,22 +226,17 @@
   opacity: 0.8;
 }
 
-.section-01 .text-1 {
-  text-align: left;
-  display: inline-block;
-  max-width: 600px;
+.section-01 .host-cell {
   position: absolute;
-  left: calc(50% - 300px);
-  top: calc(80%);
-  transform: translate(0, -50%);
-  font-size: 1.5rem;
-  line-height: 2rem;
+  width: 750px;
+  transform-origin: center;
+  left: calc(78% - 375px);
+  top: 10%;
 }
 
-.section-01 .text-2 {
+.section-01 .description-text {
   text-align: left;
   display: inline-block;
-  opacity: 0;
   max-width: 600px;
   position: absolute;
   left: calc(50% - 300px);
@@ -253,9 +253,25 @@
     top: 10px;
   }
 
+  .section-01 .label-virus {
+    left: 21.5%;
+    top: 36%;
+  }
+
+  .section-01 .label-host-cell {
+    left: 70%;
+    top: 29%;
+  }
+
   .section-01 h1 {
     top: calc(65px - 0.5em);
     font-size: 2rem;
+  }
+
+  .section-01 .host-cell {
+    width: 375px;
+    left: calc(95% - 187.5px);
+    top: 20%;
   }
 
   .section-01 .virus-01 {
@@ -276,15 +292,7 @@
     width: 216px;
   }
 
-  .section-01 .text-1 {
-    top: calc(80vh);
-    left: calc(50% - 150px);
-    max-width: 300px;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  
-  .section-01 .text-2 {
+  .section-01 .description-text {
     top: calc(80vh);
     left: calc(50% - 150px);
     max-width: 300px;
