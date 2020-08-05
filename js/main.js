@@ -115,21 +115,16 @@ tweenScene1
     0.3,
     {
       autoAlpha: 0,
-      x: -10,
       ease: Power1.easeOut,
     },
     '<+0.5'
   )
-  .fromTo(
+  .to(
     ['.section-01 .corona-h-2', '.section-01 .text-2'],
     0.3,
-    {
-      autoAlpha: 0,
-      x: 10,
-    },
+
     {
       autoAlpha: 1,
-      x: 0,
       ease: Power1.easeIn,
     },
     '<'
@@ -142,47 +137,42 @@ tweenScene1
     scale: 1,
     x: '10%',
     y: '-10%',
-    delay: 1,
+    delay: 0.5,
     ease: Power2.easeInOut,
   })
   .to('.section-01 .virus-zoomed', 1, {
     autoAlpha: 0,
     ease: Power1.easeOut,
-    delay: 1,
+    delay: 0.5,
+  })
+
+  .to(['.section-01 .text-2', '.section-01 .background-particles'], 1, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+  })
+  .to('.section-01 .virus-cross-section', 1, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
   })
   .to('.section-01 .virus-01', 1, {
     autoAlpha: 1,
     ease: Power1.easeIn,
-  })
-  .to(
-    ['.section-01 .virus-cross-section', '.section-01 .text-2'],
-    1,
-    {
-      autoAlpha: 0,
-      ease: Power1.easeOut,
-    },
-    '<'
-  )
+  },"<")
   .to(
     ['.section-01 .corona-h-2'],
     0.3,
     {
       autoAlpha: 0,
-      x: -10,
       ease: Power1.easeOut,
     },
     '<+0.5'
   )
-  .fromTo(
+  .to(
     ['.section-01 .corona-h-3'],
     0.3,
-    {
-      autoAlpha: 0,
-      x: 10,
-    },
+
     {
       autoAlpha: 1,
-      x: 0,
       ease: Power1.easeIn,
     },
     '<'
@@ -192,16 +182,11 @@ tweenScene1
     ease: Power1.easeIn,
     delay: 1,
   })
-  .fromTo(
+  .to(
     ['.section-01 .label-virus'],
     0.3,
     {
-      autoAlpha: 0,
-      x: 10,
-    },
-    {
-      autoAlpha: 1,
-      x: 0,
+      autoAlpha: 0.5,
       ease: Power1.easeIn,
     },
     '<+0.8'
@@ -218,16 +203,11 @@ tweenScene1
       ease: Power1.easeIn,
     }
   )
-  .fromTo(
+  .to(
     ['.section-01 .label-host-cell'],
     0.3,
     {
-      autoAlpha: 0,
-      x: 10,
-    },
-    {
-      autoAlpha: 1,
-      x: 0,
+      autoAlpha: 0.5,
       ease: Power1.easeIn,
     },
     '<+0.8'
@@ -235,7 +215,7 @@ tweenScene1
 
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
-  duration: 1000,
+  duration: 3000,
 })
   .on('progress', ({ progress }) => {
     if (progress > 0.05) {

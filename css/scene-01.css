@@ -18,18 +18,6 @@
   overflow: hidden;
 }
 
-.section-01 .label-virus {
-  position: absolute;
-  left: 37.5%;
-  top: 39%;
-}
-
-.section-01 .label-host-cell {
-  position: absolute;
-  left: 75%;
-  top: 25%;
-}
-
 .virus-images {
   position: inherit;
   width: 100%;
@@ -42,6 +30,21 @@
   position: absolute;
   padding-top: 0;
   top: calc(80px - 0.5em);
+}
+
+.section-01 .label-virus {
+  transform-origin: center;
+  transform: translate(-40%, 5%);
+  position: absolute;
+  top: calc(45% - 50px);
+  left: calc(50% - 200px + 35px);
+}
+
+.section-01 .label-host-cell {
+  position: absolute;
+  transform-origin: center;
+  left: calc(78% - 50px);
+  top: 25%;
 }
 
 /* PARTICLES */
@@ -254,13 +257,13 @@
   }
 
   .section-01 .label-virus {
-    left: 21.5%;
-    top: 36%;
+    top: calc(40vh);
+    left: calc(50% - 120px);
   }
 
   .section-01 .label-host-cell {
-    left: 70%;
-    top: 29%;
+    left: 75%;
+    top: 28%;
   }
 
   .section-01 h1 {
