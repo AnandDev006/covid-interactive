@@ -47,6 +47,21 @@
   top: 25%;
 }
 
+.section-01 .label-host-cell-with-receptor {
+  position: absolute;
+  transform-origin: center;
+  left: calc(78% - 400px);
+  top: 23%;
+  width: 170px;
+}
+
+.section-01 .host-cell-with-receptor-label-arrow {
+  position: absolute;
+  transform-origin: center;
+  left: calc(78% - 315px);
+  top: 31%;
+}
+
 /* PARTICLES */
 
 .section-01 .particle-1-01 {
@@ -140,6 +155,14 @@
   top: calc(45% - 200px);
   left: calc(50% - 180px);
   width: 360px;
+}
+
+.section-01 .virus-tiny {
+  position: absolute;
+  transform-origin: center;
+  transform: translate(-35%, 15%);
+  top: calc(45%);
+  left: calc(50% - 200px + 35px);
 }
 
 .section-01 .virus-01 {
@@ -237,6 +260,15 @@
   top: 10%;
 }
 
+.section-01 .host-cell-with-receptors {
+  position: absolute;
+  transform: translateY(-18%) scale(0.53);
+  transform-origin: center;
+  left: calc(78% - 375px);
+  top: 10%;
+  width: 750px;
+}
+
 .section-01 .description-text {
   text-align: left;
   display: inline-block;
@@ -256,31 +288,43 @@
     top: 10px;
   }
 
-  .section-01 .label-virus {
-    top: calc(40vh);
-    left: calc(50% - 120px);
-  }
-
-  .section-01 .label-host-cell {
-    left: 75%;
-    top: 28%;
-  }
-
   .section-01 h1 {
     top: calc(65px - 0.5em);
     font-size: 2rem;
   }
 
-  .section-01 .host-cell {
-    width: 375px;
-    left: calc(95% - 187.5px);
-    top: 20%;
+  .section-01 .label-virus {
+    top: 38vh;
+    left: 24%;
   }
 
-  .section-01 .virus-01 {
-    top: calc(-100px + 30vh);
-    left: calc(50% - 120px);
-    width: 240px;
+  .section-01 .label-host-cell {
+    left: calc(95% - 100px);
+    top: 32vh;
+  }
+
+  .section-01 .label-host-cell-with-receptor {
+    left: 10%;
+    top: 25vh;
+    width: 170px;
+  }
+
+  .section-01 .host-cell-with-receptor-label-arrow {
+    left: 45%;
+    top: 35vh;
+    width: 85px;
+  }
+
+  .section-01 .host-cell {
+    left: 45%;
+    top: 20vh;
+    width: 375px;
+  }
+
+  .section-01 .host-cell-with-receptors {
+    left: 45%;
+    top: 20vh;
+    width: 375px;
   }
 
   .section-01 .virus-cross-section {
@@ -293,6 +337,18 @@
     top: calc(-100px + 30vh);
     left: calc(50% - 108px);
     width: 216px;
+  }
+
+  .section-01 .virus-tiny {
+    top: calc(33.15vh);
+    left: calc(50% - 98px);
+    width: 15px;
+  }
+
+  .section-01 .virus-01 {
+    top: calc(-100px + 30vh);
+    left: calc(50% - 120px);
+    width: 240px;
   }
 
   .section-01 .description-text {

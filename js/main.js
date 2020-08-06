@@ -86,24 +86,28 @@ const particlesRandomizeTween = Array.from(document.querySelectorAll('.section-0
 
 const controller = new ScrollMagic.Controller();
 
+const CROSS_FADE_IMAGE = 1;
+const CROSS_FADE_TEXT = 0.3;
+const TRANSFORM = 1;
+
 // SCENE 1 START
 
 const tweenScene1 = new TimelineLite();
 
 tweenScene1
-  .to('.section-01 .virus-01', 1, {
+  .to('.section-01 .virus-01', TRANSFORM, {
     scale: 0.75,
     x: '-40%',
-    delay: 1,
+    delay: 0.5,
     ease: Power2.easeInOut,
   })
-  .to('.section-01 .virus-01', 1, {
+  .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power1.easeOut,
   })
   .to(
     '.section-01 .virus-cross-section',
-    1,
+    CROSS_FADE_IMAGE,
     {
       autoAlpha: 1,
       ease: Power1.easeIn,
@@ -112,7 +116,7 @@ tweenScene1
   )
   .to(
     ['.section-01 .corona-h-1', '.section-01 .text-1'],
-    0.3,
+    CROSS_FADE_TEXT,
     {
       autoAlpha: 0,
       ease: Power1.easeOut,
@@ -121,46 +125,49 @@ tweenScene1
   )
   .to(
     ['.section-01 .corona-h-2', '.section-01 .text-2'],
-    0.3,
-
+    CROSS_FADE_TEXT,
     {
       autoAlpha: 1,
       ease: Power1.easeIn,
     },
     '<'
   )
-  .to('.section-01 .virus-zoomed', 1, {
+  .to('.section-01 .virus-zoomed', CROSS_FADE_IMAGE, {
     autoAlpha: 1,
     ease: Power1.easeIn,
   })
-  .to('.section-01 .virus-zoomed', 1, {
+  .to('.section-01 .virus-zoomed', TRANSFORM, {
     scale: 1,
     x: '10%',
     y: '-10%',
     delay: 0.5,
     ease: Power2.easeInOut,
   })
-  .to('.section-01 .virus-zoomed', 1, {
+  .to('.section-01 .virus-zoomed', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power1.easeOut,
     delay: 0.5,
   })
-
-  .to(['.section-01 .text-2', '.section-01 .background-particles'], 1, {
+  .to(['.section-01 .text-2', '.section-01 .background-particles'], CROSS_FADE_TEXT, {
     autoAlpha: 0,
     ease: Power1.easeOut,
   })
-  .to('.section-01 .virus-cross-section', 1, {
+  .to('.section-01 .virus-cross-section', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power1.easeOut,
   })
-  .to('.section-01 .virus-01', 1, {
-    autoAlpha: 1,
-    ease: Power1.easeIn,
-  },"<")
   .to(
-    ['.section-01 .corona-h-2'],
-    0.3,
+    '.section-01 .virus-01',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .corona-h-2',
+    CROSS_FADE_TEXT,
     {
       autoAlpha: 0,
       ease: Power1.easeOut,
@@ -168,8 +175,8 @@ tweenScene1
     '<+0.5'
   )
   .to(
-    ['.section-01 .corona-h-3'],
-    0.3,
+    '.section-01 .corona-h-3',
+    CROSS_FADE_TEXT,
 
     {
       autoAlpha: 1,
@@ -177,14 +184,14 @@ tweenScene1
     },
     '<'
   )
-  .to('.section-01 .virus-01', 1, {
+  .to('.section-01 .virus-01', TRANSFORM, {
     scale: 0.25,
     ease: Power1.easeIn,
-    delay: 1,
+    delay: 0.5,
   })
   .to(
     ['.section-01 .label-virus'],
-    0.3,
+    CROSS_FADE_TEXT,
     {
       autoAlpha: 0.5,
       ease: Power1.easeIn,
@@ -193,7 +200,7 @@ tweenScene1
   )
   .fromTo(
     '.section-01 .host-cell',
-    1,
+    TRANSFORM,
     {
       x: 700,
     },
@@ -205,12 +212,71 @@ tweenScene1
   )
   .to(
     ['.section-01 .label-host-cell'],
-    0.3,
+    CROSS_FADE_TEXT,
     {
       autoAlpha: 0.5,
       ease: Power1.easeIn,
     },
     '<+0.8'
+  )
+  .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
+    scale: 0.075,
+    autoAlpha: 0.2,
+    ease: Power1.easeIn,
+  })
+  .to(
+    '.section-01 .host-cell',
+    TRANSFORM,
+    {
+      scale: 0.53,
+      y: '-18%',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .virus-tiny',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.3'
+  )
+  .to('.section-01 .text-2', CROSS_FADE_TEXT, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-01 .text-3',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(['.section-01 .host-cell-with-receptors', '.section-01 .host-cell-with-receptor-label-arrow'], CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  })
+  .to(
+    '.section-01 .label-host-cell-with-receptor',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0.5,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .host-cell',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
   );
 
 const scene01 = new ScrollMagic.Scene({
