@@ -97,7 +97,8 @@ const tweenScene1 = new TimelineLite();
 tweenScene1
   .to('.section-01 .virus-01', TRANSFORM, {
     scale: 0.75,
-    x: '-40%',
+    left: '-=20%',
+    top:"+=5%",
     delay: 0.5,
     ease: Power2.easeInOut,
   })
@@ -138,8 +139,8 @@ tweenScene1
   })
   .to('.section-01 .virus-zoomed', TRANSFORM, {
     scale: 1,
-    x: '10%',
-    y: '-10%',
+    left: '+=10%',
+    top: '-=5%',
     delay: 0.5,
     ease: Power2.easeInOut,
   })
@@ -221,15 +222,15 @@ tweenScene1
   )
   .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
     scale: 0.075,
-    autoAlpha: 0.2,
+    autoAlpha: 0,
     ease: Power1.easeIn,
   })
   .to(
     '.section-01 .host-cell',
     TRANSFORM,
     {
+      transformOrigin: 'center top',
       scale: 0.53,
-      y: '-18%',
       ease: Power1.easeIn,
     },
     '<'
@@ -259,6 +260,7 @@ tweenScene1
   .to(['.section-01 .host-cell-with-receptors', '.section-01 .host-cell-with-receptor-label-arrow'], CROSS_FADE_IMAGE, {
     autoAlpha: 1,
     ease: Power1.easeIn,
+    delay: 0.5,
   })
   .to(
     '.section-01 .label-host-cell-with-receptor',
@@ -284,7 +286,7 @@ const scene01 = new ScrollMagic.Scene({
   duration: 3000,
 })
   .on('progress', ({ progress }) => {
-    if (progress > 0.05) {
+    if (progress > 0.01) {
       if (spinNormalTween.isActive()) {
         spinNormalTween
           .repeat(0)
@@ -296,7 +298,7 @@ const scene01 = new ScrollMagic.Scene({
         virusPrimaryTranslateTween.forEach((t) => t.pause());
         Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
           TweenLite.to(v, TRANSLATION_TIME / 4, {
-            y: '5%',
+            y: 0,
             ease: Power1.easeInOut,
           })
         );
