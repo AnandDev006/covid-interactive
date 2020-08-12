@@ -18,6 +18,11 @@ const TRANSLATION_TIME = 2;
 const TRAVEL_DISTANCE = 50;
 const PARTICLE_RANDOM_PATH_TIME = 5;
 
+const spinCog = new TweenLite.to('.spin-cog', SPIN_TIME, {
+  rotation: 360,
+  ease: Linear.easeNone,
+  repeat: -1,
+});
 const spinNormalTween = new TweenLite.to('.spin-normal', SPIN_TIME, {
   rotation: 360,
   ease: Linear.easeNone,
@@ -96,9 +101,10 @@ const tweenScene1 = new TimelineLite();
 
 tweenScene1
   .to('.section-01 .virus-01', TRANSFORM, {
+    // 1/2 Start
     scale: 0.75,
     left: '-=20%',
-    top:"+=5%",
+    top: '+=5%',
     delay: 0.5,
     ease: Power2.easeInOut,
   })
@@ -143,7 +149,7 @@ tweenScene1
     top: '-=5%',
     delay: 0.5,
     ease: Power2.easeInOut,
-  })
+  }) // 1/2 End
   .to('.section-01 .virus-zoomed', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power1.easeOut,
@@ -186,8 +192,9 @@ tweenScene1
     '<'
   )
   .to('.section-01 .virus-01', TRANSFORM, {
+    // 1/3 Start
     scale: 0.25,
-    ease: Power1.easeIn,
+    ease: Power2.easeInOut,
     delay: 0.5,
   })
   .to(
@@ -208,7 +215,7 @@ tweenScene1
     {
       x: 0,
       autoAlpha: 1,
-      ease: Power1.easeIn,
+      ease: Power2.easeInOut,
     }
   )
   .to(
@@ -219,8 +226,9 @@ tweenScene1
       ease: Power1.easeIn,
     },
     '<+0.8'
-  )
+  ) // 1/3 End
   .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
+    // 1/4 Start
     scale: 0.075,
     autoAlpha: 0,
     ease: Power1.easeIn,
@@ -231,7 +239,7 @@ tweenScene1
     {
       transformOrigin: 'center top',
       scale: 0.53,
-      ease: Power1.easeIn,
+      ease: Power2.easeInOut,
     },
     '<'
   )
@@ -279,11 +287,194 @@ tweenScene1
       ease: Power1.easeOut,
     },
     '<'
+  ) // 1/4 End
+  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
+    // 1/5 Start
+    autoAlpha: 0.8,
+    left: '+=33.9%',
+    top: '+=3.4%',
+    ease: Power2.easeInOut,
+    delay: 1,
+  })
+  .to(
+    '.section-01 .virus-tiny',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0.8,
+      ease: Power2.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .label-virus',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
+    left: '+=1.5%',
+    ease: Power2.easeInOut,
+    delay: 0.5,
+  })
+  .to(
+    '.section-01 .host-cell-fusing',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    ['.section-01 .label-host-cell-with-receptor', '.section-01 .host-cell-with-receptor-label-arrow', '.section-01 .label-host-cell', '.section-01 .text-3'],
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .text-4',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .label-virus-envelope-fuses',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0.5,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .host-cell-with-receptors',
+    0.1,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '-=0.1'
+  )
+  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
+    left: '+=0.8%',
+    ease: Power2.easeInOut,
+    delay: 0.5,
+  })
+  .to(
+    '.section-01 .host-cell-fused',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .host-cell-fusing',
+    0.1,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '-=0.1'
+  ) // 1/5 End
+  .to(['.section-01 .host-cell-fused', '.section-01 .host-cell-machinery-base', '.section-01 .host-cell-machinery-lever'], TRANSFORM, {
+    // 1/6 Start
+    scale: 1,
+    left: '-=25%',
+    top: '-=25%',
+    autoAlpha: 0,
+    ease: Power2.easeInOut,
+    delay: 0.5,
+  })
+  .to(
+    '.section-01 .label-virus-envelope-fuses',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .host-cell-fused-zoomed',
+    TRANSFORM,
+    {
+      scale: 1,
+      left: '-=25%',
+      top: '-=25%',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    ['.section-01 .virus-tiny', '.section-01 .rna'],
+    TRANSFORM,
+    {
+      left: '-=35.2%',
+      top: '+=4.6%',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .virus-tiny',
+    TRANSFORM,
+    {
+      scale: 1.886,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to('.section-01 .host-cell-fused-zoomed', CROSS_FADE_IMAGE, {
+    autoAlpha: 0.2,
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-01 .rna',
+    CROSS_FADE_IMAGE,
+    {
+      scaleX: 1,
+      ease: Power1.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    [
+      '.section-01 .host-cell-machinery-base',
+      '.section-01 .host-cell-machinery-lever',
+      '.section-01 .host-cell-machinery-cog-1',
+      '.section-01 .host-cell-machinery-cog-2',
+      '.section-01 .host-cell-machinery-cog-3',
+      '.section-01 .host-cell-machinery-cog-4',
+      '.section-01 .host-cell-machinery-cog-5',
+      '.section-01 .host-cell-machinery-cog-6',
+      '.section-01 .host-cell-machinery-cog-7',
+      '.section-01 .host-cell-machinery-cog-8',
+      '.section-01 .host-cell-machinery-cog-9',
+    ],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
   );
 
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
   duration: 3000,
+  
 })
   .on('progress', ({ progress }) => {
     if (progress > 0.01) {
