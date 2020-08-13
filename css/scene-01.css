@@ -30,64 +30,79 @@
 .section-01 .title {
   position: absolute;
   padding-top: 0;
-  top: calc(80px - 0.5em);
+  top: 80px;
+  transform: translateY(-50%);
 }
 
 .section-01 .label-virus {
   position: absolute;
+  top: calc(45% - 75px);
+  left: 38%;
   transform-origin: center;
-  top: 38%;
-  left: 28%;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .label-host-cell {
   position: absolute;
+  top: calc(65% - 375px);
+  left: 75%;
   transform-origin: center;
-  left: 73%;
-  top: 25%;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .label-host-cell-with-receptor {
   position: absolute;
+  left: calc(61% - 315px);
+  top: calc(40% - 150px);
   transform-origin: center;
-  left: 50%;
-  top: 25%;
-  width: 170px;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .label-virus-envelope-fuses {
   position: absolute;
   transform-origin: center;
-  top: 27%;
-  left: 45%;
+  top: 18%;
+  left: 48%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .host-cell-with-receptor-label-arrow {
   position: absolute;
+  left: calc(61% - 250px);
+  top: calc(40% - 55px);
   transform-origin: center;
-  left: 56%;
-  top: 33%;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .host-cell {
   position: absolute;
+  top: 65%;
+  left: 120%;
   transform-origin: center;
-  top: 20%;
-  left: calc(78% - 375px);
+  transform: translate(-50%, -50%);
   width: 750px;
 }
 
 .section-01 .host-cell-with-receptors,
 .section-01 .host-cell-fusing,
 .section-01 .host-cell-fused,
-.section-01 .host-cell-fused-zoomed,
+.section-01 .host-cell-fused-zoomed {
+  position: absolute;
+  top: 40%;
+  left: 61%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0.53);
+  width: 750px;
+}
+
 .section-01 .host-cell-machinery-base,
 .section-01 .host-cell-machinery-lever {
   position: absolute;
-  transform-origin: center top;
-  transform: scale(0.53);
-  top: calc(20%);
-  left: calc(78% - 375px);
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
   width: 750px;
 }
 
@@ -101,111 +116,113 @@
 .section-01 .host-cell-machinery-cog-8,
 .section-01 .host-cell-machinery-cog-9 {
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
 }
 
 .section-01 .host-cell-machinery-cog-1 {
-  left: calc(53.7% - 80px);
-  top: calc(54% - 80px);
+  top: calc(50% + -20px);
+  left: calc(50% + 10px);
   width: 160px;
 }
 .section-01 .host-cell-machinery-cog-2 {
-  left: calc(64.6% - 28px);
-  top: calc(43.5% - 28px);
+  top: calc(50% + -82px);
+  left: calc(50% + 168px);
   width: 56px;
 }
 .section-01 .host-cell-machinery-cog-3 {
-  left: calc(64.6% - 77.5px - 4%);
-  top: calc(43.5% - 77.5px + 15%);
+  top: calc(50% + 10px);
+  left: calc(50% + 110px);
   width: 155px;
 }
 .section-01 .host-cell-machinery-cog-4 {
-  left: calc(53.7% - 65.5px - 5%);
-  top: calc(54% - 65.5px + 9%);
+  top: calc(50% + 50px);
+  left: calc(50% + -80px);
   width: 131px;
 }
 .section-01 .host-cell-machinery-cog-5 {
-  left: calc(64.6% - 62px);
-  top: calc(43.5% - 62px);
+  top: calc(50% + -82px);
+  left: calc(50% + 168px);
   width: 124px;
 }
 .section-01 .host-cell-machinery-cog-6 {
-  left: calc(64.6% - 47px + 4%);
-  top: calc(43.5% - 47px + 16%);
+  top: calc(50% + 18px);
+  left: calc(50% + 228px);
   width: 94px;
 }
 .section-01 .host-cell-machinery-cog-7 {
-  left: calc(53.7% - 22.5px + 4%);
-  top: calc(54% - 22.5px - 10%);
+  top: calc(50% + -80px);
+  left: calc(50% + 60px);
   width: 45px;
 }
 .section-01 .host-cell-machinery-cog-8 {
-  left: calc(53.7% - 47px - 11%);
-  top: calc(54% - 47px - 2%);
+  top: calc(50% + -108px);
+  left: calc(50% + 0px);
   width: 94px;
 }
 .section-01 .host-cell-machinery-cog-9 {
-  left: calc(53.7% - 47px - 1%);
-  top: calc(54% - 47px - 14.5%);
+  top: calc(50% + -30px);
+  left: calc(50% + -150px);
   width: 94px;
 }
 
 /* VIRUS */
 
 .section-01 .virus-cross-section {
-  opacity: 0;
-  transform-origin: center;
-  transform: scale(0.75);
   position: absolute;
-  top: calc(45% - 200px + 5%);
-  left: calc(50% - 200px - 20%);
+  top: 50%;
+  left: 41.25%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0.75);
   width: 400px;
 }
 
 .section-01 .virus-zoomed {
-  opacity: 0;
-  transform-origin: center;
-  transform: scale(0.4);
   position: absolute;
-  top: calc(45% - 180px);
-  left: calc(50% - 180px - 11.8%);
+  top: calc(50% - 30px);
+  left: calc(41.25% + 118px);
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0.4);
   width: 360px;
 }
 
 .section-01 .virus-tiny {
   position: absolute;
+  top: 45%;
+  left: 38%;
   transform-origin: center;
-  top: calc(45% - 15px + 5%);
-  left: calc(50% - 15px - 20%);
+  transform: translate(-50%, -50%);
   width: 30px;
   z-index: 1;
 }
 
 .section-01 .rna {
   position: absolute;
-  transform-origin: left;
-  transform: scaleX(0);
-  top: calc(45% - 15px + 5%);
-  left: calc(50% - 15px - 17.5%);
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  top: 52%;
+  left: 36%;
+  width: 200px;
+  clip: rect(0px 0px 30px 0px);
   z-index: 1;
 }
 
 .section-01 .virus-01 {
   position: absolute;
-  top: calc(45% - 200px);
-  left: calc(50% - 200px);
+  top: 45%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
   width: 400px;
 }
-
 .section-01 .virus-02 {
   position: absolute;
   top: 0;
   right: 15%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-03 {
   position: absolute;
   bottom: 15%;
@@ -213,68 +230,52 @@
 
   opacity: 0.8;
 }
-
 .section-01 .virus-04 {
   position: absolute;
   top: 30%;
   left: 0;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-05 {
   position: absolute;
   top: 45%;
   left: 25%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-06 {
   position: absolute;
   top: 5%;
   right: 0;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-07 {
   position: absolute;
   bottom: 15%;
   right: 5%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-08 {
   position: absolute;
   bottom: 10%;
   left: 10%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-09 {
   position: absolute;
   top: 10%;
   left: 20%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-10 {
   position: absolute;
   top: 30%;
   right: 25%;
-
   opacity: 0.8;
 }
-
 .section-01 .virus-11 {
   position: absolute;
   top: 40%;
   right: 10%;
-
   opacity: 0.8;
 }
 
@@ -353,14 +354,15 @@
 
 .section-01 .description-text {
   text-align: left;
-  display: inline-block;
+  width: 100%;
   max-width: 600px;
   position: absolute;
-  left: calc(50% - 300px);
-  top: calc(80%);
-  transform: translate(0, -50%);
   font-size: 1.5rem;
   line-height: 2rem;
+  left: 50%;
+  top: 80%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -376,70 +378,128 @@
   }
 
   .section-01 .label-virus {
-    top: 38%;
-    left: 23%;
+    top: calc(45% - 40px);
+    left: 25%;
   }
 
   .section-01 .label-host-cell {
-    left: 72%;
-    top: 25%;
+    top: calc(50% - 190px);
+    left: calc(88% - 90px);
   }
 
   .section-01 .label-host-cell-with-receptor {
-    left: 23%;
-    top: 20%;
-    width: 170px;
+    left: calc(76% - 160px);
+    top: calc(40% - 80px);
   }
 
   .section-01 .host-cell-with-receptor-label-arrow {
-    left: 46%;
-    top: 27%;
-    width: 85px;
+    left: calc(76% - 128px);
+    top: calc(40% - 20px);
+    width: 60px;
   }
 
   .section-01 .host-cell {
-    left: calc(90% - 187.5px);
-    top: 20%;
+    top: 50%;
+    left: 120%;
     width: 375px;
   }
 
   .section-01 .host-cell-with-receptors,
   .section-01 .host-cell-fusing,
   .section-01 .host-cell-fused,
-  .section-01 .host-cell-fused-zoomed,
-  .section-01 .host-cell-machinery-base,
-  .section-01 .host-cell-machinery-lever {
-    left: calc(90% - 187.5px);
+  .section-01 .host-cell-fused-zoomed {
+    top: 40%;
+    left: 76%;
     width: 375px;
   }
 
+  .section-01 .host-cell-machinery-base,
+  .section-01 .host-cell-machinery-lever {
+    position: absolute;
+    top: 40%;
+    left: 63%;
+    width: 375px;
+  }
+
+  .section-01 .host-cell-machinery-cog-1 {
+    top: calc(40% + -10px);
+    left: calc(63% + 5px);
+    width: 80px;
+  }
+  .section-01 .host-cell-machinery-cog-2 {
+    top: calc(40% + -41px);
+    left: calc(63% + 83px);
+    width: 28px;
+  }
+  .section-01 .host-cell-machinery-cog-3 {
+    top: calc(40% + 4px);
+    left: calc(63% + 55px);
+    width: 77.5px;
+  }
+  .section-01 .host-cell-machinery-cog-4 {
+    top: calc(40% + 20px);
+    left: calc(63% + -35px);
+    width: 65.5px;
+  }
+  .section-01 .host-cell-machinery-cog-5 {
+    top: calc(40% + -41px);
+    left: calc(63% + 83px);
+    width: 62px;
+  }
+  .section-01 .host-cell-machinery-cog-6 {
+    top: calc(40% + 10px);
+    left: calc(63% + 114px);
+    width: 47px;
+  }
+  .section-01 .host-cell-machinery-cog-7 {
+    top: calc(40% + -40px);
+    left: calc(63% + 30px);
+    width: 22.5px;
+  }
+  .section-01 .host-cell-machinery-cog-8 {
+    top: calc(40% + -15px);
+    left: calc(63% + -75px);
+    width: 47px;
+  }
+  .section-01 .host-cell-machinery-cog-9 {
+    top: calc(40% + -50px);
+    left: calc(63% + 0px);
+    width: 47px;
+  }
+
   .section-01 .virus-cross-section {
-    top: calc(40% - 120px + 5%);
-    left: calc(50% - 120px - 20%);
+    top: 41%;
     width: 240px;
   }
 
   .section-01 .virus-zoomed {
-    top: calc(42% - 108px);
-    left: calc(59% - 108px - 11.7%);
+    top: calc(41% - 17px);
+    left: calc(41.25% + 70px);
     width: 216px;
   }
 
   .section-01 .virus-tiny {
-    top: calc(40% - 7.5px + 5%);
-    left: calc(50% - 7.5px - 20%);
+    top: 45%;
+    left: 25%;
     width: 15px;
   }
 
+  .section-01 .rna {
+    top: 41%;
+    left: calc(41.25% + -20px);
+    clip: rect(0px 0px 30px 0px);
+    width: 100px;
+  }
+
   .section-01 .virus-01 {
-    top: calc(40% - 120px);
-    left: calc(50% - 120px);
+    top: 40%;
+    left: 50%;
     width: 240px;
   }
 
   .section-01 .description-text {
     top: calc(80vh);
-    left: calc(50% - 150px);
+
     max-width: 300px;
     font-size: 1.5rem;
     line-height: 2rem;
