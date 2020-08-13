@@ -1,5 +1,8 @@
 gsap.registerPlugin(MotionPathPlugin);
 
+const animating = true;
+const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
 /* Logo */
 $(window).scroll(function () {
   if ($(this).scrollTop() > 50) {
@@ -18,72 +21,88 @@ const TRANSLATION_TIME = 2;
 const TRAVEL_DISTANCE = 50;
 const PARTICLE_RANDOM_PATH_TIME = 5;
 
-const spinCog = new TweenLite.to('.spin-cog', SPIN_TIME, {
-  rotation: 360,
-  ease: Linear.easeNone,
-  repeat: -1,
-});
-const spinNormalTween = new TweenLite.to('.spin-normal', SPIN_TIME, {
-  rotation: 360,
-  ease: Linear.easeNone,
-  repeat: -1,
-});
-const spinSlowTween = new TweenLite.to('.spin-slow', SPIN_TIME / 0.6, {
-  rotation: 360,
-  ease: Linear.easeNone,
-  repeat: -1,
-});
-
-const spinSlowerTween = new TweenLite.to('.spin-slower', SPIN_TIME / 0.3, {
-  rotation: 360,
-  ease: Linear.easeNone,
-  repeat: -1,
-});
-
-const virusPrimaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
-  TweenLite.to(v, TRANSLATION_TIME, {
-    translateY: -TRAVEL_DISTANCE,
-    ease: Power1.easeInOut,
+if (animating) {
+  var spinCogCW = new TweenLite.to('.spin-cog-cw', SPIN_TIME, {
+    rotation: 360,
+    ease: Linear.easeNone,
+    transformOrigin: 'center center',
     repeat: -1,
-    yoyo: true,
-  })
-);
-
-const virusSecondaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-secondary')).map((v) =>
-  TweenLite.to(v, TRANSLATION_TIME, {
-    translateY: -TRAVEL_DISTANCE * 0.8,
-    ease: Power1.easeInOut,
+  });
+  var spinCogCCW = new TweenLite.to('.spin-cog-ccw', SPIN_TIME, {
+    rotation: -360,
+    ease: Linear.easeNone,
+    transformOrigin: 'center center',
     repeat: -1,
-    yoyo: true,
-  })
-    .progress(Math.random())
-    .play()
-);
-
-const virusTertiaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v) =>
-  TweenLite.to(v, TRANSLATION_TIME, {
-    translateY: -TRAVEL_DISTANCE * 0.6,
-    ease: Power1.easeInOut,
+  });
+  var spinNormalTween = new TweenLite.to('.spin-normal', SPIN_TIME, {
+    rotation: 360,
+    ease: Linear.easeNone,
+    transformOrigin: 'center center',
     repeat: -1,
-    yoyo: true,
-  })
-    .progress(Math.random())
-    .play()
-);
-
-const particlesRandomizeTween = Array.from(document.querySelectorAll('.section-01 .particles')).map((p) =>
-  TweenLite.to(p, PARTICLE_RANDOM_PATH_TIME, {
-    motionPath: {
-      path: 'M-2.5,1.09C-20.55,7.55-23,15.02-23,26c0,38,36,24,44,34s11,27,27,36c23.47,13.2,45.2-6.09,43-27  c-2-19-10.88-36.8,3-45c22-13,26-42,7-54c-23.22-14.66-40.13-2.28-49,18C45,4,18.55-6.64,0,0',
-      alignOrigin: [0.5, 0.5],
-      autoRotate: true,
-    },
-    ease: Power1.easeInOut,
+  });
+  var spinSlowTween = new TweenLite.to('.spin-slow', SPIN_TIME / 0.6, {
+    rotation: 360,
+    ease: Linear.easeNone,
+    transformOrigin: 'center center',
     repeat: -1,
-  })
-    .progress(Math.random())
-    .play()
-);
+  });
+
+  var spinSlowerTween = new TweenLite.to('.spin-slower', SPIN_TIME / 0.3, {
+    rotation: 360,
+    ease: Linear.easeNone,
+    transformOrigin: 'center center',
+    repeat: -1,
+  });
+
+  var virusPrimaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
+    TweenLite.to(v, TRANSLATION_TIME, {
+      translateY: -TRAVEL_DISTANCE,
+      ease: Power1.easeInOut,
+      transformOrigin: 'center center',
+      repeat: -1,
+      yoyo: true,
+    })
+  );
+
+  var virusSecondaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-secondary')).map((v) =>
+    TweenLite.to(v, TRANSLATION_TIME, {
+      translateY: -TRAVEL_DISTANCE * 0.8,
+      ease: Power1.easeInOut,
+      transformOrigin: 'center center',
+      repeat: -1,
+      yoyo: true,
+    })
+      .progress(Math.random())
+      .play()
+  );
+
+  var virusTertiaryTranslateTween = Array.from(document.querySelectorAll('.section-01 .virus-tertiary')).forEach((v) =>
+    TweenLite.to(v, TRANSLATION_TIME, {
+      translateY: -TRAVEL_DISTANCE * 0.6,
+      ease: Power1.easeInOut,
+      transformOrigin: 'center center',
+      repeat: -1,
+      yoyo: true,
+    })
+      .progress(Math.random())
+      .play()
+  );
+
+  var particlesRandomizeTween = Array.from(document.querySelectorAll('.section-01 .particles')).map((p) =>
+    TweenLite.to(p, PARTICLE_RANDOM_PATH_TIME, {
+      motionPath: {
+        path:
+          'M-2.5,1.09C-20.55,7.55-23,15.02-23,26c0,38,36,24,44,34s11,27,27,36c23.47,13.2,45.2-6.09,43-27  c-2-19-10.88-36.8,3-45c22-13,26-42,7-54c-23.22-14.66-40.13-2.28-49,18C45,4,18.55-6.64,0,0',
+        autoRotate: true,
+      },
+      ease: Power1.easeInOut,
+      transformOrigin: 'center center',
+      repeat: -1,
+    })
+      .progress(Math.random())
+      .play()
+  );
+}
 
 // PAGE INITIALIZE END
 
@@ -103,8 +122,8 @@ tweenScene1
   .to('.section-01 .virus-01', TRANSFORM, {
     // 1/2 Start
     scale: 0.75,
-    left: '-=20%',
-    top: '+=5%',
+    left: '41.25%',
+    top: isMobile ? '41%' : '50%',
     delay: 0.5,
     ease: Power2.easeInOut,
   })
@@ -145,8 +164,8 @@ tweenScene1
   })
   .to('.section-01 .virus-zoomed', TRANSFORM, {
     scale: 1,
-    left: '+=10%',
-    top: '-=5%',
+    left: '56.5%',
+    top: isMobile ? '38%' : '45%',
     delay: 0.5,
     ease: Power2.easeInOut,
   }) // 1/2 End
@@ -194,6 +213,8 @@ tweenScene1
   .to('.section-01 .virus-01', TRANSFORM, {
     // 1/3 Start
     scale: 0.25,
+    left: isMobile ? '25%' : '38%',
+    top: '45%',
     ease: Power2.easeInOut,
     delay: 0.5,
   })
@@ -206,18 +227,11 @@ tweenScene1
     },
     '<+0.8'
   )
-  .fromTo(
-    '.section-01 .host-cell',
-    TRANSFORM,
-    {
-      x: 700,
-    },
-    {
-      x: 0,
-      autoAlpha: 1,
-      ease: Power2.easeInOut,
-    }
-  )
+  .to('.section-01 .host-cell', TRANSFORM, {
+    left: isMobile ? '88%' : '75%',
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+  })
   .to(
     ['.section-01 .label-host-cell'],
     CROSS_FADE_TEXT,
@@ -227,30 +241,52 @@ tweenScene1
     },
     '<+0.8'
   ) // 1/3 End
-  .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
+  .to('.section-01 .virus-01', TRANSFORM, {
     // 1/4 Start
     scale: 0.075,
+    top: '40%',
     autoAlpha: 0,
-    ease: Power1.easeIn,
+    ease: Power2.easeInOut,
   })
   .to(
-    '.section-01 .host-cell',
+    '.section-01 .virus-tiny',
     TRANSFORM,
     {
-      transformOrigin: 'center top',
-      scale: 0.53,
+      autoAlpha: 1,
+      top: '40%',
       ease: Power2.easeInOut,
     },
     '<'
   )
   .to(
-    '.section-01 .virus-tiny',
-    CROSS_FADE_IMAGE,
+    '.section-01 .label-virus',
+    TRANSFORM,
     {
-      autoAlpha: 1,
-      ease: Power1.easeIn,
+      top: isMobile ? 'calc(43% - 40px)' : 'calc(44% - 75px)',
+      ease: Power2.easeInOut,
     },
-    '<+0.3'
+    '<'
+  )
+  .to(
+    '.section-01 .host-cell',
+    TRANSFORM,
+    {
+      scale: 0.53,
+      left: isMobile ? '76%' : '61%',
+      top: '40%',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .label-host-cell',
+    TRANSFORM,
+    {
+      left: isMobile ? 'calc(76% - 10px )' : '61%',
+      top: isMobile ? '+=20px' : '+=0%',
+      ease: Power2.easeInOut,
+    },
+    '<'
   )
   .to('.section-01 .text-2', CROSS_FADE_TEXT, {
     autoAlpha: 0,
@@ -281,27 +317,22 @@ tweenScene1
   )
   .to(
     '.section-01 .host-cell',
-    CROSS_FADE_IMAGE,
+    0.1,
     {
       autoAlpha: 0,
       ease: Power1.easeOut,
     },
-    '<'
+    '-=0.1'
   ) // 1/4 End
-  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
-    // 1/5 Start
-    autoAlpha: 0.8,
-    left: '+=33.9%',
-    top: '+=3.4%',
-    ease: Power2.easeInOut,
-    delay: 1,
-  })
   .to(
-    '.section-01 .virus-tiny',
-    CROSS_FADE_IMAGE,
+    '.section-01 .virus-tiny', // 1/5 Start
+    TRANSFORM,
     {
       autoAlpha: 0.8,
-      ease: Power2.easeOut,
+      left: isMobile ? 'calc(76% - 104px)' : 'calc(61% - 210px)',
+      top: isMobile ? '40.1%' : '40.4%',
+      ease: Power2.easeInOut,
+      delay: 1,
     },
     '<'
   )
@@ -314,10 +345,10 @@ tweenScene1
     },
     '<'
   )
-  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
-    left: '+=1.5%',
+  .to('.section-01 .virus-tiny', TRANSFORM, {
+    left:  isMobile ? "+=14px" : '+=30px',
     ease: Power2.easeInOut,
-    delay: 0.5,
+    delay: 1,
   })
   .to(
     '.section-01 .host-cell-fusing',
@@ -364,8 +395,8 @@ tweenScene1
     },
     '-=0.1'
   )
-  .to(['.section-01 .virus-tiny', '.section-01 .rna'], TRANSFORM, {
-    left: '+=0.8%',
+  .to('.section-01 .virus-tiny', TRANSFORM, {
+    left: isMobile ? "+=5px" : '+=12px',
     ease: Power2.easeInOut,
     delay: 0.5,
   })
@@ -387,17 +418,20 @@ tweenScene1
     },
     '-=0.1'
   ) // 1/5 End
-  .to(['.section-01 .host-cell-fused', '.section-01 .host-cell-machinery-base', '.section-01 .host-cell-machinery-lever'], TRANSFORM, {
-    // 1/6 Start
-    scale: 1,
-    left: '-=25%',
-    top: '-=25%',
-    autoAlpha: 0,
-    ease: Power2.easeInOut,
-    delay: 0.5,
-  })
   .to(
-    '.section-01 .label-virus-envelope-fuses',
+    '.section-01 .host-cell-fused', // 1/6 Start
+    TRANSFORM,
+    {
+      scale: 1,
+      left: isMobile ? "65%" : '50%',
+      top: isMobile ? '40%' : '50%',
+      autoAlpha: 0,
+      ease: Power2.easeInOut,
+      delay: 0.5,
+    }
+  )
+  .to(
+    ['.section-01 .label-virus-envelope-fuses', '.section-01 .text-4'],
     CROSS_FADE_TEXT,
     {
       autoAlpha: 0,
@@ -410,28 +444,9 @@ tweenScene1
     TRANSFORM,
     {
       scale: 1,
-      left: '-=25%',
-      top: '-=25%',
+      left: isMobile ? '63%' : '50%',
+      top: isMobile ? '40%' : '50%',
       autoAlpha: 1,
-      ease: Power2.easeInOut,
-    },
-    '<'
-  )
-  .to(
-    ['.section-01 .virus-tiny', '.section-01 .rna'],
-    TRANSFORM,
-    {
-      left: '-=35.2%',
-      top: '+=4.6%',
-      ease: Power2.easeInOut,
-    },
-    '<'
-  )
-  .to(
-    '.section-01 .virus-tiny',
-    TRANSFORM,
-    {
-      scale: 1.886,
       ease: Power2.easeInOut,
     },
     '<'
@@ -444,7 +459,7 @@ tweenScene1
     '.section-01 .rna',
     CROSS_FADE_IMAGE,
     {
-      scaleX: 1,
+      clip:  isMobile? 'rect(0px 100px 30px 0px)': 'rect(0px 200px 30px 0px)',
       ease: Power1.easeInOut,
     },
     '<'
@@ -474,29 +489,30 @@ tweenScene1
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.scene-02-trigger',
   duration: 3000,
-  
 })
   .on('progress', ({ progress }) => {
-    if (progress > 0.01) {
-      if (spinNormalTween.isActive()) {
-        spinNormalTween
-          .repeat(0)
-          .reverse()
-          .duration(SPIN_TIME / 4);
-      }
+    if (animating) {
+      if (progress > 0.01) {
+        if (spinNormalTween.isActive()) {
+          spinNormalTween
+            .repeat(0)
+            .reverse()
+            .duration(SPIN_TIME / 4);
+        }
 
-      if (virusPrimaryTranslateTween[0].isActive()) {
-        virusPrimaryTranslateTween.forEach((t) => t.pause());
-        Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
-          TweenLite.to(v, TRANSLATION_TIME / 4, {
-            y: 0,
-            ease: Power1.easeInOut,
-          })
-        );
+        if (virusPrimaryTranslateTween[0].isActive()) {
+          virusPrimaryTranslateTween.forEach((t) => t.pause());
+          Array.from(document.querySelectorAll('.section-01 .virus-primary')).map((v) =>
+            TweenLite.to(v, TRANSLATION_TIME / 4, {
+              y: 0,
+              ease: Power1.easeInOut,
+            })
+          );
+        }
+      } else if (progress < 0.1) {
+        !spinNormalTween.isActive() && spinNormalTween.repeat(-1).duration(SPIN_TIME).play();
+        !virusPrimaryTranslateTween[0].isActive() && virusPrimaryTranslateTween.forEach((t) => t.restart());
       }
-    } else if (progress < 0.1) {
-      !spinNormalTween.isActive() && spinNormalTween.repeat(-1).duration(SPIN_TIME).play();
-      !virusPrimaryTranslateTween[0].isActive() && virusPrimaryTranslateTween.forEach((t) => t.restart());
     }
   })
   .setPin('.section-01')
