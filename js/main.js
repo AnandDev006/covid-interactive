@@ -21,6 +21,19 @@ const TRANSLATION_TIME = 2;
 const TRAVEL_DISTANCE = 50;
 const PARTICLE_RANDOM_PATH_TIME = 5;
 
+TweenLite.set('.self_centered', { xPercent: -50, yPercent: -50 });
+
+TweenLite.set(
+  `.section-01 .host-cell-with-receptors,
+.section-01 .host-cell-fusing,
+.section-01 .host-cell-fused,
+.section-01 .host-cell-fused-zoomed`,
+  { scale: 0.53 }
+);
+
+TweenLite.set('.section-01 .virus-cross-section', { scale: 0.75 });
+TweenLite.set('.section-01 .virus-zoomed', { scale: 0.4 });
+
 if (animating) {
   var spinCogCW = new TweenLite.to('.spin-cog-cw', SPIN_TIME, {
     rotation: 360,
@@ -346,7 +359,7 @@ tweenScene1
     '<'
   )
   .to('.section-01 .virus-tiny', TRANSFORM, {
-    left:  isMobile ? "+=14px" : '+=30px',
+    left: isMobile ? '+=14px' : '+=30px',
     ease: Power2.easeInOut,
     delay: 1,
   })
@@ -396,7 +409,7 @@ tweenScene1
     '-=0.1'
   )
   .to('.section-01 .virus-tiny', TRANSFORM, {
-    left: isMobile ? "+=5px" : '+=12px',
+    left: isMobile ? '+=5px' : '+=12px',
     ease: Power2.easeInOut,
     delay: 0.5,
   })
@@ -410,7 +423,7 @@ tweenScene1
     '<'
   )
   .to(
-    '.section-01 .host-cell-fusing',
+    ['.section-01 .host-cell-fusing', '.section-01 .virus-tiny'],
     0.1,
     {
       autoAlpha: 0,
@@ -423,7 +436,7 @@ tweenScene1
     TRANSFORM,
     {
       scale: 1,
-      left: isMobile ? "65%" : '50%',
+      left: isMobile ? '65%' : '50%',
       top: isMobile ? '40%' : '50%',
       autoAlpha: 0,
       ease: Power2.easeInOut,
@@ -459,7 +472,7 @@ tweenScene1
     '.section-01 .rna',
     CROSS_FADE_IMAGE,
     {
-      clip:  isMobile? 'rect(0px 100px 30px 0px)': 'rect(0px 200px 30px 0px)',
+      clip: isMobile ? 'rect(0px 100px 30px 0px)' : 'rect(0px 200px 30px 0px)',
       ease: Power1.easeInOut,
     },
     '<'
@@ -484,6 +497,111 @@ tweenScene1
       ease: Power1.easeIn,
     },
     '<'
+  )
+  .to('.section-01 .virus-baby-1', TRANSFORM, {
+    top: 'calc(57% + 200px)',
+    left: 'calc(52% + 10px)',
+    ease: Power2.easeInOut,
+    autoAlpha: 1,
+  })
+  .to(
+    '.section-01 .virus-baby-2',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 165px)',
+      left: 'calc(52% + 80px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-3',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 145px)',
+      left: 'calc(52% + 150px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-4',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 140px)',
+      left: 'calc(52% + -45px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-5',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 120px)',
+      left: 'calc(52% + 30px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-6',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 90px)',
+      left: 'calc(52% + 140px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-7',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 80px)',
+      left: 'calc(52% + 85px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-8',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 95px)',
+      left: 'calc(52% + -15px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-9',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 55px)',
+      left: 'calc(52% + -30px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-baby-10',
+    TRANSFORM,
+    {
+      top: 'calc(57% + 40px)',
+      left: 'calc(52% + 30px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
   );
 
 const scene01 = new ScrollMagic.Scene({
