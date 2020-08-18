@@ -62,6 +62,14 @@
   position: absolute;
   left: calc(61% - 250px);
   top: calc(40% - 55px);
+  width: 120px;
+}
+
+.section-01 .arrow-red {
+  position: absolute;
+  left: calc(72% - 250px);
+  top: calc(40% + 40px);
+  width: 70px;
 }
 
 .section-01 .host-cell {
@@ -71,9 +79,17 @@
   width: 750px;
 }
 
+.section-01 .host-cell-with-receptors-copy {
+  position: absolute;
+  top: 40%;
+  left: 125%;
+  width: 750px;
+}
+
 .section-01 .host-cell-with-receptors,
 .section-01 .host-cell-fusing,
 .section-01 .host-cell-fused,
+.section-01 .host-cell-fused-fully,
 .section-01 .host-cell-fused-zoomed {
   position: absolute;
   top: 40%;
@@ -84,7 +100,7 @@
 .section-01 .host-cell-machinery-base,
 .section-01 .host-cell-machinery-lever {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 750px;
   z-index: 3;
@@ -100,53 +116,53 @@
 .section-01 .host-cell-machinery-cog-8,
 .section-01 .host-cell-machinery-cog-9 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
 }
 
 .section-01 .host-cell-machinery-cog-1 {
-  top: calc(50% + -20px);
+  top: calc(40% + -20px);
   left: calc(50% + 10px);
   width: 160px;
   z-index: 2;
 }
 .section-01 .host-cell-machinery-cog-2 {
-  top: calc(50% + -82px);
+  top: calc(40% + -82px);
   left: calc(50% + 168px);
   width: 56px;
 }
 .section-01 .host-cell-machinery-cog-3 {
-  top: calc(50% + 10px);
+  top: calc(40% + 10px);
   left: calc(50% + 110px);
   width: 155px;
 }
 .section-01 .host-cell-machinery-cog-4 {
-  top: calc(50% + 50px);
+  top: calc(40% + 50px);
   left: calc(50% + -80px);
   width: 131px;
 }
 .section-01 .host-cell-machinery-cog-5 {
-  top: calc(50% + -82px);
+  top: calc(40% + -82px);
   left: calc(50% + 168px);
   width: 124px;
 }
 .section-01 .host-cell-machinery-cog-6 {
-  top: calc(50% + 18px);
+  top: calc(40% + 18px);
   left: calc(50% + 228px);
   width: 94px;
 }
 .section-01 .host-cell-machinery-cog-7 {
-  top: calc(50% + -80px);
+  top: calc(40% + -80px);
   left: calc(50% + 60px);
   width: 45px;
 }
 .section-01 .host-cell-machinery-cog-8 {
-  top: calc(50% + -108px);
+  top: calc(40% + -108px);
   left: calc(50% + 0px);
   width: 94px;
 }
 .section-01 .host-cell-machinery-cog-9 {
-  top: calc(50% + -30px);
+  top: calc(40% + -30px);
   left: calc(50% + -150px);
   width: 94px;
 }
@@ -175,6 +191,18 @@
   z-index: 1;
 }
 
+.section-01 .virus-tiny-1,
+.section-01 .virus-tiny-2,
+.section-01 .virus-tiny-3,
+.section-01 .virus-tiny-4,
+.section-01 .virus-tiny-5 {
+  position: absolute;
+  top: calc(40% + 75px);
+  left: calc(38% + 135px);
+  width: 30px;
+  z-index: 1;
+}
+
 .section-01 .baby-virus {
   position: absolute;
   top: 57%;
@@ -185,9 +213,9 @@
 
 .section-01 .rna {
   position: absolute;
-  top: 52%;
-  left: 36%;
-  width: 200px;
+  top: 42%;
+  left: 38.5%;
+  width: 120px;
   clip: rect(0px 0px 30px 0px);
   z-index: 1;
 }
@@ -334,14 +362,25 @@
 }
 
 .section-01 .description-text {
-  text-align: left;
+  position: absolute;
   width: 100%;
   max-width: 600px;
-  position: absolute;
-  font-size: 1.5rem;
-  line-height: 2rem;
   left: 50%;
   top: 80%;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .section-01 .description-text {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -377,8 +416,21 @@
     width: 60px;
   }
 
+  .section-01 .arrow-red {
+    position: absolute;
+    left: calc(100% - 120px);
+    top: calc(30% + 48px);
+    width: 35px;
+  }
+
   .section-01 .host-cell {
     top: 50%;
+    left: 120%;
+    width: 375px;
+  }
+
+  .section-01 .host-cell-with-receptors-copy {
+    top: 30%;
     left: 120%;
     width: 375px;
   }
@@ -386,6 +438,7 @@
   .section-01 .host-cell-with-receptors,
   .section-01 .host-cell-fusing,
   .section-01 .host-cell-fused,
+  .section-01 .host-cell-fused-fully,
   .section-01 .host-cell-fused-zoomed {
     top: 40%;
     left: 76%;
@@ -395,53 +448,53 @@
   .section-01 .host-cell-machinery-base,
   .section-01 .host-cell-machinery-lever {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 63%;
     width: 375px;
   }
 
   .section-01 .host-cell-machinery-cog-1 {
-    top: calc(40% + -10px);
+    top: calc(30% + -10px);
     left: calc(63% + 5px);
     width: 80px;
   }
   .section-01 .host-cell-machinery-cog-2 {
-    top: calc(40% + -41px);
+    top: calc(30% + -41px);
     left: calc(63% + 83px);
     width: 28px;
   }
   .section-01 .host-cell-machinery-cog-3 {
-    top: calc(40% + 4px);
+    top: calc(30% + 4px);
     left: calc(63% + 55px);
     width: 77.5px;
   }
   .section-01 .host-cell-machinery-cog-4 {
-    top: calc(40% + 20px);
+    top: calc(30% + 20px);
     left: calc(63% + -35px);
     width: 65.5px;
   }
   .section-01 .host-cell-machinery-cog-5 {
-    top: calc(40% + -41px);
+    top: calc(30% + -41px);
     left: calc(63% + 83px);
     width: 62px;
   }
   .section-01 .host-cell-machinery-cog-6 {
-    top: calc(40% + 10px);
+    top: calc(30% + 10px);
     left: calc(63% + 114px);
     width: 47px;
   }
   .section-01 .host-cell-machinery-cog-7 {
-    top: calc(40% + -40px);
+    top: calc(30% + -40px);
     left: calc(63% + 30px);
     width: 22.5px;
   }
   .section-01 .host-cell-machinery-cog-8 {
-    top: calc(40% + -15px);
+    top: calc(30% + -15px);
     left: calc(63% + -75px);
     width: 47px;
   }
   .section-01 .host-cell-machinery-cog-9 {
-    top: calc(40% + -50px);
+    top: calc(30% + -50px);
     left: calc(63% + 0px);
     width: 47px;
   }
@@ -463,11 +516,27 @@
     width: 15px;
   }
 
+  .section-01 .virus-tiny-1,
+  .section-01 .virus-tiny-2,
+  .section-01 .virus-tiny-3,
+  .section-01 .virus-tiny-4,
+  .section-01 .virus-tiny-5 {
+    top: calc(30% + 40px);
+    left: calc(30% + 60px);
+    width: 15px;
+  }
+
+  .section-01 .baby-virus {
+    top: 34%;
+    left: 68%;
+    width: 15px;
+  }
+
   .section-01 .rna {
-    top: 41%;
-    left: calc(41.25% + -20px);
+    top: 31%;
+    left: calc(41.25% + -3px);
     clip: rect(0px 0px 30px 0px);
-    width: 100px;
+    width: 60px;
   }
 
   .section-01 .virus-01 {
@@ -478,7 +547,7 @@
 
   .section-01 .description-text {
     top: calc(80vh);
-
+    /* padding: 0.3em; */
     max-width: 300px;
     font-size: 1.5rem;
     line-height: 2rem;

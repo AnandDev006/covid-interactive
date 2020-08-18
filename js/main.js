@@ -25,8 +25,10 @@ TweenLite.set('.self_centered', { xPercent: -50, yPercent: -50 });
 
 TweenLite.set(
   `.section-01 .host-cell-with-receptors,
+  .section-01 .host-cell-with-receptors-copy,
 .section-01 .host-cell-fusing,
 .section-01 .host-cell-fused,
+.section-01 .host-cell-fused-fully,
 .section-01 .host-cell-fused-zoomed`,
   { scale: 0.53 }
 );
@@ -409,7 +411,7 @@ tweenScene1
     '-=0.1'
   )
   .to('.section-01 .virus-tiny', TRANSFORM, {
-    left: isMobile ? '+=5px' : '+=12px',
+    left: isMobile ? '+=5px' : '+=11px',
     ease: Power2.easeInOut,
     delay: 0.5,
   })
@@ -423,7 +425,30 @@ tweenScene1
     '<'
   )
   .to(
-    ['.section-01 .host-cell-fusing', '.section-01 .virus-tiny'],
+    ['.section-01 .host-cell-fusing'],
+    0.1,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '-=0.1'
+  )
+  .to('.section-01 .virus-tiny', TRANSFORM, {
+    left: isMobile ? '+=15px' : '+=28px',
+    ease: Power2.easeInOut,
+    delay: 0.5,
+  })
+  .to(
+    '.section-01 .host-cell-fused-fully',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    ['.section-01 .host-cell-fused', '.section-01 .virus-tiny'],
     0.1,
     {
       autoAlpha: 0,
@@ -432,12 +457,12 @@ tweenScene1
     '-=0.1'
   ) // 1/5 End
   .to(
-    '.section-01 .host-cell-fused', // 1/6 Start
+    '.section-01 .host-cell-fused-fully', // 1/6 Start
     TRANSFORM,
     {
       scale: 1,
       left: isMobile ? '65%' : '50%',
-      top: isMobile ? '40%' : '50%',
+      top: isMobile ? '30%' : '40%',
       autoAlpha: 0,
       ease: Power2.easeInOut,
       delay: 0.5,
@@ -458,7 +483,7 @@ tweenScene1
     {
       scale: 1,
       left: isMobile ? '63%' : '50%',
-      top: isMobile ? '40%' : '50%',
+      top: isMobile ? '30%' : '40%',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -472,7 +497,7 @@ tweenScene1
     '.section-01 .rna',
     CROSS_FADE_IMAGE,
     {
-      clip: isMobile ? 'rect(0px 100px 30px 0px)' : 'rect(0px 200px 30px 0px)',
+      clip: isMobile ? 'rect(0px 60px 30px 0px)' : 'rect(0px 120px 30px 0px)',
       ease: Power1.easeInOut,
     },
     '<'
@@ -490,6 +515,7 @@ tweenScene1
       '.section-01 .host-cell-machinery-cog-7',
       '.section-01 .host-cell-machinery-cog-8',
       '.section-01 .host-cell-machinery-cog-9',
+      '.section-01 .text-5',
     ],
     CROSS_FADE_IMAGE,
     {
@@ -499,8 +525,8 @@ tweenScene1
     '<'
   )
   .to('.section-01 .virus-baby-1', TRANSFORM, {
-    top: 'calc(57% + 200px)',
-    left: 'calc(52% + 10px)',
+    top: isMobile ? 'calc(34% + 85px)' : 'calc(47% + 200px)',
+    left: isMobile ? 'calc(68% + -10px)' : 'calc(52% + 10px)',
     ease: Power2.easeInOut,
     autoAlpha: 1,
   })
@@ -508,8 +534,8 @@ tweenScene1
     '.section-01 .virus-baby-2',
     TRANSFORM,
     {
-      top: 'calc(57% + 165px)',
-      left: 'calc(52% + 80px)',
+      top: isMobile ? 'calc(34% + 80px)' : 'calc(47% + 165px)',
+      left: isMobile ? 'calc(68% + 20px)' : 'calc(52% + 80px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -519,8 +545,8 @@ tweenScene1
     '.section-01 .virus-baby-3',
     TRANSFORM,
     {
-      top: 'calc(57% + 145px)',
-      left: 'calc(52% + 150px)',
+      top: isMobile ? 'calc(34% + 75px)' : 'calc(47% + 145px)',
+      left: isMobile ? 'calc(68% + 50px)' : 'calc(52% + 150px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -530,8 +556,8 @@ tweenScene1
     '.section-01 .virus-baby-4',
     TRANSFORM,
     {
-      top: 'calc(57% + 140px)',
-      left: 'calc(52% + -45px)',
+      top: isMobile ? 'calc(34% + 70px)' : 'calc(47% + 140px)',
+      left: isMobile ? 'calc(68% + -30px)' : 'calc(52% + -45px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -541,8 +567,8 @@ tweenScene1
     '.section-01 .virus-baby-5',
     TRANSFORM,
     {
-      top: 'calc(57% + 120px)',
-      left: 'calc(52% + 30px)',
+      top: isMobile ? 'calc(34% + 60px)' : 'calc(47% + 120px)',
+      left: isMobile ? 'calc(68% + 0px)' : 'calc(52% + 30px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -552,8 +578,8 @@ tweenScene1
     '.section-01 .virus-baby-6',
     TRANSFORM,
     {
-      top: 'calc(57% + 90px)',
-      left: 'calc(52% + 140px)',
+      top: isMobile ? 'calc(34% + 50px)' : 'calc(47% + 90px)',
+      left: isMobile ? 'calc(68% + 45px)' : 'calc(52% + 140px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -563,8 +589,8 @@ tweenScene1
     '.section-01 .virus-baby-7',
     TRANSFORM,
     {
-      top: 'calc(57% + 80px)',
-      left: 'calc(52% + 85px)',
+      top: isMobile ? 'calc(34% + 40px)' : 'calc(47% + 80px)',
+      left: isMobile ? 'calc(68% + -15px)' : 'calc(52% + 85px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -574,8 +600,8 @@ tweenScene1
     '.section-01 .virus-baby-8',
     TRANSFORM,
     {
-      top: 'calc(57% + 95px)',
-      left: 'calc(52% + -15px)',
+      top: isMobile ? 'calc(34% + 45px)' : 'calc(47% + 95px)',
+      left: isMobile ? 'calc(68% + 25px)' : 'calc(52% + -15px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -585,8 +611,8 @@ tweenScene1
     '.section-01 .virus-baby-9',
     TRANSFORM,
     {
-      top: 'calc(57% + 55px)',
-      left: 'calc(52% + -30px)',
+      top: isMobile ? 'calc(34% + 30px)' : 'calc(47% + 55px)',
+      left: isMobile ? 'calc(68% + 10px)' : 'calc(52% + -30px)',
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
@@ -596,8 +622,128 @@ tweenScene1
     '.section-01 .virus-baby-10',
     TRANSFORM,
     {
-      top: 'calc(57% + 40px)',
-      left: 'calc(52% + 30px)',
+      top: isMobile ? 'calc(34% + 10px)' : 'calc(47% + 40px)',
+      left: isMobile ? 'calc(68% + 0px)' : 'calc(52% + 30px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to('.section-01 .host-cell-fused-fully', TRANSFORM, {
+    scale: 0.53,
+    left: isMobile ? '30%' : '38%',
+    autoAlpha: 1,
+    delay: 1,
+    ease: Power2.easeInOut,
+  })
+  .to(
+    [
+      '.section-01 .host-cell-machinery-base',
+      '.section-01 .host-cell-machinery-lever',
+      '.section-01 .host-cell-machinery-cog-1',
+      '.section-01 .host-cell-machinery-cog-2',
+      '.section-01 .host-cell-machinery-cog-3',
+      '.section-01 .host-cell-machinery-cog-4',
+      '.section-01 .host-cell-machinery-cog-5',
+      '.section-01 .host-cell-machinery-cog-6',
+      '.section-01 .host-cell-machinery-cog-7',
+      '.section-01 .host-cell-machinery-cog-8',
+      '.section-01 .host-cell-machinery-cog-9',
+      '.section-01 .host-cell-fused-zoomed',
+      '.section-01 .rna',
+      '.section-01 .baby-virus',
+    ],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      scale: 0.53,
+      left: isMobile ? '30%' : '38%',
+      ease: Power2.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .text-5',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to('.section-01 .host-cell-with-receptors-copy', TRANSFORM, {
+    left: isMobile ? '100%' : '72%',
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+  })
+  .to(
+    '.section-01 .virus-tiny-1',
+    TRANSFORM,
+    {
+      top: isMobile ? 'calc(30% + 25px)' : 'calc(40% + 40px)',
+      left: isMobile ? 'calc(30% + 120px)' : 'calc(38% + 240px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-01 .virus-tiny-2',
+    TRANSFORM,
+    {
+      top: isMobile ? 'calc(30% + 60px)' : 'calc(40% + 100px)',
+      left: isMobile ? 'calc(30% + 110px)' : 'calc(38% + 225px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-tiny-3',
+    TRANSFORM,
+    {
+      top: isMobile ? 'calc(30% + 50px)' : 'calc(40% + 90px)',
+      left: isMobile ? 'calc(30% + 85px)' : 'calc(38% + 175px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-tiny-4',
+    TRANSFORM,
+    {
+      top: isMobile ? 'calc(30% + 80px)' : 'calc(40% + 135px)',
+      left: isMobile ? 'calc(30% + 80px)' : 'calc(38% + 180px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .virus-tiny-5',
+    TRANSFORM,
+    {
+      top: isMobile ? 'calc(30% + 90px)' : 'calc(40% + 150px)',
+      left: isMobile ? 'calc(30% + 50px)' : 'calc(38% + 120px)',
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .text-6',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.1'
+  )
+  .to(
+    '.section-01 .arrow-red',
+    TRANSFORM,
+    {
       autoAlpha: 1,
       ease: Power2.easeInOut,
     },
