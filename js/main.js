@@ -258,7 +258,7 @@ tweenScene1
   ) // 1/3 End
   .to('.section-01 .virus-01', TRANSFORM, {
     // 1/4 Start
-    scale: 0.075,
+    scale: 0.15,
     top: '40%',
     autoAlpha: 0,
     ease: Power2.easeInOut,
@@ -345,6 +345,7 @@ tweenScene1
     {
       autoAlpha: 0.8,
       left: isMobile ? 'calc(76% - 104px)' : 'calc(61% - 210px)',
+      scale: 0.5,
       top: isMobile ? '40.1%' : '40.4%',
       ease: Power2.easeInOut,
       delay: 1,

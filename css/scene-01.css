@@ -187,7 +187,7 @@
   position: absolute;
   top: 45%;
   left: 38%;
-  width: 30px;
+  width: 60px;
   z-index: 1;
 }
 
@@ -513,7 +513,7 @@
   .section-01 .virus-tiny {
     top: 45%;
     left: 25%;
-    width: 15px;
+    width: 30px;
   }
 
   .section-01 .virus-tiny-1,
