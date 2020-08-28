@@ -246,7 +246,7 @@ tweenScene1
     delay: 1,
   })
   .to(
-    ['.section-01 .label-virus'],
+    '.section-01 .label-virus',
     CROSS_FADE_TEXT,
     {
       autoAlpha: 0.5,
@@ -255,7 +255,7 @@ tweenScene1
     '<+0.8'
   )
   .to('.section-01 .host-cell', TRANSFORM, {
-    left: isMobile ? '88%' : '75%',
+    left: isMobile ? 'calc(25% + 300px)' : 'calc(38% + 600px)',
     autoAlpha: 1,
     ease: Power2.easeInOut,
   })
@@ -289,7 +289,7 @@ tweenScene1
     '.section-01 .label-virus',
     TRANSFORM,
     {
-      top: isMobile ? 'calc(40% - 40px)' : 'calc(44% - 75px)',
+      top: isMobile ? 'calc(40% - 40px)' : 'calc(40% - 50px)',
       ease: Power2.easeInOut,
     },
     '<'
@@ -299,7 +299,7 @@ tweenScene1
     TRANSFORM,
     {
       scale: 0.53,
-      left: isMobile ? '76%' : '61%',
+      left: isMobile ? 'calc(25% + 250px)' : 'calc(38% + 375px)',
       top: '40%',
       ease: Power2.easeInOut,
     },
@@ -309,7 +309,7 @@ tweenScene1
     '.section-01 .label-host-cell',
     TRANSFORM,
     {
-      left: isMobile ? 'calc(76% - 10px )' : '61%',
+      left: isMobile ? 'calc(25% + 250px)' : 'calc(38% + 375px)',
       top: isMobile ? '+=10px' : '+=0%',
       ease: Power2.easeInOut,
     },
@@ -356,7 +356,7 @@ tweenScene1
     TRANSFORM,
     {
       autoAlpha: 0.8,
-      left: isMobile ? 'calc(76% - 104px)' : 'calc(61% - 210px)',
+      left: isMobile ? 'calc(25% + 250px - 104px)' : 'calc(38% + 375px - 210px)',
       scale: 0.5,
       top: isMobile ? '40.1%' : '40.4%',
       ease: Power2.easeInOut,
