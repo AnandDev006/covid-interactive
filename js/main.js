@@ -12,15 +12,10 @@ $(window).scroll(function () {
   }
 });
 
-// PAGE INITIALIZE START
+const SCENE_1_LEN = 4000;
+const SCENE_2_LEN = 2000;
 
-// Virus Spin
-
-const SPIN_TIME = 20;
-const TRANSLATION_TIME = 2;
-const TRAVEL_DISTANCE = 50;
-const PARTICLE_RANDOM_PATH_TIME = 5;
-
+TweenLite.set('.section-02', { top: SCENE_1_LEN });
 TweenLite.set('.self_centered', { xPercent: -50, yPercent: -50 });
 
 TweenLite.set(
@@ -35,6 +30,23 @@ TweenLite.set(
 
 TweenLite.set('.section-01 .virus-cross-section', { scale: 0.75 });
 TweenLite.set('.section-01 .virus-zoomed', { scale: 0.4 });
+!isMobile &&
+  TweenLite.set(
+    `.section-02 .skin,
+.section-02 .phagocytosis,
+.section-02 .mucous-membrane, .section-02 .b-cells,
+.section-02 .t-cells`,
+    { scale: 0.667 }
+  );
+
+// PAGE INITIALIZE START
+
+// Virus Spin
+
+const SPIN_TIME = 20;
+const TRANSLATION_TIME = 2;
+const TRAVEL_DISTANCE = 50;
+const PARTICLE_RANDOM_PATH_TIME = 5;
 
 if (animating) {
   var spinCogCW = new TweenLite.to('.spin-cog-cw', SPIN_TIME, {
@@ -139,7 +151,7 @@ tweenScene1
     scale: 0.75,
     left: '41.25%',
     top: isMobile ? '41%' : '50%',
-    delay: 0.5,
+    delay: 1,
     ease: Power2.easeInOut,
   })
   .to('.section-01 .virus-01', CROSS_FADE_IMAGE, {
@@ -181,13 +193,13 @@ tweenScene1
     scale: 1,
     left: '56.5%',
     top: isMobile ? '38%' : '45%',
-    delay: 0.5,
+    delay: 1,
     ease: Power2.easeInOut,
   }) // 1/2 End
   .to('.section-01 .virus-zoomed', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power1.easeOut,
-    delay: 0.5,
+    delay: 1,
   })
   .to(['.section-01 .text-2', '.section-01 .background-particles'], CROSS_FADE_TEXT, {
     autoAlpha: 0,
@@ -231,7 +243,7 @@ tweenScene1
     left: isMobile ? '25%' : '38%',
     top: '45%',
     ease: Power2.easeInOut,
-    delay: 0.5,
+    delay: 1,
   })
   .to(
     ['.section-01 .label-virus'],
@@ -319,7 +331,7 @@ tweenScene1
   .to(['.section-01 .host-cell-with-receptors', '.section-01 .host-cell-with-receptor-label-arrow'], CROSS_FADE_IMAGE, {
     autoAlpha: 1,
     ease: Power1.easeIn,
-    delay: 0.5,
+    delay: 1,
   })
   .to(
     '.section-01 .label-host-cell-with-receptor',
@@ -414,7 +426,7 @@ tweenScene1
   .to('.section-01 .virus-tiny', TRANSFORM, {
     left: isMobile ? '+=5px' : '+=11px',
     ease: Power2.easeInOut,
-    delay: 0.5,
+    delay: 1,
   })
   .to(
     '.section-01 .host-cell-fused',
@@ -437,7 +449,7 @@ tweenScene1
   .to('.section-01 .virus-tiny', TRANSFORM, {
     left: isMobile ? '+=15px' : '+=28px',
     ease: Power2.easeInOut,
-    delay: 0.5,
+    delay: 1,
   })
   .to(
     '.section-01 .host-cell-fused-fully',
@@ -466,7 +478,7 @@ tweenScene1
       top: isMobile ? '30%' : '40%',
       autoAlpha: 0,
       ease: Power2.easeInOut,
-      delay: 0.5,
+      delay: 1,
     }
   )
   .to(
@@ -659,7 +671,7 @@ tweenScene1
       autoAlpha: 0,
       scale: 0.53,
       left: isMobile ? '30%' : '38%',
-      ease: Power2.easeOut,
+      ease: Power1.easeOut,
     },
     '<'
   )
@@ -746,19 +758,23 @@ tweenScene1
     TRANSFORM,
     {
       autoAlpha: 1,
-      ease: Power2.easeInOut,
+      ease: Power1.easeIn,
     },
     '<+0.1'
   )
   .to('.section-01', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
     ease: Power2.easeIn,
-    delay: 5
+    delay: 5,
+  })
+  .to('.section-02', CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
   });
 
 const scene01 = new ScrollMagic.Scene({
   triggerElement: '.section-01',
-  duration: 4000,
+  duration: SCENE_1_LEN,
   triggerHook: 0,
 })
   .on('progress', ({ progress }) => {
@@ -798,42 +814,230 @@ const tweenScene2 = new TimelineLite();
 tweenScene2
   .to(['.section-02 .immune-h-1', '.section-02 .text-1'], CROSS_FADE_TEXT, {
     autoAlpha: 1,
-    ease: Power2.easeOut,
-    stagger: 0.3,
+    ease: Power1.easeIn,
+    stagger: 0.1,
   })
-  .to(['.section-02 .text-innate', '.section-02 .text-fast-resp'], CROSS_FADE_TEXT, {
+  .to(['.section-02 .text-innate', '.section-02 .text-adaptive', '.section-02 .text-fast-resp', '.section-02 .text-slow-resp'], CROSS_FADE_TEXT, {
     autoAlpha: 1,
-    ease: Power2.easeOut,
+    ease: Power1.easeIn,
+  })
+  .to(['.section-02 .skin', '.section-02 .mucous-membrane', '.section-02 .phagocytosis', '.section-02 .b-cells', '.section-02 .t-cells'], CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+    stagger: 0.2,
+  })
+  .to(['.section-02 .adaptive', '.section-02 .text-1'], CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to(['.section-02 .text-innate', '.section-02 .text-fast-resp'], TRANSFORM, {
+    top: '-=5%',
+    ease: Power2.easeInOut,
   })
   .to(
-    ['.section-02 .skin', '.section-02 .phagocytosis', '.section-02 .mucous-membrane'],
-    CROSS_FADE_IMAGE,
+    ['.section-02 .text-adaptive', '.section-02 .text-slow-resp'],
+    TRANSFORM,
     {
-      autoAlpha: 1,
-      ease: Power2.easeOut,
-      stagger: 0.3,
+      top: isMobile ? '-=29%' : '-=37%',
+      ease: Power2.easeInOut,
     },
-    '<+0.2'
+    '<'
   )
-  .to(['.section-02 .text-adaptive', '.section-02 .text-slow-resp'], CROSS_FADE_TEXT, {
-    autoAlpha: 1,
-    ease: Power2.easeOut,
+  .to(
+    ['.section-02 .skin', '.section-02 .mucous-membrane', '.section-02 .phagocytosis', '.section-02 .b-cells', '.section-02 .t-cells'],
+    TRANSFORM,
+    {
+      top: '50%',
+      scale: 1,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .skin',
+    TRANSFORM,
+    {
+      left: isMobile ? '+=0' : 'calc(50% - 300px)',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .phagocytosis',
+    TRANSFORM,
+    {
+      left: isMobile ? '+=0' : 'calc(50% + 300px)',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .b-cells',
+    TRANSFORM,
+    {
+      scale: isMobile ? 1.5 : 1,
+      left: isMobile ? 'calc(50% - 75px)' : 'calc(50% - 150px)',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .t-cells',
+    TRANSFORM,
+    {
+      scale: isMobile ? 1.5 : 1,
+      left: isMobile ? 'calc(50% + 75px)' : 'calc(50% + 150px)',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-2',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.5'
+  )
+  .to('.section-02 .skin', TRANSFORM, {
+    left: isMobile ? '+=25' : '+=150',
+    scale: isMobile ? 1.5 : 1,
+    ease: Power2.easeInOut,
+    delay: 1,
   })
   .to(
-    ['.section-02 .b-cells', '.section-02 .t-cells'],
+    '.section-02 .mucous-membrane',
+    TRANSFORM,
+    {
+      left: isMobile ? '+=71.25' : '+=150',
+      scale: isMobile ? 1.5 : 1,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .phagocytosis',
+    TRANSFORM,
+    {
+      left: isMobile ? '+=125' : '+=150',
+      scale: isMobile ? 1.5 : 1,
+      autoAlpha: 0.2,
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-2',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-3',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.5'
+  )
+  .to(['.section-02 .skin', '.section-02 .phagocytosis', '.section-02 .mucous-membrane'], TRANSFORM, {
+    left: isMobile ? '-=220' : '-=450',
+    ease: Power2.easeInOut,
+    delay: 1,
+  })
+  .to(
+    ['.section-02 .skin', '.section-02 .mucous-membrane'],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0.2,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .phagocytosis',
     CROSS_FADE_IMAGE,
     {
       autoAlpha: 1,
-      ease: Power2.easeOut,
-      stagger: 0.3,
+      ease: Power1.easeIn,
     },
-    '<+0.2'
+    '<'
+  )
+  .to(
+    '.section-02 .text-3',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-4',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.5'
+  )
+  .to('.section-02 .innate', CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to(
+    '.section-02 .adaptive',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-4',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-02 .text-5',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.5'
+  )
+  .to('.section-02 .text-5', CROSS_FADE_TEXT, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to(
+    '.section-02 .text-6',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.5'
   );
 
 const scene02 = new ScrollMagic.Scene({
-  triggerElement: '.section-02',
-  duration: 1000,
-  triggerHook: 0,
+  duration: SCENE_2_LEN,
+  triggerHook: 1,
+  offset: SCENE_1_LEN,
 })
   .setPin('.section-02')
   .setTween(tweenScene2)

@@ -5,10 +5,10 @@
 
 body {
   background-color: #fff;
+  font-family: 'Proxima Nova';
 }
 
 h1 {
-  font-family: 'Proxima Nova';
   font-size: 3rem;
   color: #333;
   font-weight: bold;
@@ -27,14 +27,12 @@ h1 {
 }
 
 p {
-  font-family: 'Proxima Nova';
   font-size: 21px;
   color: #333;
   font-weight: normal;
 }
 
 label {
-  font-family: 'Proxima Nova';
   font-size: 1.5rem;
   color: #fff;
   opacity: 0.5;
@@ -129,6 +127,25 @@ label {
   min-width: 1000px;
 }
 
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.text {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .description-text {
   padding: 20px;
   border-radius: 10px;
@@ -136,7 +153,7 @@ label {
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .section-01 .description-text {
+  .description-text {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.2);
@@ -147,5 +164,11 @@ label {
   #logo {
     width: 65px;
     top: 10px;
+  }
+
+  .text {
+    max-width: 300px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
