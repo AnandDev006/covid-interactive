@@ -685,7 +685,7 @@ tweenScene1
     '<'
   )
   .to('.section-01 .host-cell-with-receptors-copy', TRANSFORM, {
-    left: isMobile ? '100%' : 'calc(38% + 530px)',
+    left: isMobile ? 'calc(30% + 275px)' : 'calc(38% + 530px)',
     autoAlpha: 1,
     ease: Power2.easeInOut,
   })
