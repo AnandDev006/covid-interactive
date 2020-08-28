@@ -372,7 +372,7 @@
   }
 
   .section-01 .label-virus {
-    top: calc(45% - 40px);
+    top: calc(45% - 50px);
     left: 25%;
   }
 
@@ -383,19 +383,24 @@
 
   .section-01 .label-host-cell-with-receptor {
     left: calc(76% - 160px);
-    top: calc(40% - 80px);
+    top: calc(40% - 100px);
+  }
+
+  .section-01 .label-virus-envelope-fuses {
+    top: calc(50% - 190px);
+    left: calc(88% - 1400px);
   }
 
   .section-01 .host-cell-with-receptor-label-arrow {
     left: calc(76% - 128px);
-    top: calc(40% - 20px);
+    top: calc(40% - 40px);
     width: 60px;
   }
 
   .section-01 .arrow-red {
     position: absolute;
     left: calc(100% - 120px);
-    top: calc(30% + 48px);
+    top: calc(30% + 8px);
     width: 35px;
   }
 

@@ -289,7 +289,7 @@ tweenScene1
     '.section-01 .label-virus',
     TRANSFORM,
     {
-      top: isMobile ? 'calc(43% - 40px)' : 'calc(44% - 75px)',
+      top: isMobile ? 'calc(40% - 40px)' : 'calc(44% - 75px)',
       ease: Power2.easeInOut,
     },
     '<'
@@ -310,7 +310,7 @@ tweenScene1
     TRANSFORM,
     {
       left: isMobile ? 'calc(76% - 10px )' : '61%',
-      top: isMobile ? '+=20px' : '+=0%',
+      top: isMobile ? '+=10px' : '+=0%',
       ease: Power2.easeInOut,
     },
     '<'
