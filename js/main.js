@@ -255,7 +255,7 @@ tweenScene1
     '<+0.8'
   )
   .to('.section-01 .host-cell', TRANSFORM, {
-    left: isMobile ? 'calc(25% + 300px)' : 'calc(38% + 600px)',
+    left: isMobile ? 'calc(25% + 250px)' : 'calc(38% + 600px)',
     autoAlpha: 1,
     ease: Power2.easeInOut,
   })
@@ -299,7 +299,7 @@ tweenScene1
     TRANSFORM,
     {
       scale: 0.53,
-      left: isMobile ? 'calc(25% + 250px)' : 'calc(38% + 375px)',
+      left: isMobile ? 'calc(25% + 190px)' : 'calc(38% + 375px)',
       top: '40%',
       ease: Power2.easeInOut,
     },
@@ -309,8 +309,8 @@ tweenScene1
     '.section-01 .label-host-cell',
     TRANSFORM,
     {
-      left: isMobile ? 'calc(25% + 250px)' : 'calc(38% + 375px)',
-      top: isMobile ? '+=10px' : '+=0%',
+      left: isMobile ? 'calc(25% + 180px)' : 'calc(38% + 375px)',
+      top: isMobile ? '+=5px' : '+=0%',
       ease: Power2.easeInOut,
     },
     '<'
@@ -356,7 +356,7 @@ tweenScene1
     TRANSFORM,
     {
       autoAlpha: 0.8,
-      left: isMobile ? 'calc(25% + 250px - 104px)' : 'calc(38% + 375px - 210px)',
+      left: isMobile ? 'calc(25% + 190px - 104px)' : 'calc(38% + 375px - 210px)',
       scale: 0.5,
       top: isMobile ? '40.1%' : '40.4%',
       ease: Power2.easeInOut,
@@ -832,14 +832,14 @@ tweenScene2
     delay: 1,
   })
   .to(['.section-02 .text-innate', '.section-02 .text-fast-resp'], TRANSFORM, {
-    top: '-=5%',
+    top: isMobile ? '-=20%' : '-=5%',
     ease: Power2.easeInOut,
   })
   .to(
     ['.section-02 .text-adaptive', '.section-02 .text-slow-resp'],
     TRANSFORM,
     {
-      top: isMobile ? '-=29%' : '-=37%',
+      top: isMobile ? '-=44%' : '-=37%',
       ease: Power2.easeInOut,
     },
     '<'
@@ -848,7 +848,7 @@ tweenScene2
     ['.section-02 .skin', '.section-02 .mucous-membrane', '.section-02 .phagocytosis', '.section-02 .b-cells', '.section-02 .t-cells'],
     TRANSFORM,
     {
-      top: '50%',
+      top: isMobile ? '40%' : '50%',
       scale: 1,
       ease: Power2.easeInOut,
     },

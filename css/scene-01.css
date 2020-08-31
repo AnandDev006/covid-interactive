@@ -47,7 +47,7 @@
 .section-01 .label-virus-envelope-fuses {
   position: absolute;
   top: 18%;
-  left: 48%;
+  left: calc(38% + 375px - 250px);
 }
 
 .section-01 .host-cell-with-receptor-label-arrow {
@@ -378,21 +378,21 @@
 
   .section-01 .label-host-cell {
     top: calc(50% - 190px);
-    left: calc(88% - 90px);
+    left: calc(25% + 200px);
   }
 
   .section-01 .label-host-cell-with-receptor {
-    left: calc(76% - 160px);
+    left: calc(25% + 190px - 175px);
     top: calc(40% - 100px);
   }
 
   .section-01 .label-virus-envelope-fuses {
-    top: calc(50% - 190px);
-    left: calc(88% - 1400px);
+    top: calc(50% - 200px);
+    left: calc(25% + 190px - 100px);
   }
 
   .section-01 .host-cell-with-receptor-label-arrow {
-    left: calc(76% - 128px);
+    left: calc(25% + 190px - 125px);
     top: calc(40% - 40px);
     width: 60px;
   }
@@ -422,7 +422,7 @@
   .section-01 .host-cell-fused-fully,
   .section-01 .host-cell-fused-zoomed {
     top: 40%;
-    left: calc(25% + 250px);
+    left: calc(25% + 190px);
     width: 375px;
   }
 
