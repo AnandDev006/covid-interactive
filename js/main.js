@@ -14,9 +14,13 @@ $(window).scroll(function () {
 
 const SCENE_1_LEN = 4000;
 const SCENE_2_LEN = 2000;
+const SCENE_3_LEN = 2000;
 
 TweenLite.set('.section-02', { top: SCENE_1_LEN });
+TweenLite.set('.section-03', { top: SCENE_1_LEN + SCENE_2_LEN });
 TweenLite.set('.self_centered', { xPercent: -50, yPercent: -50 });
+TweenLite.set('.x_self_centered', { xPercent: -50 });
+TweenLite.set('.y_self_centered', { yPercent: -50 });
 
 TweenLite.set(
   `.section-01 .host-cell-with-receptors,
@@ -764,7 +768,7 @@ tweenScene1
   )
   .to('.section-01', CROSS_FADE_IMAGE, {
     autoAlpha: 0,
-    ease: Power2.easeIn,
+    ease: Power2.easeOut,
     delay: 5,
   })
   .to('.section-02', CROSS_FADE_IMAGE, {
@@ -812,7 +816,7 @@ const scene01 = new ScrollMagic.Scene({
 const tweenScene2 = new TimelineLite();
 
 tweenScene2
-  .to(['.section-02 .immune-h-1', '.section-02 .text-1'], CROSS_FADE_TEXT, {
+  .to(['.section-02 .title-1', '.section-02 .text-1'], CROSS_FADE_TEXT, {
     autoAlpha: 1,
     ease: Power1.easeIn,
     stagger: 0.1,
@@ -1032,7 +1036,21 @@ tweenScene2
       ease: Power1.easeIn,
     },
     '<+0.5'
-  );
+  )
+  .to('.section-02 .adaptive', CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to('.section-02', CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 5,
+  })
+  .to('.section-03', CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  });
 
 const scene02 = new ScrollMagic.Scene({
   duration: SCENE_2_LEN,
@@ -1041,5 +1059,619 @@ const scene02 = new ScrollMagic.Scene({
 })
   .setPin('.section-02')
   .setTween(tweenScene2)
+  .addIndicators()
+  .addTo(controller);
+
+// Scene 3
+
+const tweenScene3 = new TimelineLite();
+
+tweenScene3
+  .to(['.section-03 .bg-layer-3', '.symptom-images .default'], CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  })
+  .to(
+    ['.section-03 .title-1', '.section-03 .text-1'],
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<+0.3'
+  )
+  .to(['.section-03 .scroll-list'], CROSS_FADE_TEXT, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  })
+  .to('.section-03 .scroll-list-1', CROSS_FADE_TEXT, {
+    autoAlpha: 1,
+    fontWeight: 'bold',
+    ease: Power1.easeIn,
+    delay: 1,
+  })
+  .to(
+    '.section-03 .symptom-image-1',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-1', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-2',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-1',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-2',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-2', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-3',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-2',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-3',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-3', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-4',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-3',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-4',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-4', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-5',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-5', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-6',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-4',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-5',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-6', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-7',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-5',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-6',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-7', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-8',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-6',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-7',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-8', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-9',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-7',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-8',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-9', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-10',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-8',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-9',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-10', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-11',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-9',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-10',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-11', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-12',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-10',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-5',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-12', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-13',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-5',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-11',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-13', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-14',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .scroll-list',
+    TRANSFORM,
+    {
+      top: '-=28',
+      ease: Power2.easeInOut,
+      delay: 2,
+    },
+    '<'
+  )
+  .to('.section-03 .scroll-list-14', CROSS_FADE_TEXT, {
+    autoAlpha: 0.5,
+    fontWeight: 'normal',
+    ease: Power1.easeOut,
+  })
+  .to(
+    '.section-03 .scroll-list-15',
+    CROSS_FADE_TEXT,
+    {
+      autoAlpha: 1,
+      fontWeight: 'bold',
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-11',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(
+    '.section-03 .symptom-image-5',
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  );
+
+const scene03 = new ScrollMagic.Scene({
+  duration: SCENE_3_LEN,
+  triggerHook: 1,
+  offset: SCENE_1_LEN + SCENE_2_LEN,
+})
+  .setPin('.section-03')
+  .setTween(tweenScene3)
   .addIndicators()
   .addTo(controller);
