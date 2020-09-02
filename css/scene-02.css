@@ -104,9 +104,8 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .section-02 h1 {
-    top: calc(65px - 0.5em);
-    font-size: 2rem;
+  .section-02 .title {
+    top: 100px;
   }
 
   .section-02 .skin,

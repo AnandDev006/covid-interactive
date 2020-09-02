@@ -15,9 +15,11 @@ $(window).scroll(function () {
 const SCENE_1_LEN = 4000;
 const SCENE_2_LEN = 2000;
 const SCENE_3_LEN = 2000;
+const SCENE_4_LEN = 2000;
 
 TweenLite.set('.section-02', { top: SCENE_1_LEN });
 TweenLite.set('.section-03', { top: SCENE_1_LEN + SCENE_2_LEN });
+TweenLite.set('.section-04', { top: SCENE_1_LEN + SCENE_2_LEN + SCENE_3_LEN });
 TweenLite.set('.self_centered', { xPercent: -50, yPercent: -50 });
 TweenLite.set('.x_self_centered', { xPercent: -50 });
 TweenLite.set('.y_self_centered', { yPercent: -50 });
@@ -1664,7 +1666,16 @@ tweenScene3
       ease: Power1.easeIn,
     },
     '<'
-  );
+  )
+  .to('.section-03', CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 5,
+  })
+  .to('.section-04', CROSS_FADE_IMAGE, {
+    autoAlpha: 1,
+    ease: Power1.easeIn,
+  });
 
 const scene03 = new ScrollMagic.Scene({
   duration: SCENE_3_LEN,
@@ -1673,5 +1684,99 @@ const scene03 = new ScrollMagic.Scene({
 })
   .setPin('.section-03')
   .setTween(tweenScene3)
+  .addIndicators()
+  .addTo(controller);
+
+const tweenScene4 = new TimelineLite();
+
+tweenScene4
+  .to(
+    [
+      '.section-04 .bg-layer-4',
+      '.section-04 .title-1',
+      '.section-04 .text-1',
+      '.section-04 .boy-1',
+      '.section-04 .girl-1',
+      '.section-04 .call-bubble-1',
+      '.section-04 .call-bubble-2',
+      '.section-04 .dist-line',
+    ],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    }
+  )
+  .to(['.section-04 .girl-1', '.section-04 .call-bubble-1'], TRANSFORM, {
+    left: isMobile ? '+=65' :'+=75',
+    ease: Power2.easeInOut,
+    delay: 2,
+  })
+  .to(
+    ['.section-04 .boy-1', '.section-04 .call-bubble-2'],
+    TRANSFORM,
+    {
+      left: isMobile ? '-=70' : '-=80',
+      ease: Power2.easeInOut,
+    },
+    '<'
+  )
+  .to(
+    ['.section-04 .dist-line'],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 0,
+      ease: Power1.easeOut,
+    },
+    '<'
+  )
+  .to(['.section-04 .boy-1', '.section-04 .call-bubble-1', '.section-04 .call-bubble-2'], CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+    delay: 1,
+  })
+  .to(
+    ['.section-04 .boy-2'],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(['.section-04 .girl-1'], CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+  })
+  .to(
+    ['.section-04 .girl-2'],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  )
+  .to(['.section-04 .bg-layer-4'], CROSS_FADE_IMAGE, {
+    autoAlpha: 0,
+    ease: Power1.easeOut,
+  })
+  .to(
+    ['.section-04 .bg-layer-5'],
+    CROSS_FADE_IMAGE,
+    {
+      autoAlpha: 1,
+      ease: Power1.easeIn,
+    },
+    '<'
+  );
+
+const scene04 = new ScrollMagic.Scene({
+  duration: SCENE_4_LEN,
+  triggerHook: 1,
+  offset: SCENE_1_LEN + SCENE_2_LEN + SCENE_3_LEN,
+})
+  .setPin('.section-04')
+  .setTween(tweenScene4)
   .addIndicators()
   .addTo(controller);
