@@ -2,12 +2,56 @@
   top: 0;
 }
 
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .section-01 .description-text {
+    -webkit-backdrop-filter: blur(0.55em);
+    backdrop-filter: blur(0.55em);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.section-01 .hyperlink {
+  color: #ffffff;
+}
+
 .bg-layer-1 {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: url('../images/01/01/bg.jpg');
+  background: url("../images/01/01/bg.jpg");
   overflow: hidden;
+}
+
+.scroll-down {
+  z-index: 2;
+}
+
+.scroll-down-line {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  height: 70%;
+  width: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.scroll-down-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid white;
+  top: 84%;
+  right: calc(15% - 10px - 4.5px);
+}
+
+.scroll-down-text {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  color: white;
 }
 
 .virus-images,
@@ -26,6 +70,15 @@
   transform: translateY(-50%);
 }
 
+.section-01 .corona-h-2-1 {
+  font-style: italic;
+}
+
+.section-01 .corona-h-2-2 {
+  font-weight: normal;
+  margin-left: 4px;
+}
+
 .section-01 .label-virus {
   position: absolute;
   top: calc(45% - 75px);
@@ -34,14 +87,14 @@
 
 .section-01 .label-host-cell {
   position: absolute;
-  top: calc(65% - 375px);
-  left: calc(38% + 600px);
+  top: calc(65% - 375px + 100px);
+  left: calc(38% + 600px - 300px);
 }
 
 .section-01 .label-host-cell-with-receptor {
   position: absolute;
   left: calc(38% + 375px - 315px);
-  top: calc(40% - 175px);
+  top: calc(40% - 175px + 50px);
 }
 
 .section-01 .label-virus-envelope-fuses {
@@ -53,7 +106,7 @@
 .section-01 .host-cell-with-receptor-label-arrow {
   position: absolute;
   left: calc(38% + 375px - 250px);
-  top: calc(40% - 80px);
+  top: calc(40% - 80px + 50px);
   width: 120px;
 }
 
@@ -84,7 +137,7 @@
 .section-01 .host-cell-fused-fully,
 .section-01 .host-cell-fused-zoomed {
   position: absolute;
-  top: 40%;
+  top: calc(40%  + 50px);
   left: calc(38% + 375px);
   width: 750px;
 }
@@ -149,13 +202,13 @@
   width: 45px;
 }
 .section-01 .host-cell-machinery-cog-8 {
-  top: calc(40% + -108px);
-  left: calc(50% + 0px);
+  top: calc(40% + -30px);
+  left: calc(50% + -150px);
   width: 94px;
 }
 .section-01 .host-cell-machinery-cog-9 {
-  top: calc(40% + -30px);
-  left: calc(50% + -150px);
+  top: calc(40% + -108px);
+  left: calc(50% + 0px);
   width: 94px;
 }
 
@@ -189,24 +242,24 @@
 .section-01 .virus-tiny-4,
 .section-01 .virus-tiny-5 {
   position: absolute;
-  top: calc(40% + 75px);
-  left: calc(38% + 135px);
+  top: 40%;
+  left: 38%;
   width: 30px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .section-01 .baby-virus {
   position: absolute;
-  top: 57%;
-  left: 52%;
+  top: calc(40% + 50px);
+  left: calc(50% + 10px);
   width: 30px;
   z-index: 1;
 }
 
 .section-01 .rna {
   position: absolute;
-  top: 42%;
-  left: 38.5%;
+  top: calc(40% + -30px + 45px);
+  left: calc(50% + -150px - 35px);
   width: 120px;
   clip: rect(0px 0px 30px 0px);
   z-index: 1;
@@ -366,40 +419,61 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .scroll-down-line {
+    top: 10%;
+    height: 30%;
+    width: 5px;
+    border-radius: 2.5px;
+  }
+
+  .scroll-down-arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid white;
+    top: calc(40% - 5px);
+    right: calc(15% - 5px - 2.45px );
+  }
+
+  .scroll-down-text {
+    top: 25%;
+    right: 1%;
+    font-size: 0.8rem;
+  }
+
   .section-01 .title {
     top: 100px;
   }
 
   .section-01 .label-virus {
-    top: calc(45% - 50px);
+    top: calc(50% - 50px);
     left: 25%;
   }
 
   .section-01 .label-host-cell {
-    top: calc(50% - 190px);
-    left: calc(25% + 200px);
+    top: calc(50% - 160px);
+    left: calc(25% + 250px - 100px);
   }
 
   .section-01 .label-host-cell-with-receptor {
     left: calc(25% + 190px - 175px);
-    top: calc(40% - 100px);
+    top: calc(45% - 100px);
   }
 
   .section-01 .label-virus-envelope-fuses {
-    top: calc(50% - 200px);
-    left: calc(25% + 190px - 100px);
+    top: calc(45% - 100px);
+    left: calc(25% + 250px - 150px);
   }
 
   .section-01 .host-cell-with-receptor-label-arrow {
     left: calc(25% + 190px - 125px);
-    top: calc(40% - 40px);
+    top: calc(45% - 40px);
     width: 60px;
   }
 
   .section-01 .arrow-red {
     position: absolute;
-    left: calc(30% + 150px);
-    top: calc(30% + 8px);
+    left: calc(30% + 150px - 20px);
+    top: calc(40% + 8px);
     width: 35px;
   }
 
@@ -410,7 +484,7 @@
   }
 
   .section-01 .host-cell-with-receptors-copy {
-    top: 30%;
+    top: 40%;
     left: 120%;
     width: 375px;
   }
@@ -420,7 +494,7 @@
   .section-01 .host-cell-fused,
   .section-01 .host-cell-fused-fully,
   .section-01 .host-cell-fused-zoomed {
-    top: 40%;
+    top: 45%;
     left: calc(25% + 190px);
     width: 375px;
   }
@@ -428,53 +502,53 @@
   .section-01 .host-cell-machinery-base,
   .section-01 .host-cell-machinery-lever {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 63%;
     width: 375px;
   }
 
   .section-01 .host-cell-machinery-cog-1 {
-    top: calc(30% + -10px);
+    top: calc(40% + -10px);
     left: calc(63% + 5px);
     width: 80px;
   }
   .section-01 .host-cell-machinery-cog-2 {
-    top: calc(30% + -41px);
+    top: calc(40% + -41px);
     left: calc(63% + 83px);
     width: 28px;
   }
   .section-01 .host-cell-machinery-cog-3 {
-    top: calc(30% + 4px);
+    top: calc(40% + 4px);
     left: calc(63% + 55px);
     width: 77.5px;
   }
   .section-01 .host-cell-machinery-cog-4 {
-    top: calc(30% + 20px);
+    top: calc(40% + 20px);
     left: calc(63% + -35px);
     width: 65.5px;
   }
   .section-01 .host-cell-machinery-cog-5 {
-    top: calc(30% + -41px);
+    top: calc(40% + -41px);
     left: calc(63% + 83px);
     width: 62px;
   }
   .section-01 .host-cell-machinery-cog-6 {
-    top: calc(30% + 10px);
+    top: calc(40% + 10px);
     left: calc(63% + 114px);
     width: 47px;
   }
   .section-01 .host-cell-machinery-cog-7 {
-    top: calc(30% + -40px);
+    top: calc(40% + -40px);
     left: calc(63% + 30px);
     width: 22.5px;
   }
   .section-01 .host-cell-machinery-cog-8 {
-    top: calc(30% + -15px);
+    top: calc(40% + -15px);
     left: calc(63% + -75px);
     width: 47px;
   }
   .section-01 .host-cell-machinery-cog-9 {
-    top: calc(30% + -50px);
+    top: calc(40% + -50px);
     left: calc(63% + 0px);
     width: 47px;
   }
@@ -491,7 +565,7 @@
   }
 
   .section-01 .virus-tiny {
-    top: 45%;
+    top: 50%;
     left: 25%;
     width: 30px;
   }
@@ -501,20 +575,20 @@
   .section-01 .virus-tiny-3,
   .section-01 .virus-tiny-4,
   .section-01 .virus-tiny-5 {
-    top: calc(30% + 40px);
-    left: calc(30% + 60px);
+    top: calc(40%);
+    left: calc(50% - 110px);
     width: 15px;
   }
 
   .section-01 .baby-virus {
-    top: 34%;
-    left: 68%;
+    top: calc(40% + 25px);
+    left: calc(63% + 10px);
     width: 15px;
   }
 
   .section-01 .rna {
-    top: 31%;
-    left: calc(41.25% + -3px);
+    top: calc(40% + -15px + 23px);
+    left: calc(63% + -75px - 17px);
     clip: rect(0px 0px 30px 0px);
     width: 60px;
   }
@@ -531,9 +605,14 @@
   .section-01 .text-4,
   .section-01 .text-5,
   .section-01 .text-6 {
-    top: calc(80vh);
-    max-width: 300px;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    top: calc(75vh);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  
+
+  .scroll-down-text {
+    font-size: 0.6rem;
   }
 }

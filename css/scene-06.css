@@ -1,0 +1,263 @@
+.section-06 .title {
+  position: absolute;
+  padding-top: 0;
+  top: 80px;
+  transform: translateY(-50%);
+}
+
+.section-06 .blue-macro,
+.section-06 .red-macro {
+  position: absolute;
+  top: calc(30% - 50px);
+  left: 50%;
+  width: calc(0.8 * 530px);
+}
+
+.section-06 .blue-micro,
+.section-06 .red-micro {
+  position: absolute;
+  top: calc(30% - 50px + 150px);
+  left: 50%;
+  width: calc(0.8 * 530px);
+}
+
+.section-06 .soap-macro {
+  position: absolute;
+  top: calc(30% - 50px);
+  left: 50%;
+  width: calc(0.8 * 530px);
+}
+
+.section-06 .soap-micro {
+  position: absolute;
+  top: calc(30% - 50px + 150px);
+  left: 50%;
+  width: calc(0.8 * 530px);
+}
+
+.section-06 .arrow {
+  position: absolute;
+  top: calc(30% - 50px + 65px);
+  left: 50%;
+  width: calc(0.8 * 39px);
+}
+
+.section-06 .arrow-1 {
+  left: calc(50% - 25px);
+}
+.section-06 .arrow-2 {
+  left: calc(50% + 160px);
+}
+
+.section-06 .label-1 {
+  position: absolute;
+  top: calc(30% - 50px + 275px);
+  left: calc(50% + 160px);
+  color: #008abf;
+}
+
+.section-06 .label-2 {
+  position: absolute;
+  top: calc(30% - 50px + 275px);
+  left: calc(50% - 50px);
+  color: #e02d34;
+}
+
+.section-06 .text-1 {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+}
+
+.section-06 .text-2 {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  max-width: 80%;
+}
+
+.section-06 .lottie-hand-wash {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 250px);
+  width: 520px;
+}
+
+.section-06 .lottie-virus {
+  position: absolute;
+  top: 40%;
+  left: calc(50% + 250px);
+  width: 400px;
+}
+
+/* iPad */
+@media only screen and (max-width: 800px) {
+  .section-06 .lottie-hand-wash {
+    left: calc(50% - 200px);
+    width: calc(0.8 * 520px);
+  }
+
+  .section-06 .lottie-virus {
+    left: calc(50% + 200px);
+    width: calc(0.8 * 400px);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section-06 .title {
+    top: 100px;
+  }
+
+  .section-06 .blue-macro,
+  .section-06 .red-macro {
+    top: 28%;
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .blue-micro,
+  .section-06 .red-micro {
+    top: calc(28% + 150px);
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .soap-macro {
+    top: 28%;
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .soap-micro {
+    top: calc(28% + 150px);
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .arrow {
+    top: calc(28% + 70px);
+    left: 50%;
+    max-width: 60%;
+  }
+
+  .section-06 .arrow-1 {
+    left: calc(50% - 15px);
+  }
+  .section-06 .arrow-2 {
+    left: calc(50% + 120px);
+  }
+
+  .section-06 .label-1 {
+    top: calc(28% + 250px);
+    left: calc(50% + 120px);
+    color: #008abf;
+  }
+
+  .section-06 .label-2 {
+    top: calc(28% + 250px);
+    left: calc(50% - 25px);
+    color: #e02d34;
+  }
+
+  .section-06 .text-1 {
+    top: 85vh;
+  }
+
+  .section-06 .text-2 {
+    top: 80%;
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  .section-06 .lottie-hand-wash {
+    left: 50%;
+    width: calc(0.6 * 520px);
+  }
+
+  .section-06 .lottie-virus {
+    top: calc(40% + calc(0.6 * 423px) + 25px);
+    left: 50%;
+    width: calc(0.6 * 400px);
+  }
+}
+
+/* Extra small devices (phones, 360px and down) */
+@media only screen and (max-width: 360px) {
+  .section-06 .title {
+    top: 100px;
+  }
+
+  .section-06 .blue-macro,
+  .section-06 .red-macro {
+    top: 26%;
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .blue-micro,
+  .section-06 .red-micro {
+    top: calc(26% + 150px);
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .soap-macro {
+    top: 26%;
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .soap-micro {
+    top: calc(26% + 150px);
+    left: 50%;
+    width: calc(0.6 * 530px);
+  }
+
+  .section-06 .arrow {
+    top: calc(26% + 70px);
+    left: 50%;
+    max-width: 60%;
+  }
+
+  .section-06 .arrow-1 {
+    left: calc(50% - 15px);
+  }
+  .section-06 .arrow-2 {
+    left: calc(50% + 120px);
+  }
+
+  .section-06 .label-1 {
+    top: calc(26% + 230px);
+    left: calc(50% + 110px);
+    color: #008abf;
+  }
+
+  .section-06 .label-2 {
+    top: calc(26% + 230px);
+    left: calc(50% - 25px);
+    color: #e02d34;
+  }
+
+  .section-06 .text-1 {
+    top: 85vh;
+  }
+
+  .section-06 .text-2 {
+    top: 75%;
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  .section-06 .lottie-hand-wash {
+    top: 35%;
+    left: 50%;
+    width: calc(0.4 * 520px);
+  }
+
+  .section-06 .lottie-virus {
+    top: calc(42% + calc(0.6 * 423px) - 20px);
+    left: 50%;
+    width: calc(0.6 * 400px);
+  }
+}

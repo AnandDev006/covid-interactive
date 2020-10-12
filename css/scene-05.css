@@ -1,0 +1,169 @@
+.section-05 .title {
+  position: absolute;
+  padding-top: 0;
+  top: 80px;
+  transform: translateY(-50%);
+}
+
+.section-05 .virus-primary,
+.section-05 .prevent {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.section-05 .virus-primary {
+  width: 400px;
+}
+
+.section-05 .prevent {
+  width: 300px;
+}
+
+.section-05 .carousel-img {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 225px;
+}
+
+.section-05 .carousel-label {
+  position: absolute;
+  top: calc(70% - 125px);
+  left: 50%;
+  /* width: 100%; */
+  color: black;
+}
+
+.section-05 .carousel-img-1,
+.section-05 .label-1 {
+  left: calc(50% - 400px);
+}
+.section-05 .carousel-img-2,
+.section-05 .label-2 {
+  left: calc(50% - 125px);
+}
+.section-05 .carousel-img-3,
+.section-05 .label-3 {
+  left: calc(50% + 125px);
+}
+.section-05 .carousel-img-4,
+.section-05 .label-4 {
+  left: calc(50% + 400px);
+}
+
+.section-05 .text-1 {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  font-size: 1.125rem;
+  line-height: 1rem;
+  max-width: 80%;
+}
+
+/* Extra iPAD devices (phones, 800px and down) */
+@media only screen and (max-width: 800px) {
+  .section-05 .carousel-img {
+    width: 150px;
+  }
+
+  .section-05 .carousel-label {
+    font-size: 1.25rem;
+  }
+
+  .section-05 .carousel-img-1,
+  .section-05 .label-1 {
+    left: calc(50% - 270px);
+  }
+  .section-05 .carousel-img-2,
+  .section-05 .label-2 {
+    left: calc(50% - 90px);
+  }
+  .section-05 .carousel-img-3,
+  .section-05 .label-3 {
+    left: calc(50% + 90px);
+  }
+  .section-05 .carousel-img-4,
+  .section-05 .label-4 {
+    left: calc(50% + 270px);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section-05 .title {
+    top: 80px;
+  }
+
+  .section-05 .virus-primary,
+  .section-05 .prevent {
+    top: 28%;
+    left: 50%;
+  }
+
+  .section-05 .virus-primary {
+    width: 300px;
+  }
+
+  .section-05 .prevent {
+    width: 225px;
+  }
+
+  .section-05 .carousel-label {
+    top: calc(20% + 200px);
+    left: 50%;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .section-05 .carousel-img {
+    top: calc(20% + 300px);
+    left: 50%;
+    max-width: 100%;
+    opacity: 1;
+  }
+
+  .section-05 .label-2 {
+    top: calc(20% + 200px + 250px);
+  }
+  .section-05 .label-3 {
+    top: calc(20% + 200px + 500px);
+  }
+  .section-05 .label-4 {
+    top: calc(20% + 200px + 750px);
+  }
+
+  .section-05 .carousel-img-2 {
+    top: calc(20% + 300px + 250px);
+  }
+  .section-05 .carousel-img-3 {
+    top: calc(20% + 300px + 500px);
+  }
+  .section-05 .carousel-img-4 {
+    top: calc(20% + 300px + 750px);
+  }
+
+  .section-05 .text-1 {
+    top: 70vh;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .section-05 .title {
+    top: 80px;
+  }
+
+  .section-05 .virus-primary,
+  .section-05 .prevent {
+    top: 32%;
+    left: 50%;
+  }
+
+  .section-05 .virus-primary {
+    width: 250px;
+  }
+
+  .section-05 .prevent {
+    width: 187.5px;
+  }
+}

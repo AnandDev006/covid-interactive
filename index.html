@@ -11,121 +11,364 @@
   </head>
 
   <body>
+    <div id="modal" class="modal">
+      <div class="modal-content modal-content-mobile">
+        Please rotate your device. This orientation on this device isn't
+        supported.
+      </div>
+      <div class="modal-content modal-content-desktop">
+        Please fullscreen your page. This window does not meet the minimum
+        required resolution.
+      </div>
+    </div>
     <div class="content-wrapper">
+      <div class="scrollbar">
+        <div class="scrollbar-down scrollbar-down-bg"></div>
+        <div class="scrollbar-down scrollbar-down-fg"></div>
+        <div class="self_centered scrollbar-arrow"></div>
+      </div>
       <section class="section section-01">
         <div class="bg-layer-1"></div>
+        <div class="scroll-down">
+          <div class="scroll-down-line"></div>
+          <div class="scroll-down-arrow"></div>
+          <div class="scroll-down-text">
+            SCROLL <br />
+            DOWN
+          </div>
+        </div>
         <h1 class="white title corona-h-1">Coronavirus</h1>
-        <h1 class="white title hidden corona-h-2">Corona</h1>
+        <h1 class="white title hidden corona-h-2">
+          <span class="corona-h-2-1">Corona</span
+          ><span class="corona-h-2-2">virus</span>
+        </h1>
         <h1 class="white title hidden corona-h-3">Coronavirus Life Cycle</h1>
         <div class="section-content">
           <label class="hidden self_centered label-virus">Virus</label>
           <label class="hidden self_centered label-host-cell">Host Cell</label>
-          <label class="hidden self_centered label-host-cell-with-receptor">Host Cell's <br> ACE2 Receptor</label>
-          <label class="hidden self_centered label-virus-envelope-fuses">Virus Envelope Fuses</label>
-          <img class="hidden self_centered host-cell-with-receptor-label-arrow" src="images/01/04/receptor-label-arrow.png" />
-          <img class="hidden self_centered arrow-red" src="images/01/07/arrow-red.png" />
+          <label class="hidden self_centered label-host-cell-with-receptor"
+            >Host Cell's <br />
+            ACE2 Receptor</label
+          >
+          <label class="hidden self_centered label-virus-envelope-fuses"
+            >Virus Envelope Fuses</label
+          >
+          <img
+            class="hidden self_centered host-cell-with-receptor-label-arrow"
+            src="images/01/04/receptor-label-arrow.png"
+          />
+          <img
+            class="hidden self_centered arrow-red"
+            src="images/01/07/arrow-red.png"
+          />
           <div class="virus-images">
-            <div class="background-particles" >
-              <img class="particle-1-01 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-2-01 particles" src="images/01/01/particle-2.png" />
-              <img class="particle-1-02 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-2-02 particles" src="images/01/01/particle-2.png" />
-              <img class="particle-1-03 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-2-03 particles" src="images/01/01/particle-2.png" />
-              <img class="particle-1-04 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-2-04 particles" src="images/01/01/particle-2.png" />
-              <img class="particle-1-05 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-2-05 particles" src="images/01/01/particle-2.png" />
-              <img class="particle-1-06 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-1-07 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-1-08 particles" src="images/01/01/particle-1.png" />
-              <img class="particle-1-09 particles" src="images/01/01/particle-1.png" />
+            <div class="background-particles">
+              <img
+                class="particle-1-01 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-2-01 particles"
+                src="images/01/01/particle-2.png"
+              />
+              <img
+                class="particle-1-02 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-2-02 particles"
+                src="images/01/01/particle-2.png"
+              />
+              <img
+                class="particle-1-03 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-2-03 particles"
+                src="images/01/01/particle-2.png"
+              />
+              <img
+                class="particle-1-04 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-2-04 particles"
+                src="images/01/01/particle-2.png"
+              />
+              <img
+                class="particle-1-05 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-2-05 particles"
+                src="images/01/01/particle-2.png"
+              />
+              <img
+                class="particle-1-06 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-1-07 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-1-08 particles"
+                src="images/01/01/particle-1.png"
+              />
+              <img
+                class="particle-1-09 particles"
+                src="images/01/01/particle-1.png"
+              />
 
-              <img class="virus-02 spin-slow virus-secondary" src="images/01/01/virus-2.png" />
-              <img class="virus-03 spin-slow virus-secondary" src="images/01/01/virus-2.png" />
-              <img class="virus-04 spin-slower virus-tertiary" src="images/01/01/virus-3.png" />
-              <img class="virus-05 spin-slower virus-tertiary" src="images/01/01/virus-3.png" />
-              <img class="virus-06 spin-slower virus-tertiary" src="images/01/01/virus-3.png" />
-              <img class="virus-07 spin-slower virus-tertiary" src="images/01/01/virus-3.png" />
-              <img class="virus-08 virus-tertiary" src="images/01/01/virus-4.png" />
-              <img class="virus-09 virus-tertiary" src="images/01/01/virus-4.png" />
-              <img class="virus-10 virus-tertiary" src="images/01/01/virus-4.png" />
-              <img class="virus-11 virus-tertiary" src="images/01/01/virus-4.png" />
+              <img
+                class="virus-02 spin-slow virus-secondary"
+                src="images/01/01/virus-2.png"
+              />
+              <img
+                class="virus-03 spin-slow virus-secondary"
+                src="images/01/01/virus-2.png"
+              />
+              <img
+                class="virus-04 spin-slower virus-tertiary"
+                src="images/01/01/virus-3.png"
+              />
+              <img
+                class="virus-05 spin-slower virus-tertiary"
+                src="images/01/01/virus-3.png"
+              />
+              <img
+                class="virus-06 spin-slower virus-tertiary"
+                src="images/01/01/virus-3.png"
+              />
+              <img
+                class="virus-07 spin-slower virus-tertiary"
+                src="images/01/01/virus-3.png"
+              />
+              <img
+                class="virus-08 virus-tertiary"
+                src="images/01/01/virus-4.png"
+              />
+              <img
+                class="virus-09 virus-tertiary"
+                src="images/01/01/virus-4.png"
+              />
+              <img
+                class="virus-10 virus-tertiary"
+                src="images/01/01/virus-4.png"
+              />
+              <img
+                class="virus-11 virus-tertiary"
+                src="images/01/01/virus-4.png"
+              />
             </div>
-            
-            <img class="virus-01 self_centered virus-primary" src="images/01/01/virus-body.png" />
-            <img class="virus-01 self_centered spin-normal virus-primary" src="images/01/01/virus-spikes.png" />
-            
-            <img class="hidden self_centered virus-cross-section" src="images/01/02/virus-cross-section.png" />
-            <img class="hidden self_centered virus-zoomed" src="images/01/02/virus-zoomed.png" />
-            <img class="hidden self_centered virus-tiny" src="images/01/04/virus-tiny.png" />
-            
-            <img class="hidden self_centered virus-tiny-1" src="images/01/04/virus-tiny.png" />
-            <img class="hidden self_centered virus-tiny-2" src="images/01/04/virus-tiny.png" />
-            <img class="hidden self_centered virus-tiny-3" src="images/01/04/virus-tiny.png" />
-            <img class="hidden self_centered virus-tiny-4" src="images/01/04/virus-tiny.png" />
-            <img class="hidden self_centered virus-tiny-5" src="images/01/04/virus-tiny.png" />
-            
-            <img class="hidden self_centered baby-virus" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-1" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-2" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-3" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-4" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-5" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-6" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-7" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-8" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-9" src="images/01/06/baby-virus.png" />
-            <img class="hidden self_centered baby-virus virus-baby-10" src="images/01/06/baby-virus.png" />
-            
+
+            <img
+              class="virus-01 self_centered virus-primary"
+              src="images/01/01/virus-body.png"
+            />
+            <img
+              class="virus-01 self_centered spin-normal virus-primary"
+              src="images/01/01/virus-spikes.png"
+            />
+
+            <img
+              class="hidden self_centered virus-cross-section"
+              src="images/01/02/virus-cross-section.png"
+            />
+            <img
+              class="hidden self_centered virus-zoomed"
+              src="images/01/02/virus-zoomed.png"
+            />
+            <img
+              class="hidden self_centered virus-tiny"
+              src="images/01/04/virus-tiny.png"
+            />
+
+            <img
+              class="hidden self_centered virus-tiny-1"
+              src="images/01/04/virus-tiny.png"
+            />
+            <img
+              class="hidden self_centered virus-tiny-2"
+              src="images/01/04/virus-tiny.png"
+            />
+            <img
+              class="hidden self_centered virus-tiny-3"
+              src="images/01/04/virus-tiny.png"
+            />
+            <img
+              class="hidden self_centered virus-tiny-4"
+              src="images/01/04/virus-tiny.png"
+            />
+            <img
+              class="hidden self_centered virus-tiny-5"
+              src="images/01/04/virus-tiny.png"
+            />
+
+            <img
+              class="hidden self_centered baby-virus"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-1"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-2"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-3"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-4"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-5"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-6"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-7"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-8"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-9"
+              src="images/01/06/baby-virus.png"
+            />
+            <img
+              class="hidden self_centered baby-virus virus-baby-10"
+              src="images/01/06/baby-virus.png"
+            />
+
             <img class="self_centered rna" src="images/01/06/rna.png" />
-            
           </div>
 
           <div class="host-cell-group">
-            <img class="hidden self_centered host-cell" src="images/01/03/host-cell.png" />
-            <img class="hidden self_centered host-cell-with-receptors" src="images/01/04/host-cell-with-receptors.png" />
-            <img class="hidden self_centered host-cell-with-receptors-copy" src="images/01/04/host-cell-with-receptors.png" />
-            <img class="hidden self_centered host-cell-fusing" src="images/01/05/host-cell-fusing.png" />
-            <img class="hidden self_centered host-cell-fused" src="images/01/05/host-cell-fused.png" />
-            <img class="hidden self_centered host-cell-fused-fully" src="images/01/05/host-cell-fused-fully.png" />
-            <img class="hidden self_centered host-cell-fused-zoomed" src="images/01/06/host-cell-fused-zoomed.png" />
-            
-            <img class="hidden self_centered host-cell-machinery-base" src="images/01/06/machinery-base.png" />
-            
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-9" src="images/01/06/machinery-cog-6.png" />
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-8" src="images/01/06/machinery-cog-6.png" />
-            <img class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-7" src="images/01/06/machinery-cog-7.png" />
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-6" src="images/01/06/machinery-cog-6.png" />
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-5" src="images/01/06/machinery-cog-5.png" />
-            <img class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-4" src="images/01/06/machinery-cog-4.png" />
-            <img class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-3" src="images/01/06/machinery-cog-3.png" />
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-2" src="images/01/06/machinery-cog-2.png" />
-            <img class="hidden self_centered spin-cog-cw host-cell-machinery-cog-1" src="images/01/06/machinery-cog-1.png" />
+            <img
+              class="hidden self_centered host-cell"
+              src="images/01/03/host-cell.png"
+            />
+            <img
+              class="hidden self_centered host-cell-with-receptors"
+              src="images/01/04/host-cell-with-receptors.png"
+            />
+            <img
+              class="hidden self_centered host-cell-with-receptors-copy"
+              src="images/01/04/host-cell-with-receptors.png"
+            />
+            <img
+              class="hidden self_centered host-cell-fusing"
+              src="images/01/05/host-cell-fusing.png"
+            />
+            <img
+              class="hidden self_centered host-cell-fused"
+              src="images/01/05/host-cell-fused.png"
+            />
+            <img
+              class="hidden self_centered host-cell-fused-fully"
+              src="images/01/05/host-cell-fused-fully.png"
+            />
+            <img
+              class="hidden self_centered host-cell-fused-zoomed"
+              src="images/01/06/host-cell-fused-zoomed.png"
+            />
 
-            <img class="hidden self_centered host-cell-machinery-lever" src="images/01/06/machinery-lever.png" />
-            
+            <img
+              class="hidden self_centered host-cell-machinery-base"
+              src="images/01/06/machinery-base.png"
+            />
+
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-9"
+              src="images/01/06/machinery-cog-6.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-8"
+              src="images/01/06/machinery-cog-6.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-7"
+              src="images/01/06/machinery-cog-7.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-6"
+              src="images/01/06/machinery-cog-6.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-5"
+              src="images/01/06/machinery-cog-5.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-4"
+              src="images/01/06/machinery-cog-4.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-ccw host-cell-machinery-cog-3"
+              src="images/01/06/machinery-cog-3.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-2"
+              src="images/01/06/machinery-cog-2.png"
+            />
+            <img
+              class="hidden self_centered spin-cog-cw host-cell-machinery-cog-1"
+              src="images/01/06/machinery-cog-1.png"
+            />
+
+            <img
+              class="hidden self_centered host-cell-machinery-lever"
+              src="images/01/06/machinery-lever.png"
+            />
           </div>
 
           <div id="scene-02-trigger" class="spacer s0"></div>
 
           <p class="description-text self_centered text text-1 cream">
-            <strong>Coronavirus</strong> is a family of viruses that causes respiratory illness, such as the common cold and Severe Acute Respiratory Syndrome-2 (SARS CoV-2), the virus that causes <strong>COVID-19</strong>.
+            <strong>Coronavirus</strong> is a family of viruses that causes
+            respiratory illness, such as the common cold and Severe Acute
+            Respiratory Syndrome-2 (SARS CoV-2), the virus that causes
+            <strong>COVID-19</strong>.
           </p>
           <p class="description-text self_centered hidden text text-2 cream">
-            These viruses have projections on their surface that have led to their name <strong>corono</strong> meaning crown. They are a type of RNA, enveloped virus that has a complex capsid shape.
+            These viruses have projections on their surface that have led to
+            their name <strong>corona</strong> meaning crown. They are a type of
+            RNA, enveloped virus that has a complex capsid shape.
           </p>
           <p class="description-text self_centered hidden text text-3 cream">
-            The viral projections or <strong>'spikes'</strong> on SARS CoV-2 enters cells by attaching its spike proteins to the receptor on the <strong>enzyme ACE2</strong> that can be found on various cells throughout the body.
+            The viral projections or <strong>'spikes'</strong> on SARS CoV-2
+            enters cells by attaching its spike proteins to the receptor on the
+            <strong>enzyme ACE2</strong> that can be found on various cells
+            throughout the body.
           </p>
           <p class="description-text self_centered hidden text text-4 cream">
-            Once the spike attaches to the receptors, the virus envelope fuses with the cell membrane of the host cell and RNA from the virus is released into the host cell.
+            Once the spike attaches to the receptors, the virus envelope fuses
+            with the cell membrane of the host cell and RNA from the virus is
+            released into the host cell.
           </p>
           <p class="description-text self_centered hidden text text-5 cream">
-            The virus uses the machinery of a host cell to produce new copies of the virus.
+            The virus uses the machinery of a host cell to produce new copies of
+            the virus.
           </p>
           <p class="description-text self_centered hidden text text-6 cream">
-            The replicated virus particles are released from the host cell, able to infect other cells of the host.
+            The
+            <a
+              class="hyperlink"
+              target="_blank"
+              href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.13/primary/lesson/virus-replication-bio"
+              >replicated virus</a
+            >
+            particles are released from the host cell, able to infect other
+            cells of the host.
           </p>
         </div>
       </section>
@@ -136,57 +379,186 @@
         <h1 class="hidden title title-2">Symptoms</h1>
         <div class="section-content">
           <div class="innate">
-            <h2 class="hidden self_centered text-innate" >Innate</h2>
-            <h3 class="hidden self_centered text-fast-resp" >(FAST RESPONSE)</h3>
+            <h2 class="hidden self_centered text text-innate">
+              INNATE IMMUNE SYSTEM
+            </h2>
+            <h3 class="hidden self_centered text text-fast-resp">
+              (FAST RESPONSE)
+            </h3>
           </div>
           <div class="adaptive">
-            <h2 class="hidden self_centered text-adaptive" >Adaptive</h2>
-            <h3 class="hidden self_centered text-slow-resp" >(SLOW RESPONSE)</h3>
+            <h2 class="hidden self_centered text text-adaptive">
+              ADAPTIVE IMMUNE SYSTEM
+            </h2>
+            <h3 class="hidden self_centered text text-slow-resp">
+              (SLOW RESPONSE)
+            </h3>
           </div>
-          <p class="hidden description-text self_centered text text-1" >The immune system protects the body against disease or other potentially damaging foreign bodies</p>
-            <div class="immune-system">
-              <div >
-                <div class="innate">
-                  <img src="images/02/01-skin.png" class="self_centered hidden skin" >
-                  <img src="images/02/02-mucous-membrane.png" class="self_centered hidden mucous-membrane">
-                  <img src="images/02/03-phagocytosis.png" class="self_centered hidden phagocytosis">
-                </div>
-                <div class="adaptive">
-                  <img src="images/02/04-b-cells.png" class="self_centered hidden b-cells">
-                  <img src="images/02/05-t-cells.png" class="self_centered hidden t-cells">
-                </div>
+          <p class="hidden description-text self_centered text text-1">
+            The immune system protects the body against disease or other
+            potentially damaging foreign bodies
+          </p>
+          <div class="immune-system">
+            <div>
+              <div class="innate">
+                <img
+                  src="images/02/01-skin.png"
+                  class="self_centered hidden skin"
+                />
+                <img
+                  src="images/02/02-mucous-membrane.png"
+                  class="self_centered hidden mucous-membrane"
+                />
+                <img
+                  src="images/02/03-phagocytosis.png"
+                  class="self_centered hidden phagocytosis"
+                />
+              </div>
+              <div class="adaptive">
+                <img
+                  src="images/02/04-b-cells.png"
+                  class="self_centered hidden b-cells"
+                />
+                <img
+                  src="images/02/05-t-cells.png"
+                  class="self_centered hidden t-cells"
+                />
               </div>
             </div>
-            <p class="hidden description-text self_centered text text-2" >The innate immune system provides a <strong>quick</strong> and <strong>non-specific</strong> response to to viruses</p>
-            <p class="hidden description-text self_centered text text-3" >It includes mechanical barriers (<strong>skin</strong> and <strong>mucous membranes</strong>) that normally prevent viruses form entering the body</p>
-            <p class="hidden description-text self_centered text text-4" >It also includes responses to viruses that may overcome these barriers. For example, certain <strong>leukocytes</strong> (white blood cells) use <strong>phagocytosis</strong> to engulf and destroy viruses</p>
-            <p class="hidden description-text self_centered text text-5" >The adaptive immune system is activated if viruses successfully enter the body and overcome the general defenses of the innate immune system. <strong>B and T cell</strong> activation occurs as part of the immune response</p>
-            <p class="hidden description-text self_centered text text-6" >Memory B and T cells may remain in the body to protect the body from <strong>re-infection</strong>. This is known as immunity</p>
+          </div>
+          <p class="hidden description-text self_centered text text-2">
+            The
+            <a
+              class="hyperlink"
+              target="_blank"
+              href="https://flexbooks.ck12.org/cbook/ck-12-college-human-biology-flexbook-2.0/section/19.2/primary/lesson/introduction-to-the-immune-system-chumbio"
+              >innate immune system</a
+            >
+            provides a <strong>quick</strong> and
+            <strong>non-specific</strong> response to to viruses
+          </p>
+          <p class="hidden description-text self_centered text text-3">
+            It includes mechanical barriers (<strong>skin</strong> and
+            <strong>mucous membranes</strong>) that normally prevent viruses
+            form entering the body
+          </p>
+          <p class="hidden description-text self_centered text text-4">
+            It also includes responses to viruses that may overcome these
+            barriers. For example, certain
+            <glossary-popup
+              content="White blood cells produced by bone marrow to fight infections."
+              ><strong>leukocytes</strong></glossary-popup
+            >
+            (white blood cells) use
+            <glossary-popup
+              content="Process in which leukocytes engulf and break down pathogens and debris."
+              ><strong>phagocytosis</strong></glossary-popup
+            >
+            to engulf and destroy viruses
+          </p>
+          <p class="hidden description-text self_centered text text-5">
+            The
+            <a
+              class="hyperlink"
+              target="_blank"
+              href="https://flexbooks.ck12.org/cbook/ck-12-college-human-biology-flexbook-2.0/section/19.2/primary/lesson/introduction-to-the-immune-system-chumbio"
+              >adaptive immune system</a
+            >
+            is activated if viruses successfully enter the body and overcome the
+            general defenses of the innate immune system.
+            <strong>B and T cell</strong> activation occurs as part of the
+            immune response
+          </p>
+          <p class="hidden description-text self_centered text text-6">
+            Memory B and T cells may remain in the body to protect the body from
+            re-infection. This is known as
+            <a
+              class="hyperlink"
+              target="_blank"
+              href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.50/primary/lesson/immunity-bio"
+              >immunity</a
+            >.
+          </p>
         </div>
       </section>
 
       <section class="section section-03 hidden">
         <div class="hidden bg-layer-3"></div>
-        
+
         <h1 class="hidden title title-1">Symptoms</h1>
         <div class="section-content">
-          <p class="hidden description-text self_centered text text-1" >Symptoms can be observed between 2 - 14 days after viral exposure. Symptoms may include some of these</p>
-            <div class="symptom-images">
-              <img src="images/03/default.png" alt="" class="hidden self_centered default">
-              <img src="images/03/fever.gif" alt="" class="hidden self_centered symptom-image-1">
-              <img src="images/03/chills.gif" alt="" class="hidden self_centered symptom-image-2">
-              <img src="images/03/cough.gif" alt="" class="hidden self_centered symptom-image-3">
-              <img src="images/03/difficulty-breathing.gif" alt="" class="hidden self_centered symptom-image-4">
-              <img src="images/03/diarrhea.gif" alt="" class="hidden self_centered symptom-image-5">
-              <img src="images/03/muscle-body-ache.gif" alt="" class="hidden self_centered symptom-image-6">
-              <img src="images/03/headache.gif" alt="" class="hidden self_centered symptom-image-7">
-              <img src="images/03/nasal-congestion.gif" alt="" class="hidden self_centered symptom-image-8">
-              <img src="images/03/runny-nose.gif" alt="" class="hidden self_centered symptom-image-9">
-              <img src="images/03/soar-throat.gif" alt="" class="hidden self_centered symptom-image-10">
-              <img src="images/03/vomiting.gif" alt="" class="hidden self_centered symptom-image-11">
-            </div>
-            
-            <div class="x_self_centered scroll-list-container">
+          <p class="hidden self_centered text text-1">
+            Symptoms* may include some of these
+          </p>
+          <p class="hidden self_centered text subtext-1">
+            *There may be other symptoms. This is not an exhaustive. The
+            symptoms are from the CDC website as of July 2020. Refer to the CDC
+            website for updated information regarding COVID-19
+          </p>
+          <div class="symptom-images">
+            <img
+              src="images/03/default.png"
+              alt=""
+              class="hidden self_centered default"
+            />
+            <img
+              src="images/03/fever.gif"
+              alt=""
+              class="hidden self_centered symptom-image-1"
+            />
+            <img
+              src="images/03/chills.gif"
+              alt=""
+              class="hidden self_centered symptom-image-2"
+            />
+            <img
+              src="images/03/cough.gif"
+              alt=""
+              class="hidden self_centered symptom-image-3"
+            />
+            <img
+              src="images/03/difficulty-breathing.gif"
+              alt=""
+              class="hidden self_centered symptom-image-4"
+            />
+            <img
+              src="images/03/diarrhea.gif"
+              alt=""
+              class="hidden self_centered symptom-image-5"
+            />
+            <img
+              src="images/03/muscle-body-ache.gif"
+              alt=""
+              class="hidden self_centered symptom-image-6"
+            />
+            <img
+              src="images/03/headache.gif"
+              alt=""
+              class="hidden self_centered symptom-image-7"
+            />
+            <img
+              src="images/03/nasal-congestion.gif"
+              alt=""
+              class="hidden self_centered symptom-image-8"
+            />
+            <img
+              src="images/03/runny-nose.gif"
+              alt=""
+              class="hidden self_centered symptom-image-9"
+            />
+            <img
+              src="images/03/soar-throat.gif"
+              alt=""
+              class="hidden self_centered symptom-image-10"
+            />
+            <img
+              src="images/03/vomiting.gif"
+              alt=""
+              class="hidden self_centered symptom-image-11"
+            />
+          </div>
+
+          <div class="x_self_centered scroll-list-container">
             <div class="hidden x_self_centered scroll-list">
               <div class="scroll-list-1">Fever</div>
               <div class="scroll-list-2">chills</div>
@@ -204,33 +576,635 @@
               <div class="scroll-list-14">vomiting</div>
               <div class="scroll-list-15">diarrhea</div>
             </div>
-            </div>
-
-            
+          </div>
         </div>
       </section>
 
       <section class="section section-04 hidden">
-        <img src="images/04/01/bg-green.png" class="hidden self_centered bg-layer-4" alt="">
-        <img src="images/04/01/bg-red.png" class="hidden self_centered bg-layer-5" alt="">
-        
+        <img
+          src="images/04/01/bg-green.png"
+          class="hidden self_centered bg-layer-4"
+          alt=""
+        />
+        <img
+          src="images/04/01/bg-red.png"
+          class="hidden self_centered bg-layer-5"
+          alt=""
+        />
+
         <h1 class="hidden title title-1">How Coronavirus Spreads</h1>
         <div class="section-content">
+          <div class="shot-1">
             <div class="bubble-dist">
-              <img src="images/04/01/call-bubble-1.png" alt="" class="self_centered hidden call-bubble-1">
-              <img src="images/04/01/call-bubble-2.png" alt="" class="self_centered hidden call-bubble-2">
-              <img src="images/04/01/distance.png" alt="" class="self_centered hidden dist-line">
+              <img
+                src="images/04/01/call-bubble-1.png"
+                alt=""
+                class="self_centered hidden call-bubble-1"
+              />
+              <img
+                src="images/04/01/call-bubble-2.png"
+                alt=""
+                class="self_centered hidden call-bubble-2"
+              />
+              <img
+                src="images/04/01/distance.png"
+                alt=""
+                class="self_centered hidden dist-line"
+              />
             </div>
             <div class="humans">
-              <img src="images/04/01/boy-1.png" alt="" class="self_centered hidden boy-1">
-              <img src="images/04/01/boy-2.png" alt="" class="self_centered hidden boy-2">
-              <img src="images/04/01/girl-1.png" alt="" class="self_centered hidden girl-1">
-              <img src="images/04/01/girl-2.png" alt="" class="self_centered hidden girl-2">
+              <img
+                src="images/04/01/boy-1.png"
+                alt=""
+                class="self_centered hidden boy-1"
+              />
+              <img
+                src="images/04/01/boy-2.png"
+                alt=""
+                class="self_centered hidden boy-2"
+              />
+              <img
+                src="images/04/01/girl-1.png"
+                alt=""
+                class="self_centered hidden girl-1"
+              />
+              <img
+                src="images/04/01/girl-2.png"
+                alt=""
+                class="self_centered hidden girl-2"
+              />
             </div>
-            
-          <p class="hidden description-text self_centered text text-1" >Symptoms can be observed between 2 - 14 days after viral exposure. Symptoms may include some of these</p>
+          </div>
+
+          <div class="shot-2">
+            <div
+              id="lottieLungs"
+              class="self_centered hidden lottie-lungs"
+            ></div>
+          </div>
+          <p class="hidden description-text self_centered text text-1">
+            The virus is thought to spread through close person-to-person
+            contact (e.g. between people within about 6 feet of each other) from
+            droplets of a cough, sneeze, and talking
+          </p>
+          <p class="hidden description-text self_centered text text-2">
+            People may become infected after the virus gets transferred to the
+            mouth or nose, or inhaled into the lungs. There is evidence that the
+            virus may spread by people who do not have symptoms (asymptomatic
+            and pre-symptomatic).
+          </p>
         </div>
       </section>
+
+      <section class="section section-05 hidden">
+        <h1 class="hidden title title-1">Prevent the Spread</h1>
+        <div class="section-content">
+          <div class="virus-prevent">
+            <div class="virus-with-spike">
+              <img
+                src="images/01/01/virus-body.png"
+                alt=""
+                class="self_centered hidden virus-primary"
+              />
+              <img
+                src="images/01/01/virus-spikes.png"
+                alt=""
+                class="self_centered spin-normal hidden virus-primary"
+              />
+            </div>
+            <img
+              src="images/05/prevent.png"
+              alt=""
+              class="self_centered hidden prevent"
+            />
+          </div>
+          <div class="image-carousel hidden">
+            <img
+              src="images/05/handwash.png"
+              alt=""
+              class="self_centered hidden carousel-img carousel-img-1"
+            />
+            <img
+              src="images/05/distance6feet.png"
+              alt=""
+              class="self_centered hidden carousel-img carousel-img-2"
+            />
+            <img
+              src="images/05/mask.png"
+              alt=""
+              class="self_centered hidden carousel-img carousel-img-3"
+            />
+            <img
+              src="images/05/disinfect.png"
+              alt=""
+              class="self_centered hidden carousel-img carousel-img-4"
+            />
+            <label class="hidden self_centered carousel-label label-1"
+              >Wash your hands</label
+            >
+            <label class="hidden self_centered carousel-label label-2"
+              >Maintain distance</label
+            >
+            <label class="hidden self_centered carousel-label label-3"
+              >Wear a mask</label
+            >
+            <label class="hidden self_centered carousel-label label-4"
+              >Disinfect objects</label
+            >
+          </div>
+          <p class="hidden description-text self_centered text text-1">
+            These are just some ways to help protect yourself from COVID-19
+            according to the CDC website as of September 2020. Continue to refer
+            to the CDC website for more information and updates regarding hwo to
+            protect yourself and prevent the spread of COVID-19
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-06 hidden">
+        <h1 class="hidden title title-1">Why does soap work ?</h1>
+        <div class="section-content">
+          <div class="shot-1">
+            <img
+              src="images/06//01/bg-blue-macro.png"
+              alt=""
+              class="self_centered hidden blue-macro"
+            />
+            <img
+              src="images/06//01/bg-blue-micro.png"
+              alt=""
+              class="self_centered hidden blue-micro"
+            />
+            <img
+              src="images/06//01/bg-red-macro.png"
+              alt=""
+              class="self_centered hidden red-macro"
+            />
+            <img
+              src="images/06//01/bg-red-micro.png"
+              alt=""
+              class="self_centered hidden red-micro"
+            />
+
+            <img
+              src="images/06/01/soap-macro.png"
+              alt=""
+              class="self_centered hidden soap-macro"
+            />
+            <img
+              src="images/06/01/soap-macro.png"
+              alt=""
+              class="self_centered hidden soap-macro soap-macro-copy"
+            />
+            <img
+              src="images/06/01/soap-micro.png"
+              alt=""
+              class="self_centered hidden soap-micro"
+            />
+            <img
+              src="images/06/01/arrow.png"
+              alt=""
+              class="self_centered hidden arrow arrow-1"
+            />
+            <img
+              src="images/06/01/arrow.png"
+              alt=""
+              class="self_centered hidden arrow arrow-2"
+            />
+
+            <label class="hidden self_centered carousel-label label-1"
+              >Hydrophilic <br />
+              Polar</label
+            >
+            <label class="hidden self_centered carousel-label label-2"
+              >Hydrophobic <br />
+              Non-polar</label
+            >
+          </div>
+          <div class="shot-2">
+            <div
+              id="lottieHandWash"
+              class="self_centered hidden lottie-hand-wash"
+            ></div>
+            <div
+              id="lottieVirus"
+              class="self_centered hidden lottie-virus"
+            ></div>
+          </div>
+          <p class="hidden description-text self_centered text text-1">
+            Soap molecules have two different ends. The head of the soap
+            molecule is polar and the tail end is nonpolar
+          </p>
+          <p class="hidden description-text self_centered text text-2">
+            Soap molecules have two different ends. The head of the soap
+            molecule is polar and the tail end is nonpolar. Having polar and
+            nonpolar parts allows soap to interact with polar molecules such as
+            water and nonpolar materials such as lipids in membranes. The
+            enveloped coronavirus contains lipids, making the virus more
+            vulnerable to inactivation by soap.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-07 hidden">
+        <h1 class="hidden title title-1">Prevention & Treatment</h1>
+        <div class="section-content">
+          <div class="vaccine">
+            <img
+              src="images/07/vaccination.png"
+              alt=""
+              class="self_centered hidden vaccination"
+            />
+          </div>
+          <p class="hidden description-text self_centered text text-1">
+            Vaccines can be used to prevent viral infections. A vaccine is a
+            mixture of antigenic material and other immune stimulants that will
+            produce immunity to a certain pathogen or disease.
+          </p>
+          <p class="hidden description-text self_centered text text-2">
+            The material in the vaccine can either be weakened forms of a living
+            pathogen or virus, dead pathogens (or inactivated viruses), purified
+            material such as viral proteins, or genetically engineered pieces of
+            a pathogen. Antiviral drugs, medications used specifically for
+            treating the symptoms of viral infections, can also be used.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-08 hidden">
+        <div class="summary-body">
+          <h2 class="heading">Share this story ...</h2>
+          <img src="" alt="" class="share-icon" />
+          <a href="#" class="share-button ck12-button ck12-button-primary"
+            >Share this story with a friend</a
+          >
+
+          <div class="learn-more">
+            <h2 class="subheading">Learn More</h2>
+
+            <p class="ck12-body">
+              More information is still emerging about the coronavirus that
+              causes the COVID-19 disease. New information continues to be
+              learned about the virus including how it spreads, how to prevent
+              infection, how it affects the body, and how we provide care and
+              treatment to patients that are infected by the virus.
+            </p>
+            <p class="ck12-body">
+              If interested in learning more about viruses in general, visit the
+              following CK-12 resources:
+            </p>
+            <div class="learn-more-links">
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.8/primary/lesson/viruses-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Virus</a
+              >
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.11/primary/lesson/virus-classification-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Virus Classification</a
+              >
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.13/primary/lesson/virus-replication-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Virus Replication</a
+              >
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.10/primary/lesson/virus-structures-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Virus Structure</a
+              >
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.14/primary/lesson/viruses-and-human-disease-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Viral Disease</a
+              >
+              <a
+                target="_blank"
+                href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.16/primary/lesson/control-of-viruses-bio"
+                class="share-button ck12-button ck12-button-secondary"
+                >Viral Control</a
+              >
+            </div>
+          </div>
+
+          <div class="sources">
+            <h3 class="panel-heading">Sources</h3>
+            <div class="source">
+              <p class="ck12-body">
+                Centers for Disease Control and Prevention. (2020, July 16).
+              </p>
+              <p class="ck12-body">About Cloth Face Coverings.</p>
+              <p class="ck12-body">
+                Retrieved (July 22, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html"
+                  class="ck12-hyperlink"
+                  >https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">
+                Centers for Disease Control and Prevention. (2020, June 16).
+              </p>
+              <p class="ck12-body">How COVID-19 Spreads.</p>
+              <p class="ck12-body">
+                Retrieved (July 22, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html"
+                  class="ck12-hyperlink"
+                  >https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">
+                Centers for Disease Control and Prevention. (2020, September
+                11).
+              </p>
+              <p class="ck12-body">How to Protect Yourself & Others.</p>
+              <p class="ck12-body">
+                Retrieved (September 21, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+                  class="ck12-hyperlink"
+                  >https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">
+                Centers for Disease Control and Prevention. (2020, May 13).
+              </p>
+              <p class="ck12-body">Symptoms of Coronavirus.</p>
+              <p class="ck12-body">
+                Retrieved from (July 22, 2020):
+                <a
+                  target="_blank"
+                  href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+                  class="ck12-hyperlink"
+                  >https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Cell-Mediated Response.</p>
+              <p class="ck12-body">
+                Retrieved (July 23, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.49/primary/lesson/cell-mediated-immune-response-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.49/primary/lesson/cell-mediated-immune-response-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Humoral Response.</p>
+              <p class="ck12-body">
+                Retrieved (July 23, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.48/primary/lesson/humoral-immune-response-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.48/primary/lesson/humoral-immune-response-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Immunity.</p>
+              <p class="ck12-body">
+                Retrieved (July 23, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.50/primary/lesson/immunity-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/13.50/primary/lesson/immunity-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2020, April 20).</p>
+              <p class="ck12-body">Introduction to the Immune System.</p>
+              <p class="ck12-body">
+                Retrieved (July 23, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-college-human-biology-flexbook-2.0/section/19.2/primary/lesson/introduction-to-the-immune-system-chumbio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-college-human-biology-flexbook-2.0/section/19.2/primary/lesson/introduction-to-the-immune-system-chumbio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2015, July 27).</p>
+              <p class="ck12-body">Soap.</p>
+              <p class="ck12-body">
+                Retrieved (July 22, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://interactives.ck12.org/simulations/chemistry/soap/app/index.html?lang=en&referrer=ck12Launcher&backUrl=https://interactives.ck12.org/simulations/chemistry.html"
+                  class="ck12-hyperlink"
+                  >https://interactives.ck12.org/simulations/chemistry/soap/app/index.html?lang=en&referrer=ck12Launcher&backUrl=https://interactives.ck12.org/simulations/chemistry.html</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Viruses.</p>
+              <p class="ck12-body">
+                Retrieved (July 23, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.8/primary/lesson/viruses-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.8/primary/lesson/viruses-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Virus Classification.</p>
+              <p class="ck12-body">
+                Retrieved (July 22, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.11/primary/lesson/virus-classification-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.11/primary/lesson/virus-classification-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation. (2019, November 20).</p>
+              <p class="ck12-body">Virus Replication.</p>
+              <p class="ck12-body">
+                Retrieved (March 9, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.13/primary/lesson/virus-replication-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.13/primary/lesson/virus-replication-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">CK-12 Foundation (2019, November 20).</p>
+              <p class="ck12-body">Virus Structure.</p>
+              <p class="ck12-body">
+                Retrieved (July 22, 2020) from:
+                <a
+                  target="_blank"
+                  href="https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.10/primary/lesson/virus-structures-bio"
+                  class="ck12-hyperlink"
+                  >https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/7.10/primary/lesson/virus-structures-bio</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">Wikipedia.</p>
+              <p class="ck12-body">Coronavirus.</p>
+              <p class="ck12-body">
+                (last updated, 2020, July 26)
+                <a
+                  target="_blank"
+                  href="https://en.wikipedia.org/w/index.php?title=Coronavirus&oldid=969693752"
+                  class="ck12-hyperlink"
+                  >https://en.wikipedia.org/w/index.php?title=Coronavirus&oldid=969693752</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">Collins, F. (2020, May 5)</p>
+              <p class="ck12-body">
+                The Prime Cellular Targets for the Novel Coronavirus. NIH
+                Director’s Blog.
+              </p>
+              <p class="ck12-body">
+                <a
+                  target="_blank"
+                  href="https://directorsblog.nih.gov/2020/05/05/the-prime-cellular-targets-for-the-novel-coronavirus/"
+                  class="ck12-hyperlink"
+                  >https://directorsblog.nih.gov/2020/05/05/the-prime-cellular-targets-for-the-novel-coronavirus/</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">Kurzgesagt – In a Nutshell (2020, May 19)</p>
+              <p class="ck12-body">
+                The Coronavirus Explained & What You Should Do [Video]
+              </p>
+              <p class="ck12-body">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=BtN-goy9VOY"
+                  class="ck12-hyperlink"
+                  >https://www.youtube.com/watch?v=BtN-goy9VOY</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">Liu, M. et. al. (2020).</p>
+              <p class="ck12-body">
+                Potential Role of ACE2 in Coronavirus Disease 2019 (COVID-19)
+                Prevention and Management. J Transl Int Med, 8(1), 9-19.
+              </p>
+              <p class="ck12-body">
+                <a
+                  target="_blank"
+                  href="https://doi.org/10.2478/jtim-2020-0003"
+                  class="ck12-hyperlink"
+                  >https://doi.org/10.2478/jtim-2020-0003</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">
+                Massachusetts Institute of Technology. (2020, April 22).
+              </p>
+              <p class="ck12-body">
+                Researchers identify cells likely targeted by COVID-19 virus:
+                Study finds specific cells in the lungs, nasal passages, and
+                intestines that are more susceptible to infection. ScienceDaily.
+              </p>
+              <p class="ck12-body">
+                Retrieved July 27, 2020 from:
+                <a
+                  target="_blank"
+                  href="http://www.sciencedaily.com/releases/2020/04/200422132556.htm"
+                  class="ck12-hyperlink"
+                  >http://www.sciencedaily.com/releases/2020/04/200422132556.htm</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">
+                Shereen, M.A., Khan, S., Kazmi, A., Bashir, N., Siddique, R.
+                (2020, July).
+              </p>
+              <p class="ck12-body">
+                COVID-19 infection: Origin, transmission, and characteristics of
+                human coronaviruses. Journal of Advanced Research, 24, 91-98.
+              </p>
+              <p class="ck12-body">
+                <a
+                  target="_blank"
+                  href="https://doi.org/10.1016/j.jare.2020.03.005"
+                  class="ck12-hyperlink"
+                  >https://doi.org/10.1016/j.jare.2020.03.005</a
+                >
+              </p>
+            </div>
+
+            <div class="source">
+              <p class="ck12-body">TED-Ed. (2020, May 5).</p>
+              <p class="ck12-body">
+                Which is better: Soap or hand sanitizer? - Alex Rosenthal and
+                Pall Thordarson [Video].
+              </p>
+              <p class="ck12-body">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?time_continue=117&v=x7KKkElpyKQ&feature=emb_logo"
+                  class="ck12-hyperlink"
+                  >https://www.youtube.com/watch?time_continue=117&v=x7KKkElpyKQ&feature=emb_logo</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <div><img id="logo" src="images/ck-12-logo.png" /></div>
   </body>
@@ -239,7 +1213,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/MotionPathPlugin.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie_svg.min.js"></script>
+  <script type="text/javascript" src="js/glossary.js"></script>
+  <script type="text/javascript" src="json/handwash.js"></script>
+  <script type="text/javascript" src="json/lungs.js"></script>
+  <script type="text/javascript" src="json/virusDisintegrate.js"></script>
+  <script src="js/main.js"></script>
 </html>

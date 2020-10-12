@@ -1,0 +1,65 @@
+.section-07 .title {
+  position: absolute;
+  padding-top: 0;
+  top: 80px;
+  transform: translateY(-50%);
+}
+
+.section-07 .vaccination {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 500px;
+}
+
+.section-07 .text-1,
+.section-07 .text-2 {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+}
+
+
+/* iPad */
+@media only screen and (max-width: 800px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section-07 .title {
+    top: 100px;
+  }
+
+  .section-07 .vaccination {
+    width: calc(0.6 * 500px);
+  }
+
+  .section-07 .text-1,
+  .section-07 .text-2 {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    line-height: 1.5rem;
+    max-width: 80%;
+  }
+}
+
+/* Extra small devices (phones, 360px and down) */
+@media only screen and (max-width: 360px) {
+  .section-07 .vaccination {
+    width: calc(0.6 * 500px);
+  }
+
+  .section-07 .vaccination {
+    top: 35%;
+    width: calc(0.6 * 500px);
+  }
+
+  .section-07 .text-1,
+  .section-07 .text-2 {
+    top: 70%;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    max-width: 80%;
+  }
+}

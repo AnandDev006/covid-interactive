@@ -8,15 +8,15 @@
 
 .symptom-images > * {
   position: absolute;
-  max-width: 100%;
-  top: 45%;
+  width: 420px;
+  top: calc(55% + 50px);
   left: 50%;
   z-index: 2;
 }
 
 .scroll-list-container {
   position: absolute;
-  top: 67%;
+  top: calc(55% + 175px + 50px);
   left: 50%;
   height: 420px;
   width: 100%;
@@ -31,7 +31,8 @@
 }
 
 .scroll-list > * {
-  margin-bottom: 0.5em;
+  margin-bottom: 8px;
+  height: 20px;
   opacity: 0.5;
 }
 
@@ -45,7 +46,15 @@
 .section-03 .text-1 {
   position: absolute;
   left: 50%;
-  top: 17%;
+  top: calc(80px + 30px);
+}
+
+.section-03 .subtext-1 {
+  position: absolute;
+  left: 50%;
+  top: calc(80px + 85px);
+  line-height: 1rem;
+  font-size: 1rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -55,16 +64,14 @@
   }
 
   .symptom-images > * {
-    max-width: 75%;
-    top: 45%;
+    width: 294px;
+    top: 65%;
     left: 50%;
   }
 
   .scroll-list-container {
-    top: 59%;
-    left: 50%;
+    top: 87%;
     width: 500px;
-    overflow: hidden;
   }
 
   .scroll-list {
@@ -73,6 +80,31 @@
   }
 
   .section-03 .text-1 {
-    top: 23vh;
+    top: calc(100px + 60px);
+  }
+  .section-03 .subtext-1 {
+    top: calc(100px + 175px);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .section-03 .title {
+    top: 80px;
+  }
+
+  .symptom-images > * {
+    top: 70%;
+  }
+
+  .scroll-list-container {
+    top: 92%;
+  }
+
+  .section-03 .text-1 {
+    top: calc(80px + 45px);
+  }
+  .section-03 .subtext-1 {
+    top: calc(80px + 145px);
   }
 }

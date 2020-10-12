@@ -1,8 +1,8 @@
 .bg-layer-4,
 .bg-layer-5 {
   position: absolute;
-  max-width: 100%;
-  top: 50%;
+  width: 410px;
+  top: 45%;
   left: 50%;
   overflow: hidden;
 }
@@ -14,47 +14,27 @@
   transform: translateY(-50%);
 }
 
-.section-04 .text-1 {
+.section-04 .text-1,
+.section-04 .text-2 {
   position: absolute;
   left: 50%;
   top: 80%;
 }
 
-.section-04 .call-bubble-1 {
-  position: absolute;
-  top: calc(50% + 15px - 160px);
-  left: calc(50% - 170px + 30px);
-  max-width: 100%;
-}
-
-.section-04 .call-bubble-2 {
-  position: absolute;
-  top: calc(50% + 10px - 180px);
-  left: calc(50% + 100px + 10px);
-  max-width: 100%;
-}
-
-.section-04 .dist-line {
-  position: absolute;
-  top: calc(40%);
-  left: calc(50% - 20px);
-  max-width: 100%;
-}
-
 .section-04 .girl-1,
 .section-04 .girl-2 {
   position: absolute;
-  top: calc(50% + 15px);
+  top: calc(45% + 15px);
   left: 50%;
-  max-width: 100%;
+  width: 115px;
 }
 
 .section-04 .boy-1,
 .section-04 .boy-2 {
   position: absolute;
-  top: calc(50% + 10px);
+  top: calc(45% + 10px);
   left: 50%;
-  max-width: 100%;
+  width: 175px;
 }
 
 .section-04 .girl-1 {
@@ -73,66 +53,118 @@
   left: calc(50% + 100px - 80px);
 }
 
+.section-04 .call-bubble-1 {
+  position: absolute;
+  top: calc(45% + 15px - 160px);
+  left: calc(50% - 170px + 30px);
+  width: 75px;
+}
+
+.section-04 .call-bubble-2 {
+  position: absolute;
+  top: calc(45% + 10px - 180px);
+  left: calc(50% + 100px + 10px);
+  width: 90px;
+}
+
+.section-04 .dist-line {
+  position: absolute;
+  top: calc(35%);
+  left: calc(50% - 20px);
+  width: 235px;
+}
+
+.section-04 .lottie-lungs {
+  position: absolute;
+  top: calc(45% - 70px + 1px);
+  left: calc(50% + 100px - 80px + 45px);
+  width: 400px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .section-04 .title {
-    top: 100px;
+    top: 80px;
+    width: 100%;
   }
 
   .bg-layer-4,
   .bg-layer-5 {
-    top: 40%;
-  }
-
-  .section-04 .call-bubble-1 {
-    top: calc(40% - 150px);
-    left: calc(50% - 150px + 30px);
-    max-width: 100%;
-  }
-
-  .section-04 .call-bubble-2 {
-    top: calc(40% - 5px - 165px);
-    left: calc(50% + 90px + 10px);
-    max-width: 100%;
-  }
-
-  .section-04 .dist-line {
-    top: calc(50% - 180px);
-    left: calc(50% - 10px);
-    max-width: 50%;
+    top: 35%;
+    width: 307.5px;
   }
 
   .section-04 .girl-1,
   .section-04 .girl-2 {
-    top: 40%;
-    left: 50%;
-    max-width: 100%;
+    top: calc(35% + 10px);
+    width: 86.25px;
   }
 
   .section-04 .boy-1,
   .section-04 .boy-2 {
-    top: calc(40% - 5px);
-    left: 50%;
-    max-width: 100%;
+    top: calc(35% + 5px);
+    width: 131.25px;
   }
 
   .section-04 .girl-1 {
-    left: calc(50% - 150px);
+    left: calc(50% - 125px);
   }
 
   .section-04 .boy-1 {
-    left: calc(50% + 90px);
+    left: calc(50% + 80px);
   }
 
   .section-04 .girl-2 {
-    left: calc(50% - 150px + 65px);
+    left: calc(50% - 125px + 65px);
   }
 
   .section-04 .boy-2 {
-    left: calc(50% + 90px - 70px);
+    left: calc(50% + 80px - 70px);
+  }
+
+  .section-04 .call-bubble-1 {
+    top: calc(35% - 110px);
+    left: calc(50% - 125px + 25px);
+    width: 52.5px;
+  }
+
+  .section-04 .call-bubble-2 {
+    top: calc(35% + 5px - 130px);
+    left: calc(50% + 80px + 10px);
+    width: 67.5px;
+  }
+
+  .section-04 .dist-line {
+    top: calc(35% - 65px);
+    left: calc(50% - 10px);
+    width: 176.25px;
   }
 
   .section-04 .text-1 {
-    top: 80vh;
+    top: 77vh;
+  }
+
+  .section-04 .text-2 {
+    top: 77vh;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .section-04 .lottie-lungs {
+    top: calc(35% + 5px - 60px);
+    left: calc(50% + 80px - 70px + 33px);
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .section-04 .lottie-lungs {
+    top: calc(35% + 5px - 60px);
+    left: calc(50% + 80px - 70px + 33px);
+    width: 250px;
+  }
+
+  .section-04 .text-2 {
+    top: 74vh;
   }
 }
