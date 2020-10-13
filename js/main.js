@@ -250,7 +250,7 @@ const TRANSFORM = 1;
 const tweenScene1 = new TimelineLite();
 
 tweenScene1
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onComplete: () => {
       const RESET_TIME = 1;
 
@@ -285,7 +285,7 @@ tweenScene1
         virusPrimaryTranslateTween.forEach((t) => t.restart());
     },
   })
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -322,7 +322,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -331,7 +331,7 @@ tweenScene1
     autoAlpha: 1,
     ease: Power1.easeIn,
   })
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -342,7 +342,7 @@ tweenScene1
     top: isMobile ? "38%" : "45%",
     ease: Power2.easeInOut,
   }) // 1/2 End
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -359,7 +359,7 @@ tweenScene1
       ease: Power1.easeOut,
     }
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -368,7 +368,7 @@ tweenScene1
     autoAlpha: 0,
     ease: Power1.easeOut,
   })
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -401,7 +401,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -423,7 +423,7 @@ tweenScene1
     },
     "<+0.8"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM + 0.1],
     onReverseComplete: transitionReverse,
   })
@@ -443,7 +443,7 @@ tweenScene1
     },
     "<+0.8"
   ) // 1/3 End
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM + 0.1],
     onReverseComplete: transitionReverse,
   })
@@ -513,7 +513,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -547,7 +547,7 @@ tweenScene1
     },
     "-=0.1"
   ) // 1/4 End
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -573,7 +573,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {})
+  .to({}, 0, {}) // deadscroll 1
   .to(".section-01 .virus-tiny", TRANSFORM, {
     left: isMobile ? "+=14px" : "+=30px",
     ease: Power2.easeInOut,
@@ -628,7 +628,7 @@ tweenScene1
     },
     "-=0.1"
   )
-  .to({}, 1, {})
+  .to({}, 0, {}) // deadscroll 1
   .to(".section-01 .virus-tiny", TRANSFORM, {
     left: isMobile ? "+=5px" : "+=11px",
     ease: Power2.easeInOut,
@@ -651,7 +651,7 @@ tweenScene1
     },
     "-=0.1"
   )
-  .to({}, 1, {})
+  .to({}, 0, {}) // deadscroll 1
   .to(".section-01 .virus-tiny", TRANSFORM, {
     left: isMobile ? "+=15px" : "+=28px",
     ease: Power2.easeInOut,
@@ -674,7 +674,7 @@ tweenScene1
     },
     "-=0.1"
   ) // 1/5 End
-  .to({}, 2, {})
+  .to({}, 0, {}) // deadscroll 2
   .to(
     ".section-01 .host-cell-fused-fully", // 1/6 Start
     TRANSFORM,
@@ -716,7 +716,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -747,7 +747,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -858,7 +858,7 @@ tweenScene1
     },
     "<+0.1"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [2, TRANSFORM + 0.9],
     onReverseComplete: transitionReverse,
   })
@@ -885,7 +885,7 @@ tweenScene1
       ease: Power1.easeOut,
     }
   )
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -918,7 +918,7 @@ tweenScene1
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1009,7 +1009,7 @@ tweenScene1
     },
     "<+0.1"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM + 0.6],
     onReverseComplete: transitionReverse,
   })
@@ -1059,7 +1059,7 @@ const scene01 = new ScrollMagic.Scene({
 const tweenScene2 = new TimelineLite();
 
 tweenScene2
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene01.duration() / tweenScene1.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -1072,7 +1072,7 @@ tweenScene2
     ease: Power1.easeIn,
     stagger: 0.1,
   })
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_TEXT + 0.1],
     onReverseComplete: transitionReverse,
   })
@@ -1090,7 +1090,7 @@ tweenScene2
       ease: Power1.easeIn,
     }
   )
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
@@ -1111,7 +1111,7 @@ tweenScene2
       stagger: 0.2,
     }
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE + 0.8],
     onReverseComplete: transitionReverse,
   })
@@ -1120,7 +1120,7 @@ tweenScene2
     autoAlpha: 0,
     ease: Power1.easeOut,
   })
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -1201,7 +1201,7 @@ tweenScene2
     },
     "<+0.5"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1250,7 +1250,7 @@ tweenScene2
     },
     "<+0.5"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1304,7 +1304,7 @@ tweenScene2
     },
     "<+0.5"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1342,7 +1342,7 @@ tweenScene2
     },
     "<+0.5"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -1361,7 +1361,7 @@ tweenScene2
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
@@ -1395,7 +1395,7 @@ const scene02 = new ScrollMagic.Scene({
 const tweenScene3 = new TimelineLite();
 
 tweenScene3
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene02.duration() / tweenScene2.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -1419,7 +1419,7 @@ tweenScene3
     },
     "<+0.3"
   )
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -1428,7 +1428,7 @@ tweenScene3
     autoAlpha: 1,
     ease: Power1.easeIn,
   })
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
@@ -1447,7 +1447,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -1494,7 +1494,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1541,7 +1541,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1588,7 +1588,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1617,7 +1617,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1664,7 +1664,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1711,7 +1711,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1758,7 +1758,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1805,7 +1805,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1852,7 +1852,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1899,7 +1899,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1946,7 +1946,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -1993,7 +1993,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2022,7 +2022,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2069,7 +2069,7 @@ tweenScene3
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2101,7 +2101,7 @@ const scene03 = new ScrollMagic.Scene({
 const tweenScene4 = new TimelineLite();
 
 tweenScene4
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene03.duration() / tweenScene3.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -2125,7 +2125,7 @@ tweenScene4
       ease: Power1.easeIn,
     }
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2152,7 +2152,7 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2178,7 +2178,7 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2196,7 +2196,7 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2214,7 +2214,7 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2232,7 +2232,7 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2263,13 +2263,13 @@ tweenScene4
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseComplete: () => {
       lottieLungsAnimation.stop();
       transitionReverse(1, TRANSFORM + 0.2);
     },
   })
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onStart: () => {
       lottieLungsAnimation.play();
     },
@@ -2305,7 +2305,7 @@ const scene04 = new ScrollMagic.Scene({
 const tweenScene5 = new TimelineLite();
 
 tweenScene5
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene04.duration() / tweenScene4.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -2319,7 +2319,7 @@ tweenScene5
     onReverseComplete: () =>
       spinNormalTween.isActive() && spinNormalTween.pause(),
   })
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
@@ -2341,7 +2341,7 @@ tweenScene5
     },
     "<"
   )
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2358,7 +2358,7 @@ tweenScene5
       ease: Power1.easeIn,
     }
   )
-  .to({}, isMobile ? 1 : 0, {
+  .to({}, 0, { // deadscroll isMobile ? 1 : 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2393,7 +2393,7 @@ tweenScene5
     },
     "<"
   )
-  .to({}, isMobile ? 1 : 0, {
+  .to({}, 0, { // deadscroll isMobile ? 1 : 0
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2428,7 +2428,7 @@ tweenScene5
     },
     "<"
   )
-  .to({}, isMobile ? 1 : 0, {
+  .to({}, 0, { // deadscroll isMobile ? 1 : 0
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2463,7 +2463,7 @@ tweenScene5
     },
     "<"
   )
-  .to({}, isMobile ? 1 : 0, {
+  .to({}, 0, { // deadscroll isMobile ? 1 : 0
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2494,7 +2494,7 @@ tweenScene5
     },
     "<"
   )
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, TRANSFORM],
     onReverseComplete: transitionReverse,
   })
@@ -2526,7 +2526,7 @@ const scene05 = new ScrollMagic.Scene({
 const tweenScene6 = new TimelineLite();
 
 tweenScene6
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene05.duration() / tweenScene5.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -2537,7 +2537,7 @@ tweenScene6
     autoAlpha: 1,
     ease: Power1.easeIn,
   })
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
@@ -2546,7 +2546,7 @@ tweenScene6
     autoAlpha: 1,
     ease: Power1.easeIn,
   })
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2583,7 +2583,7 @@ tweenScene6
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, TRANSFORM + 0.2],
     onReverseComplete: transitionReverse,
   })
@@ -2600,7 +2600,7 @@ tweenScene6
       ease: Power1.easeIn,
     }
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2617,7 +2617,7 @@ tweenScene6
       ease: Power1.easeIn,
     }
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2644,7 +2644,7 @@ tweenScene6
     },
     "<"
   )
-  .to({}, isMobile ? 1 : 0, {
+  .to({}, 0, { // deadscroll isMobile ? 1 : 0
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2662,14 +2662,14 @@ tweenScene6
     },
     "<"
   )
-  .to(1, {
+  .to({}, 0, { // deadscroll 1
     onReverseComplete: () => {
       lottieHandWashAnimation.stop();
       lottieVirusAnimation.stop();
       transitionReverse(1, isMobile ? CROSS_FADE_IMAGE : 0);
     },
   })
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onStart: () => {
       lottieHandWashAnimation.play();
       lottieVirusAnimation.play();
@@ -2707,7 +2707,7 @@ const scene06 = new ScrollMagic.Scene({
 const tweenScene7 = new TimelineLite();
 
 tweenScene7
-  .to({}, 0, {
+  .to({}, 0, { // deadscroll 0
     onReverseComplete: () => {
       delta = scene06.duration() / tweenScene6.duration();
       transitionReverse(1, CROSS_FADE_IMAGE);
@@ -2727,7 +2727,7 @@ tweenScene7
     },
     "<"
   )
-  .to({}, 1, {
+  .to({}, 0, { // deadscroll 1
     onReverseCompleteParams: [1, CROSS_FADE_IMAGE],
     onReverseComplete: transitionReverse,
   })
@@ -2740,7 +2740,7 @@ tweenScene7
     autoAlpha: 1,
     ease: Power1.easeOut,
   })
-  .to({}, 2, {
+  .to({}, 0, { // deadscroll 2
     onReverseCompleteParams: [1, CROSS_FADE_TEXT],
     onReverseComplete: transitionReverse,
   })
