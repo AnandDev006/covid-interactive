@@ -3,13 +3,15 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
-const SCENE_1_LEN = 2000; // 23
-const SCENE_2_LEN = 800;
-const SCENE_3_LEN = 1500;
-const SCENE_4_LEN = 700;
-const SCENE_5_LEN = 600;
-const SCENE_6_LEN = 500;
-const SCENE_7_LEN = 300;
+const lenthScale = 1.5;
+
+const SCENE_1_LEN = lenthScale * 2000; // 23
+const SCENE_2_LEN = lenthScale * 800;
+const SCENE_3_LEN = lenthScale * 1500;
+const SCENE_4_LEN = lenthScale * 700;
+const SCENE_5_LEN = lenthScale * 600;
+const SCENE_6_LEN = lenthScale * 500;
+const SCENE_7_LEN = lenthScale * 300;
 
 const totalLen =
   SCENE_1_LEN +
@@ -2768,7 +2770,7 @@ let last_known_scroll_position = 0;
 let cur_scroll_position = 0;
 let ticking = false;
 let activeScrollTween = null;
-let skip = 200;
+let skip = 150;
 
 const gsapScroll = (duration, yPos, isRelative) => {
   activeScrollTween = gsap.to(window, {
@@ -2821,7 +2823,7 @@ function handleScrollSetup() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     handleSroll = gsapScroll;
-    skip = Number(urlParams.get("skip") ?? 200);
+    skip = Number(urlParams.get("skip") ?? skip);
   });
   window.removeEventListener("scroll", handleScrollSetup);
 }
