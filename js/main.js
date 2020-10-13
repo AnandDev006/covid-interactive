@@ -2770,7 +2770,7 @@ let last_known_scroll_position = 0;
 let cur_scroll_position = 0;
 let ticking = false;
 let activeScrollTween = null;
-let skip = 150;
+let skip = 200;
 
 const gsapScroll = (duration, yPos, isRelative) => {
   activeScrollTween = gsap.to(window, {
